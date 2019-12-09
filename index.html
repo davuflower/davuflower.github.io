@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -1382,10 +1382,7 @@
                             Đánh giá từ khách hàng
 
                         </li>
-                        <li>
-                            Cầu hôn cùng chúng tôi
-
-                        </li>
+                        
                         <li>
                             Doanh nghiệp
 
@@ -1398,9 +1395,7 @@
                             Blog
 
                         </li>
-                        <li>
-                            Affiliates program
-                        </li>
+                        
                     </ul>
                 </div>
                 <div class="itemFtr">
@@ -1443,43 +1438,24 @@
 
                         </li>
                         <li>
-                            Facebook: flowerstore.vn
+                            Facebook: davuflower.vn
 
                         </li>
                         <li>
-                            Email: contact@flowerstore.vn
+                            Email: contact@davuflower.vn
 
 
                         </li>
                         <li>
                             Doanh nghiệp:<br />
-                            corporate@flowerstore.vn
+                            corporate@davuflower.vn
 
 
                         </li>
-                        <li>Marketing: marketing@flowerstore.vn</li>
+                        <li>Marketing: marketing@davuflower.vn</li>
                     </ul>
                 </div>
-                <div class="itemFtr">
-                    <h3>Cửa hàng có mặt tại</h3>
-                    <ul>
-                        <li>
-                            Vietnam
-
-
-                        </li>
-                        <li>
-                            The Philippines
-
-
-                        </li>
-                        <li>
-                            Zalo<br />
-
-                        </li>
-
-                    </ul>
-                </div>
+                
             </div>
             <!--các mạng xã hội-->
             <div>
@@ -1968,8 +1944,8 @@
             if (!isChosen(cart, id.text())) {
                 var item = { "time": (new Date()), "quantity": 1, "info": JSON.stringify(subCart) }
                 cart.push(item)
-            }
-
+           }
+           setNotification(cart);
             localStorage.setItem("cart", JSON.stringify(cart));
 
             $(x).parent().addClass("wow fadeOutUp animated");
