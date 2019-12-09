@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Jquery.js"></script>
+    <link href="fontawesome/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .body {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .shopping-cart {
+            width: 100%;
+            margin: 20px auto;
+            background: #FFFFFF;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .item {
+            padding: 20px 50px;
+            height: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .item:nth-child(2n) {
+                border-top: 1px solid #E1E8EE;
+                border-bottom: 1px solid #E1E8EE;
+            }
+        .item .itemId
+        {
+            display:none;
+        }
+        .buttons {
+            position: relative;
+        }
+
+        .delete-btn {
+            display: inline-block;
+            Cursor: pointer;
+        }
+
+        .delete-btn {
+            width: 18px;
+            height: 17px;
+        }
+
+
+        .quantity {
+            margin-right: 60px;
+        }
+
+            .quantity input {
+                -webkit-appearance: none;
+                border: none;
+                text-align: center;
+                width: 32px;
+                font-size: 16px;
+                color: #43484D;
+                font-weight: 300;
+            }
+
+        button[class*=btn] {
+            width: 30px;
+            height: 30px;
+            background-color: #E1E8EE;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        button:focus,
+        input:focus {
+            outline: 0;
+        }
+
+        .total-price {
+            text-align: center;
+            font-size: 16px;
+            color: #43484D;
+            font-weight: 300;
+        }
+
+        .total {
+            padding: 20px 50px;
+        }
+
+        .total-item {
+            padding: 10px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .money {
+            width: 200px;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: right;
+            margin-left: 50px;
+        }
+
+        .coupon {
+            width: 200px;
+            height: 30px;
+            margin-left: 50px;
+            box-sizing: border-box;
+            padding: 20px 10px;
+            border-radius: 4px;
+            border: 1px solid #c8c8c8;
+        }
+
+        .checkout-btn {
+            text-align: center;
+            background-color: #F29BAB;
+            font-weight: 800;
+            color: #fff;
+            padding: 15px 55px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .description {
+            margin-right: 60px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="body">
+        <h3>Giỏ hàng</h3>
+        <div class="shopping-cart">
+            <!-- Title -->
+            <!-- Product #1 -->
+            <!--<div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </div>
+
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
+
+                <div class="description">
+                    <span>Bó Hoa Young & Beautiful</span>
+
+                </div>
+
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="total-price">149.000đ</div>
+            </div>-->
+            <!--<div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </div>
+
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
+
+                <div class="description">
+                    <span>Bó Hoa Hồng Beautiful You</span>
+
+                </div>
+
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="total-price">149.000đ</div>
+            </div>-->
+            <!--<div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </div>
+
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
+
+                <div class="description">
+                    <span>Hộp Hoa Secret Lover</span>
+
+                </div>
+
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="total-price">149.000đ</div>
+            </div>-->
+            <!--<div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </div>
+
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
+
+                <div class="description">
+                    <span>Hộp Hoa Moonlight Lover</span>
+
+                </div>
+
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="total-price">149.000đ</div>
+            </div>-->
+
+            <div class="total">
+                <div class="total-item">
+                    <label>Mã khuyến mãi</label>
+                    <input class="coupon" type="text" placeholder="Nhập mã.." />
+                </div>
+                <div class="total-item">
+                    <label>Tổng cộng</label>
+                    <div class="money">100.000đ</div>
+                </div>
+                <div class="total-item">
+                    <a href="#thanhtoan" class="checkout-btn">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="Jquery.js"></script>
+    <script type="text/javascript">
+        var cart = JSON.parse(localStorage.cart);
+        loadItem();
+        
+
+        
+
+        
+        
+
+        function addEvents() {
+            var plusbtns = document.getElementsByClassName("plus-btn");
+            var plusbtnsLength = plusbtns.length;
+            for (var i = 0; i < plusbtnsLength; i++) {
+                plusbtns[i].setAttribute('onclick', 'clickChinhSoLuong(this)');
+            }
+
+            var minusbtns = document.getElementsByClassName("minus-btn");
+            var plusbtnsLength = plusbtns.length;
+            for (var i = 0; i < plusbtnsLength; i++) {
+                plusbtns[i].setAttribute('onclick', 'clickChinhSoLuong(this)');
+            }
+        }
+
+
+        function clickChinhSoLuong(btn) {
+            var item = btn.parentNode.parentNode;
+            var itemId = item.getElementsByClassName("itemId")[0].innerHTML;
+            var input = item.getElementsByTagName("input")[0];
+
+            if(btn.className.includes("minus"))
+                input.value = eval(input.value) - 1;
+            else
+                input.value = eval(input.value) + 1;
+
+            updateSoLuong(itemId, eval(input.value));
+            
+        }
+
+        function updateSoLuong(itemId, quan) {
+            var cartLength = cart.length;
+            for (var i = 0; i < cartLength; i++) {
+
+                var item = cart[i];
+                var id = JSON.parse(item.info)[0];
+                if (id == itemId) {
+                    cart[i].quantity = quan;
+                    break;
+                }
+                
+            }
+
+            localStorage.cart = cart.toString();
+            var itemParent = document.getElementsByClassName('item')[0].parentNode;
+            var items = document.getElementsByClassName('item');
+            var itemsLength = document.getElementsByClassName('item').length;
+            for (var i = 0; i < itemsLength; i++) {
+                itemParent.removeChild(items[i]);
+            }
+            loadItem();
+        }
+
+        function loadItem() {
+            var sum = 0;
+            for (let i = 0; i < cart.length; i++) {
+                let chosen = cart[i];
+                let info = JSON.parse(chosen.info);
+                let item = $('<div class="item"></div>');
+                item.insertBefore($('.total').eq(0));
+
+                let itemId = $('<div class="itemId"></div>');
+                itemId.appendTo(item);
+                let button = $('<div class="buttons" onclick="deleteItem(this)"><button class="delete-btn"><i class="fas fa-times"></i></button></div>').appendTo(item);
+                let imgDiv = $('<div class="image"></div>');
+                let img = $('<img width="120" alt="">').attr('src', info[1]);
+
+                itemId.html(info[0]);
+
+                $(imgDiv).append(img).appendTo(item);
+               
+
+                let description = $('<div class="description"><span></span></div>');
+                description.text(info[2]).appendTo(item);
+
+                let quantity = $('<div class="quantity"><button class="minus-btn" type="button" name="button"><i class="fas fa-minus"></i></button><input type="text" name="name" value=""><button class="plus-btn" onclick="plusQuantity(this)" type="button" name="button"><i class="fas fa-plus"></i></button></div>').appendTo(item);
+                $(quantity).find('input').eq(0).attr('value', chosen.quantity);
+
+                let price = $('<div class="total-price"></div>');
+                $(price).text(separate(info[3]) + "đ X " + chosen.quantity).appendTo(item);
+
+                sum = sum + parseInt(info[3])*chosen.quantity
+                $('.money').eq(0).text(separate(sum));
+
+                addEvents();
+            }
+        }
+
+        function separate(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function deleteItem(x) {
+            console.log("x: " + $(x).html());
+
+            let item = $(x).parent();
+            console.log("item: " + $(item).html());
+
+            let i = $('.item').index(item);
+            console.log($('.item').index(item));
+
+            let target = $(item).parent().find('.item').eq(i);
+
+            $(target).hide('slow', function(){ $(target).remove(); });
+        }
+
+    </script>
+</body>
+</html>
