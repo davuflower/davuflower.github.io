@@ -2,8 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>About Us</title>
+    <style type="text/css">
 
+        .bodyAboutUs {
+            text-align: left;
+            max-width: 960px;
+            margin: 0 auto;
+            font-family:"Quicksand"
+        }
+
+        .line {
+            width: 960px;
+            color: thistle;
+        }
+    </style>
     <!--thu vien tham khao-->
 
     <link href=fontawesome/css/all.css rel="stylesheet" type="text/css">
@@ -13,21 +26,11 @@
     <script src="Jquery.js"></script>
     <script src="wow.min.js"></script>
     <script src="animate.js"></script>
-    <script type="text/javascript">
-        new WOW().init();
-    </script>
 
-    <style type="text/css">
-        .preload {
-            background-color: #E3E3E3;
-        }
-    </style>
-
-
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 </head>
-<body class="preload">
-
+<body>
+    <!--header-->
     <!--header và style của header-->
     <style type="text/css">
         @media screen and (min-width: 960px) {
@@ -41,9 +44,8 @@
                 padding-top: 12px
             }
 
-            .myDropdown
-            {
-                display:none;
+            .myDropdown {
+                display: none;
             }
 
             .header {
@@ -935,378 +937,32 @@
     <button id="scrollButton" class="gotoheader" onclick="scrollToHeader()">
         <i class="fas fa-chevron-up fa-3x"></i>
     </button>
-
-    <!--body và style của body-->
-    <style>
-        /**/
-        @media screen and (min-width: 960px) {
-            .banner
-            {
-                
-
-            }
-            .bana
-            {
-                text-decoration:none;
-                font-size:50px;
-                font-weight:bolder;
-                display:block;
-                cursor:pointer;
-                background-color:#faf0ff;
-                color:gray;
-            }
-            .bana:hover
-            {
-                background-color:#d4ade7;
-                color:white;
-            }
-
-            .body {
-                padding: 10px 150px;
-            }
-
-                .body > .banner {
-                    min-width: 100%;
-                    height: 600px;
-                    background-color: white;
-                    border-radius: 5px;
-                    display: flex;
-                    flex-flow: wrap column;
-                    justify-content: center;
-                    align-content: center;
-                }
-
-                    .body > .banner > img {
-                        width: 800px;
-                        height: 500px;
-                        background-color: #E3E3E3;
-                        border: 0;
-                        outline: 0;
-                    }
-
-                .body > .grid {
-                    margin-top: 10px;
-                    background-color: white;
-                    padding: 40px 30px;
-                    padding-bottom: 20px;
-                    border-radius: 5px;
-                }
-
-                    .body > .grid > .gridTitle {
-                        font-size: 35px;
-                        color: #484c7f;
-                        font-family: 'Montserrat', sans-serif;
-                        font-weight: 400;
-                        cursor: pointer;
-                        width: 400px;
-                        min-height: 25px;
-                        margin-bottom: 5px;
-                        /*border-radius: 5px;*/
-                    }
-
-                        .body > .grid > .gridTitle:hover {
-                            color: #8185b8;
-                        }
-
-                    .body > .grid > .gridContent {
-                        background-color: #ffffff;
-                        display: flex;
-                        flex-wrap: wrap;
-                        padding: 0 0;
-                        justify-content: space-between;
-                        margin-bottom: 0;
-                    }
-
-                    .body > .grid > .gridMore {
-                        text-align: center;
-                        cursor: pointer;
-                        font-size: 30px;
-                        color: #484c7f;
-                        background-color: #fff;
-                        margin-top: 10px;
-                        padding: 5px;
-                        margin-left: auto;
-                        margin-right: auto;
-                        font-family: 'Comfortaa', cursive;
-                        font-weight: bolder;
-                    }
-
-                        .body > .grid > .gridMore :hover {
-                            color: #a2a2a2;
-                        }
-
-                    .body > .grid > .gridContent > .item {
-                        width: 250px;
-                        text-align: center;
-                        display: flex;
-                        flex-flow: column wrap;
-                        min-height: 300px;
-                        justify-content: flex-end;
-                        margin: 15px 0;
-                    }
-
-            .itemId {
-                display: none;
-            }
-
-            .body > .grid > .gridContent > .item > .itemImg {
-                height: 180px;
-                width: 180px;
-                border: none;
-                background-color: #ffcccc;
-                margin-left: auto;
-                margin-right: auto;
-                align-self: flex-start;
-            }
-
-                .body > .grid > .gridContent > .item > .itemImg:hover {
-                    cursor: pointer;
-                }
-
-                .body > .grid > .gridContent > .item > .itemImg > img {
-                    width: 100%;
-                    border: none;
-                    width: 100%;
-                    height: 100%;
-                }
-
-            .body > .grid > .gridContent > .item > .itemName {
-                font-size: 18px;
-                color: #444444;
-                height: 35px;
-            }
-
-                .body > .grid > .gridContent > .item > .itemName:hover {
-                    color: #6f6f6f;
-                    cursor: pointer;
-                }
-
-                .body > .grid > .gridContent > .item > .itemName:active {
-                    color: #c2c0c0;
-                }
-
-                .body > .grid > .gridContent > .item > .itemName > a {
-                    text-decoration: none;
-                }
-
-            .body > .grid > .gridContent > .item > .itemPrice {
-                font-size: 25px;
-                font-weight: lighter;
-                font-family: HelveticaNeue,'Arial Rounded MT',Montserrat,HelveticaNeue, sans-serif,sans-serif,'Quicksand','Segoe UI';
-                color: #727272;
-                padding: 5px 0;
-            }
-
-                .body > .grid > .gridContent > .item > .itemPrice:hover {
-                    cursor: default;
-                }
-
-            .body > .grid > .gridContent > .item > .addToCart {
-                font-size: 18px;
-                background-color: #f1d0ff;
-                padding: 10px;
-                color: #008b8b;
-                font-weight: 700;
-                letter-spacing: 1px;
-            }
-
-                .body > .grid > .gridContent > .item > .addToCart:hover {
-                    background-color: #eec4ff;
-                    cursor: pointer;
-                }
-
-            .body > .grid > .gridContent > .item > .addToCart:active {
-                background-color: #ebb9ff;
-            }
-
-            .body > .grid > .gridContent > .item > .addToCart-mb
-            {
-                display:none;
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            .display:active {
-            }
-
-
-
-            /*phần preload*/
-
-
-
-            .preload > .body {
-                /*background-color: #FFFFFF;*/
-                padding: 10px 150px;
-            }
-
-                .preload > .body > .banner {
-                    min-width: 100%;
-                    height: 600px;
-                    background-color: white;
-                    border-radius: 5px;
-                    display: flex;
-                    flex-flow: wrap row;
-                    justify-content: center;
-                    align-content: center;
-                }
-
-                    .preload > .body > .banner > img {
-                        width: 800px;
-                        height: 500px;
-                        background-color: #E3E3E3;
-                        border: 0;
-                        outline: 0;
-                    }
-
-                .preload > .body > .grid {
-                    margin-top: 10px;
-                    background-color: white;
-                    padding: 40px 30px;
-                    padding-bottom: 20px;
-                    border-radius: 5px;
-                }
-
-                    .preload > .body > .grid > .gridTitle {
-                        background-color: #E3E3E3;
-                        width: 400px;
-                        min-height: 25px;
-                        /*border-radius: 5px;*/
-                        margin-bottom: 5px;
-                    }
-
-                    .preload > .body > .grid > .gridContent {
-                        /*width: 400px;*/
-                        min-height: 40px;
-                        /*border-radius: 5px;*/
-                        display: flex;
-                        flex-wrap: wrap;
-                        padding: 0 0;
-                        justify-content: space-between;
-                        margin-bottom: 0;
-                    }
-
-            .itemId {
-                display: none;
-                /*border-radius: 5px;*/
-            }
-
-            .preload > .body > .grid > .gridContent > .item {
-                background-color: #fff;
-                /*width: 400px;*/
-                min-height: 40px;
-                /*border-radius: 5px;*/
-                width: 250px;
-                text-align: center;
-                display: flex;
-                flex-flow: column wrap;
-                min-height: 300px;
-                justify-content: flex-end;
-                align-items: center;
-                margin: 15px 0;
-            }
-
-                .preload > .body > .grid > .gridContent > .item > .itemImg {
-                    /*Mockup propertise*/
-                    height: 180px;
-                    width: 180px;
-                    border: none;
-                    /*Real Propertise*/
-                    background-color: #E3E3E3;
-                    margin-left: auto;
-                    margin-right: auto;
-                    justify-self: flex-start;
-                }
-
-                .preload > .body > .grid > .gridContent > .item > .itemName {
-                    margin-top: 10px;
-                    background-color: #E3E3E3;
-                    height: 12px;
-                    width: 150px;
-                }
-
-                .preload > .body > .grid > .gridContent > .item > .itemPrice {
-                    height: 16px;
-                    width: 125px;
-                    margin-top: 10px;
-                    background-color: #E3E3E3;
-                    font-weight: lighter;
-                    /**/
-                }
-
-                .preload > .body > .grid > .gridContent > .item > .addToCart {
-                    margin-top: 10px;
-                    width: 180px;
-                    font-size: 18px;
-                    background-color: #E3E3E3;
-                    padding: 6px 0;
-                    color: #008b8b;
-                    font-weight: 700;
-                    letter-spacing: 1px;
-                    /**/
-                }
-
-                .body > .grid > .gridContent > .item > .addToCart-mb
-                {
-                    display:none;
-                }
-
-            .preload > .body > .grid > .gridMore {
-                text-align: center;
-                font-weight: 700;
-                font-size: 20px;
-            }
-        }
-    </style>
-
-    <!--html của body-->
-    <div class="body">
-        <div class="banner"><img /> <div style="display: flex; flex-flow:row; justify-content:center;"><div class="bana" onclick="changeBanner()">&lt;</div><div>&nbsp;</div><div class="bana" onclick="changeBanner()">&gt;</div></div>  </div>
-        <div class="grid">
-            <!--hàng 1-->
-            <div class="gridTitle"></div>
-            <!-- hàng 2-->
-            <div style="" class="gridContent">
-                <!--hình ảnh 1-->
-                <div class="item">
-                    <div class="itemId">&nbsp;</div>
-                    <div class="itemImg">&nbsp;</div>
-                    <div class="itemName">&nbsp;</div>
-                    <div class="itemPrice">&nbsp;</div>
-                    <div class="addToCart">&nbsp;</div>
-                    <div class="addToCart-mb">&nbsp;</div>
-                </div>
-
-                <!--hình ảnh 2-->
-                <div class="item">
-                    <div class="itemId">&nbsp;</div>
-                    <div class="itemImg">&nbsp;</div>
-                    <div class="itemName">&nbsp;</div>
-                    <div class="itemPrice">&nbsp;</div>
-                    <div class="addToCart">&nbsp;</div>
-                    <div class="addToCart-mb">&nbsp;</div>
-                </div>
-                <!--hình ảnh 3-->
-                <div class="item">
-                    <div class="itemId">&nbsp;</div>
-                    <div class="itemImg">&nbsp;</div>
-                    <div class="itemName">&nbsp;</div>
-                    <div class="itemPrice">&nbsp;</div>
-                    <div class="addToCart">&nbsp;</div>
-                    <div class="addToCart-mb">&nbsp;</div>
-                </div>
-                <!--hình ảnh 4-->
-
+    <!--body-->
+    <div class="bodyAboutUs">
+        <div style="padding-top:30px;padding-bottom:10px;width:960px">
+            <a href="index.html" title="Trở lại trang chủ">Trang chủ</a>
+            &nbsp;&nbsp; >&nbsp;&nbsp; Về chúng tôi
+        </div>
+        <hr class="line" />
+        <div>
+            <div style="padding-top:30px;padding-bottom:10px">Dạ Vũ Flower là đơn vị hàng đầu cung cấp các loại hoa tươi với mẫu mã đẹp, chất lượng và giá cả hợp lý trên thị trường hoa hiện tại. Với sứ mệnh đem đến cho khách hàng những sản phẩm tốt và giá cả hợp lý, chúng tôi đã liên kết và hợp tác với các nhà vườn trồng hoa nổi tiếng tại Đà Lạt để tạo ra những bó hoa tươi và rực rỡ.</div>
+            <div style="padding-top:30px;padding-bottom:10px"> Tại Dạ Vũ Flower, bạn có thể mua những bó hoa tươi được gói một cách tỉ mỉ và sang trọng. Chúng tôi cung cấp cho khách hàng với đa dạng loại hoa như: Hoa Hồng, Hoa Cúc, Hoa Hướng Dương, Sen Đá, Hoa Cẩm Chướng, Hoa Đồng Tiền, ... Ngoài ra, nhằm giúp khách hàng có thêm nhiều lựa chọn quà tặng và tiện lợi hơn cho việc chọn hoa phù hợp cho từng dịp cụ thể, chúng tôi đã phân chia các loại hoa theo các chủ đề như: Hoa sinh nhật, Hoa cầu hôn, Hoa chúc mừng, ... </div>
+            <div style="padding-top:30px;padding-bottom:10px"> Ngoài những bó hoa xinh đẹp thì một món quà hoàn hảo còn cần đến những quà tặng đi kèm như Kẹo, Bánh Kem, Gấu Bông, ... bạn hoàn toàn có thể có một món quà hoàn hảo và tuyệt vời đó để dành tặng cho những người yêu thương của mình.</div>
+            <div style="padding-top:30px;padding-bottom:10px">
+                Khi đặt hàng tại Dạ Vũ Flower, bạn sẽ nhận được nhiều ưu đãi từ chúng tôi.
+                <ul>
+                    <li>Được hoàn tiền 100% nếu sản phẩm lỗi và không giống với hình trên Website.</li>
+                    <li>Được giảm phí giao hàng 10% trên tất cả các hóa đơn nếu đăng kí thành viên trên 5 tháng.</li>
+                    <li>Được miễn phí giao hàng miễn phí đối với hóa đơn trên 200.000VND.</li>
+                </ul>
             </div>
-            <!--hàng 3-->
-            <div class="gridMore" onclick="themItem(this)">
-                <div>+</div>
+            <div>
+                <img src="../../AllImages/Aboutus1.jpg" />
+                <img src="../../AllImages/Aboutus2.jpg" />
             </div>
         </div>
     </div>
-
+    <!--footer-->
     <!--footer và style của footer-->
     <style type="text/css">
         .wrapperFtr {
@@ -1344,11 +1000,11 @@
 
             .itemFtr ul li {
                 padding: 5px 0;
-                
             }
-            .itemFtr ul li a{
-                text-decoration:none;
-            }
+
+                .itemFtr ul li a {
+                    text-decoration: none;
+                }
 
         .socialFtr {
             margin: 1rem;
@@ -1386,7 +1042,7 @@
                             Đánh giá từ khách hàng
 
                         </li>
-                        
+
                         <li>
                             Doanh nghiệp
 
@@ -1399,7 +1055,7 @@
                             Blog
 
                         </li>
-                        
+
                     </ul>
                 </div>
                 <div class="itemFtr">
@@ -1459,7 +1115,7 @@
                         <li>Marketing: marketing@davuflower.vn</li>
                     </ul>
                 </div>
-                
+
             </div>
             <!--các mạng xã hội-->
             <div>
@@ -1478,526 +1134,5 @@
             </div>
         </div>
     </div>
-
-    <!--phan code hidden-->
-
-    <form id="frmChiTiet" action="chitietsanpham.html" style="display:none;">
-        <input type="text" value="" name="idSanPham"/>
-        <input type="submit" name="subChiTiet" />
-    </form>
-
-    <!--phần js load data va xu ly nguyen trang-->
-   
-    <script type="text/javascript">
-
-        new WOW().init();
-
-        preloadData();
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-
-        /*hàm giả loadData*/
-
-
-
-
-
-        function preloadData() {
-            var gridContent = document.getElementsByClassName("gridContent")[0];
-            var item = gridContent.getElementsByClassName("item")[0];
-            var itemRect = item.getBoundingClientRect();
-            var gridContentRect = gridContent.getBoundingClientRect();
-
-            var numberOfItemOnRow = (Math.floor(gridContentRect.width / itemRect.width));
-
-
-            var spaceBetweenItems = (gridContentRect.width - numberOfItemOnRow * itemRect.width) / (numberOfItemOnRow - 1);
-            var spaceRate = spaceBetweenItems / gridContentRect.width;
-            if (spaceRate < 0.04)
-                numberOfItemOnRow = numberOfItemOnRow - 1;
-
-
-            //mobile version
-            //if (numberOfItemOnRow <= 2)
-            //    alert(numberOfItemOnRow + " " + window.outerWidth + " " + window.innerWidth);
-
-            //alert(numberOfItemOnRow);
-            gridContent.innerHTML = "";
-            for (var i = 0; i < numberOfItemOnRow; i++) {
-                var newItem = document.createElement("div");
-                newItem.className = "item";
-                newItem.innerHTML += item.innerHTML;
-                gridContent.appendChild(newItem);
-            }
-        }
-
-        function countItemOnRow() {
-            var gridContent = document.getElementsByClassName("gridContent")[0];
-            var item = gridContent.getElementsByClassName("item")[0];
-            var itemRect = item.getBoundingClientRect();
-            var gridContentRect = gridContent.getBoundingClientRect();
-
-            var numberOfItemOnRow = (Math.floor(gridContentRect.width / itemRect.width));
-
-
-            var spaceBetweenItems = (gridContentRect.width - numberOfItemOnRow * itemRect.width) / (numberOfItemOnRow - 1);
-            var spaceRate = spaceBetweenItems / gridContentRect.width;
-            if (spaceRate < 0.04)
-                numberOfItemOnRow = numberOfItemOnRow - 1;
-            return numberOfItemOnRow;
-        }
-        function loadedData() {
-            var preloadDiv = document.getElementsByClassName("preload")[0];
-            preloadDiv.className = '';
-
-            var gridContentDau = document.getElementsByClassName("gridContent")[0];
-            var gridContentDauLength = gridContentDau.children.length;
-            for (var i = 0; i < gridContentDauLength; i++) {
-                var itemId = gridContentDau.children[0].children[0].innerHTML;
-                if (itemId == '&nbsp;') {
-                    gridContentDau.removeChild(gridContentDau.children[0]);
-                }
-            }
-
-        }
-
-
-        function scrollFunction() {
-
-
-
-
-            var scrollButton = document.getElementById("scrollButton")
-            var header = document.getElementsByClassName("header")[0];
-            var shopName = document.getElementById("shopname");
-            var shopSlogan = document.getElementById("slogan");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollButton.style.display = "block";
-                header.style.backgroundColor = "transparent";
-                shopName.style.display = "none";
-                shopSlogan.style.display = "none";
-
-            } else {
-                scrollButton.style.display = "none";
-                header.style.backgroundColor = "white";
-                shopName.style.display = "block";
-                shopSlogan.style.display = "block";
-            }
-
-
-            ///
-
-            var allDropDownList = document.getElementsByClassName("dropdown-content");
-            var i = 1;
-            for (i = 0; i < allDropDownList.length; i++) {
-                allDropDownList[i].style.display = "none";
-            }
-        }
-
-
-        function changeBanner() {
-            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
-            var srcPath = img.src;
-            if (srcPath.includes("1.png")) {
-                img.src = banners[1];
-            }
-            else {
-                img.src = banners[0];
-            }
-        }
-        function scrollToHeader() {
-            var html = document.getElementsByTagName("html")[0];
-            html.style.scrollBehavior = "smooth"
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0;  // For Chrome, Firefox, IE and Opera
-        }
-       
-
-        var product;
-        var category;
-        var gift;
-        var loadHomePage = 0;
-        var localStorage = window.localStorage;
-        var cart = [];
-
-
-        $(document).ready(function () {
-            if (reload()) {
-                loadPage();
-                $(document).load('home.html #body')
-            }
-        });
-
-        function reload() {
-            if (loadHomePage == 0) {
-                loadHomePage == 1;
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        //function loadPage() {
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_sanpham.json',
-        //        dataType: 'json',
-        //        success: function (json) {
-        //            product = json
-        //        }
-        //    });
-
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_quatangkem.json',
-        //        dataType: 'json',
-        //        success: function (json) {
-        //            gift = json
-        //        }
-        //    });
-
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_homepage.json',
-        //        dataType: 'json',
-        //        variable: 'category',
-        //        callback: 'function () { loadHomepage(product) }',
-        //        success: function (json) {
-        //            category = json
-        //            loadHomepage(product)
-        //            loadedData();
-        //        }
-        //    });
-
-        //}
-        var banners = ['AllImages/banner 1.png', 'AllImages/banner 2.png'];
-
-        function loadPage() {
-
-           
-
-            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
-            img.src = banners[0];
-            
-            //
-            $.ajax({
-                type: 'GET',
-                url: 'data/data_sanpham.json',
-                dataType: 'json',
-                success: function (json) {
-                    product = json
-                      $.ajax({
-                        type: 'GET',
-                        url: 'data/data_quatangkem.json',
-                        dataType: 'json',
-                        success: function (json) {
-                            gift = json
-
-                            $.ajax({
-                            type: 'GET',
-                            url: 'data/data_homepage.json',
-                            dataType: 'json',
-                            variable: 'category',
-                            callback: 'function () { loadHomepage(product) }',
-                            success: function (json) {
-                                category = json
-                                loadHomepage(product)
-                                loadedData();
-                            }
-                        })
-                        }
-                    })
-                }
-            });
-
-
-        }
-
-
-        function loadHomepage(product) {
-            let firstGrid = true;
-            category.forEach(function (e) {
-                let gridContent = "";
-                if (firstGrid) {
-                    firstGrid = false;
-                    buildFirstGrid(e);
-
-                } else {
-                    let body = $("body");
-                    let grid = $("<div class='grid'></div>").insertAfter($(".grid").eq($(".grid").length - 1));
-
-                    let gridTitle = $("<div class='gridTitle'></div>");
-                    $(gridTitle).text(e.title).appendTo(grid);
-                    setTitleStyle(gridTitle)
-
-                    gridContent = $("<div class='gridContent'></div>");
-                    $(gridContent).insertAfter(gridTitle);
-
-                    addItem1(e.items, gridContent, product);
-                    addWatchMore1(null, gridContent);
-                }
-            })
-        }
-
-        function moreItem(x) {
-            let lastGridTitleText = $(x).parent().find(".gridTitle").eq(0).text();
-
-            let gridContent = $(x).parent().find(".gridContent");
-            let lastGridContentIndex = $(gridContent).length - 1;
-            let lastAddedItem = $(gridContent).eq(lastGridContentIndex).find(".item").eq(2);
-            let lastAddedItemId = $(lastAddedItem).find(".itemId").text();
-
-            var array;
-            category.forEach(function (x) {
-                if (x.title.includes(lastGridTitleText)) {
-                    array = x.items
-                }
-            });
-
-            if (jQuery.inArray(lastAddedItemId, array)) {
-                let newGridContent = $("<div class='gridContent'><div>").empty()
-                $(newGridContent).insertAfter($(gridContent).eq(lastGridContentIndex));
-
-                var val = lastAddedItemId;
-                var index;
-                array.find(function (item, i) {
-                    if (item === val) {
-                        index = i;
-                        return;
-                    }
-                });
-
-                var cloneArray = array.slice();
-                var productId = cloneArray.splice(index + 1);
-
-                addItem2(productId, newGridContent, product, $(x).parent());
-            }
-        }
-
-        function getProductIdByCategory(lastGridTitleText, array) {
-            category.forEach(function (x) {
-                if (x.title.includes(lastGridTitleText)) {
-                    array = new Array(x.items);
-                }
-            });
-            return array;
-        }
-
-        function buildFirstGrid(e) {
-            let grid = $(".grid")
-
-            let gridTitle = $(grid).eq(0).find(".gridTitle")
-            $(gridTitle).eq(0).text(e.title);
-            setTitleStyle(gridTitle)
-
-            gridContent = $(grid).eq(0).find(".gridContent")
-
-            var productId = e.items;
-
-            addItem1(productId, gridContent, product);
-            addWatchMore1(grid, gridContent);
-        }
-
-        function setTitleStyle(gridTitle) {
-            $(gridTitle).css("background-color", "transparent");
-        }
-
-        function addItem2(productId, gridContent, product, grid) {
-            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
-                var item = $("<div class='item'></item>").appendTo(gridContent);
-                let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
-
-                if (productId[i].includes("sp")) {
-                    for (let j = 0; j < product.length && showItem < 3; j++) {
-                        if (product[j].id.includes(productId[i])) {
-                            addProductItemAttr(item, j);
-                            break;
-                        }
-                    }
-                }
-
-                if (productId[i].includes("qt")) {
-                    for (let j = 0; j < gift.length && showItem < 3; j++) {
-                        if (gift[j].id.includes(productId[i])) {
-                            addGiftItemAttr(item, j)
-                            break;
-                        }
-                    }
-                }
-                //console.log("i : " + i + " max: " + (productId.length - 1));
-                addWatchMore2(grid, gridContent, i, productId.length - 1);
-                removeItemBackGroundColor(item)
-            }
-        }
-
-        function addProductItemAttr(item, j) {
-            let img = $("<img></img>").attr("src", "data" + product[j].imgLink);
-            $("<div class='itemImg'></div>").append(img).appendTo(item)
-            $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(product[j].title).appendTo(item)
-            $("<div class='itemPrice'></div>").text(product[j].price).appendTo(item)
-            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
-            $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
-        }
-
-        function addGiftItemAttr(item, j) {
-            let img = $("<img></img>").attr("src", "data" + gift[j].imgLink);
-            $("<div class='itemImg'></div>").append(img).appendTo(item)
-            $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(gift[j].title).appendTo(item)
-            $("<div class='itemPrice'></div>").text(gift[j].price).appendTo(item)
-            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
-            $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
-        }
-
-        //function addItem1(productId, gridContent, product) {
-        //    for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
-        //        var item = $("<div class='item'></item>").appendTo(gridContent);
-        //        let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
-
-        //        if (productId[i].includes("sp")) {
-        //            for (let j = 0; j < product.length && showItem < 3; j++) {
-        //                if (product[j].id.includes(productId[i])) {
-        //                    addProductItemAttr(item, j);
-        //                    break;
-        //                }
-        //            }
-        //        }
-
-        //        if (productId[i].includes("qt")) {
-        //            for (let j = 0; j < gift.length && showItem < 3; j++) {
-        //                if (gift[j].id.includes(productId[i])) {
-        //                    addGiftItemAttr(item, j)
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //        //console.log("i : " + i + " max: " + (productId.length - 1));
-        //        removeItemBackGroundColor(item)
-        //    }
-        //}
-
-        function addItem1(productId, gridContent, product) {
-            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
-                var item = $("<div class='item'></item>").appendTo(gridContent);
-                let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
-
-                if (productId[i].includes("sp")) {
-                    for (let j = 0; j < product.length && showItem < 3; j++) {
-                        if (product[j].id.includes(productId[i])) {
-                            addProductItemAttr(item, j);
-                            break;
-                        }
-                    }
-                }
-
-                if (productId[i].includes("qt")) {
-                    for (let j = 0; j < gift.length && showItem < 3; j++) {
-                        if (gift[j].id.includes(productId[i])) {
-                            addGiftItemAttr(item, j)
-                            break;
-                        }
-                    }
-                }
-                //console.log("i : " + i + " max: " + (productId.length - 1));
-                removeItemBackGroundColor(item)
-            }
-        }
-
-        function addWatchMore1(previousGrid, gridContent) {
-            let previousGridMore = $(previousGrid).find(".gridMore").eq(0).html()
-            if (previousGridMore === undefined) {
-                let watchMore = $("<div></div>").text("+")
-                $("<div class='gridMore' onclick='moreItem(this)'></div>").append(watchMore).insertAfter(gridContent)
-            }
-        }
-
-        function addWatchMore2(previousGrid, gridContent, lastIndex, maxIndex) {
-
-            let previousGridMore = $(previousGrid).find(".gridMore").eq(0).html()
-            if (previousGridMore === undefined && lastIndex + 3 < maxIndex) {
-                let watchMore = $("<div></div>").text("+")
-                $("<div class='gridMore' onclick='moreItem(this)'></div>").append(watchMore).insertAfter(gridContent)
-            }
-            if (lastIndex + 3 > maxIndex) {
-                $(previousGrid).find(".gridMore").remove();
-            }
-        }
-
-
-        function removeItemBackGroundColor(item) {
-            let name = $(item).find(".itemName").eq(0);
-            let price = $(item).find(".itemPrice").eq(0);
-            let cart = $(item).find(".addToCart").eq(0);
-            let cartMb = $(item).find(".addToCart-mb").eq(0);
-
-            name.css("background-color", "transparent");
-            price.css("background-color", "transparent");
-        }
-
-       function addToCart(x) {
-
-            let id = $(x).parent().find(".itemId").eq(0);
-            let img = $(x).parent().find(".itemImg").eq(0).find("img").attr("src");
-            let name = $(x).parent().find(".itemName").eq(0);
-            let price = $(x).parent().find(".itemPrice").eq(0);
-
-            subCart = [];
-            subCart.push(id.text(), img, name.text(), price.text());
-
-            if (!isChosen(cart, id.text())) {
-                var item = { "time": (new Date()), "quantity": 1, "info": JSON.stringify(subCart) }
-                cart.push(item)
-           }
-           setNotification(cart);
-            localStorage.setItem("cart", JSON.stringify(cart));
-
-            $(x).parent().addClass("wow fadeOutUp animated");
-            $(x).parent().attr("style", "animation-name: fadeInUp;");
-
-            setInterval(function () { removeAnimationAddToCart(x) }, 1500);
-        }
-
-        function removeAnimationAddToCart(x) {
-            $(x).parent().removeClass("wow fadeOutUp animated");
-            $(x).parent().removeAttr("style");
-            $(x).parent().attr("style", "z-index:0")
-        }
-
-        function isChosen(cart, id) {
-            for (var i = 0; i < cart.length; i++) {
-                if (cart[i].info.includes(id)) {
-                    cart[i].quantity = parseInt(cart[i].quantity) + 1;
-                    return true;
-                }
-            }
-        }
-
-
-        function addEvent() {
-            var items = document.getElementsByClassName('item');
-            var itemsLength = items.length;
-            for (var i = 0; i < itemsLength; i++) {
-                var itemName = items[i].getElementsByClassName('itemName')[0];
-                itemName.onclick = 'openDetailLink(this);';
-            }
-            
-
-        }
-
-        function openDetailLink(itemName) {
-            var itemId = itemName.parentNode.children[0].innerHTML;
-            //
-            frmChiTiet.idSanPham.value = itemId;
-            frmChiTiet.subChiTiet.click();
-        }
-
-        function setNotification(cart) {
-            let notification = $('.shopping-cart>.notify-container>.notify-bubble').eq(0);
-            $(notification).empty();
-            $(notification).eq(0).text(cart.length)
-            $(notification).show(400);
-        }
-    </script>
 </body>
 </html>
