@@ -1494,11 +1494,12 @@
     </div>
 
     <script>
-        setNotification(localStorage.cart)
+        setNotification(window.localStorage.cart)
         function setNotification(cart) {
             let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
             $(notification).empty();
-            $(notification).eq(0).text(cart.length)
+            var cartJson = JSON.parse(cart);
+            $(notification).eq(0).text(cartJson.length)
             $(notification).show(400);
         }
     </script>
