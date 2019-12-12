@@ -1,34 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title></title>
-
-    <!--thu vien tham khao-->
-
     <link href=fontawesome/css/all.css rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
-    
+
 
     <script src="Jquery.js"></script>
     <script src="wow.min.js"></script>
     <script src="animate.js"></script>
-    <script type="text/javascript">
-        new WOW().init();
-    </script>
-
-    <style type="text/css">
-        .preload {
-            background-color: #E3E3E3;
-        }
-    </style>
-
-
-
 </head>
 <body class="preload">
-
     <!--header và style của header-->
     <style type="text/css">
         @media screen and (min-width: 960px) {
@@ -827,16 +811,11 @@
                     <a style="
                         padding: 11px 44px;" href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Chủ đề</a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="clickTitle(this)">Sản phẩm nổi bật</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Sinh Nhật</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Tình Yêu</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Kỷ Niệm</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Cầu Hôn</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Chúc Mừng</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Cảm Ơn </a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Chúc Sức Khoẻ</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Mừng Tốt Nghiệp</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Xin lỗi</a>
+                        <a href="#">Sản phẩm mới</a>
+                        <a href="#">Hoa Sinh Nhật</a>
+                        <a href="#">Hoa Tình Yêu</a>
+                        <a href="#">Hoa Chúc Mừng</a>
+                        <a href="#">Hoa Cầu Hôn</a>
                     </div>
                 </li>
                 <li>
@@ -845,12 +824,12 @@
                         Loại hoa
                     </a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="clickTitle(this)">Hoa Hồng</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Hướng Dương</a>
-                        <a href="#" onclick="clickTitle(this)">Sen Đá</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Đồng Tiền</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Cúc</a>
-                        <a href="#" onclick="clickTitle(this)">Hoa Cẩm Chướng</a>
+                        <a href="#">Hoa Hồng</a>
+                        <a href="#">Hoa Hướng Dương</a>
+                        <a href="#">Sen Đá</a>
+                        <a href="#">Hoa Đồng Tiền</a>
+                        <a href="#">Hoa Cúc</a>
+                        <a href="#">Hoa Cẩm Chướng</a>
                     </div>
                 </li>
                 <li>
@@ -858,9 +837,9 @@
                         padding: 11px 34px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Quà tặng</a>
 
                     <div class="dropdown-content">
-                        <a href="#" onclick="clickTitle(this)">Gấu Bông</a>
-                        <a href="#" onclick="clickTitle(this)">Kẹo</a>
-                        <a href="#" onclick="clickTitle(this)">Bánh Kem</a>
+                        <a href="#">Gấu Bông</a>
+                        <a href="#">Kẹo</a>
+                        <a href="#">Bánh Kem</a>
 
                     </div>
                 </li>
@@ -1269,7 +1248,7 @@
         };
 
 
-         function scrollFunction() {
+        function scrollFunction() {
 
 
 
@@ -1311,9 +1290,326 @@
 
     </script>
 
-    <!--html của body-->
+    <!--body và style của body-->
+    <style>
+        /**/
+        @media screen and (min-width: 960px) {
+            .banner {
+            }
+
+            .bana {
+                text-decoration: none;
+                font-size: 50px;
+                font-weight: bolder;
+                display: block;
+                cursor: pointer;
+                background-color: #faf0ff;
+                color: gray;
+            }
+
+                .bana:hover {
+                    background-color: #d4ade7;
+                    color: white;
+                }
+
+            .body {
+                padding: 10px 150px;
+            }
+
+                .body > .banner {
+                    min-width: 100%;
+                    height: 600px;
+                    background-color: white;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: wrap column;
+                    justify-content: center;
+                    align-content: center;
+                }
+
+                    .body > .banner > img {
+                        width: 800px;
+                        height: 500px;
+                        background-color: #E3E3E3;
+                        border: 0;
+                        outline: 0;
+                    }
+
+                .body > .grid {
+                    margin-top: 10px;
+                    background-color: white;
+                    padding: 40px 30px;
+                    padding-bottom: 20px;
+                    border-radius: 5px;
+                }
+
+                    .body > .grid > .gridTitle {
+                        font-size: 35px;
+                        color: #484c7f;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 400;
+                        cursor: pointer;
+                        width: 400px;
+                        min-height: 25px;
+                        margin-bottom: 5px;
+                        /*border-radius: 5px;*/
+                    }
+
+                        .body > .grid > .gridTitle:hover {
+                            color: #8185b8;
+                        }
+
+                    .body > .grid > .gridContent {
+                        background-color: #ffffff;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 0;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                    }
+
+                    .body > .grid > .gridMore {
+                        text-align: center;
+                        cursor: pointer;
+                        font-size: 30px;
+                        color: #484c7f;
+                        background-color: #fff;
+                        margin-top: 10px;
+                        padding: 5px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-family: 'Comfortaa', cursive;
+                        font-weight: bolder;
+                    }
+
+                        .body > .grid > .gridMore :hover {
+                            color: #a2a2a2;
+                        }
+
+                    .body > .grid > .gridContent > .item {
+                        width: 250px;
+                        text-align: center;
+                        display: flex;
+                        flex-flow: column wrap;
+                        min-height: 300px;
+                        justify-content: flex-end;
+                        margin: 15px 0;
+                    }
+
+            .itemId {
+                display: none;
+            }
+
+            .body > .grid > .gridContent > .item > .itemImg {
+                height: 180px;
+                width: 180px;
+                border: none;
+                background-color: #ffcccc;
+                margin-left: auto;
+                margin-right: auto;
+                align-self: flex-start;
+            }
+
+                .body > .grid > .gridContent > .item > .itemImg:hover {
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .itemImg > img {
+                    width: 100%;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            .body > .grid > .gridContent > .item > .itemName {
+                font-size: 18px;
+                color: #444444;
+                height: 35px;
+            }
+
+                .body > .grid > .gridContent > .item > .itemName:hover {
+                    color: #6f6f6f;
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .itemName:active {
+                    color: #c2c0c0;
+                }
+
+                .body > .grid > .gridContent > .item > .itemName > a {
+                    text-decoration: none;
+                }
+
+            .body > .grid > .gridContent > .item > .itemPrice {
+                font-size: 25px;
+                font-weight: lighter;
+                font-family: HelveticaNeue,'Arial Rounded MT',Montserrat,HelveticaNeue, sans-serif,sans-serif,'Quicksand','Segoe UI';
+                color: #727272;
+                padding: 5px 0;
+            }
+
+                .body > .grid > .gridContent > .item > .itemPrice:hover {
+                    cursor: default;
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart {
+                font-size: 18px;
+                background-color: #f1d0ff;
+                padding: 10px;
+                color: #008b8b;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+
+                .body > .grid > .gridContent > .item > .addToCart:hover {
+                    background-color: #eec4ff;
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .addToCart:active {
+                    background-color: #ebb9ff;
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart-mb {
+                display: none;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .display:active {
+            }
+
+
+
+            /*phần preload*/
+
+
+
+            .preload > .body {
+                /*background-color: #FFFFFF;*/
+                padding: 10px 150px;
+            }
+
+                .preload > .body > .banner {
+                    min-width: 100%;
+                    height: 600px;
+                    background-color: white;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: wrap row;
+                    justify-content: center;
+                    align-content: center;
+                }
+
+                    .preload > .body > .banner > img {
+                        width: 800px;
+                        height: 500px;
+                        background-color: #E3E3E3;
+                        border: 0;
+                        outline: 0;
+                    }
+
+                .preload > .body > .grid {
+                    margin-top: 10px;
+                    background-color: white;
+                    padding: 40px 30px;
+                    padding-bottom: 20px;
+                    border-radius: 5px;
+                }
+
+                    .preload > .body > .grid > .gridTitle {
+                        background-color: #E3E3E3;
+                        width: 400px;
+                        min-height: 25px;
+                        /*border-radius: 5px;*/
+                        margin-bottom: 5px;
+                    }
+
+                    .preload > .body > .grid > .gridContent {
+                        /*width: 400px;*/
+                        min-height: 40px;
+                        /*border-radius: 5px;*/
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 0;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                    }
+
+            .itemId {
+                display: none;
+                /*border-radius: 5px;*/
+            }
+
+            .preload > .body > .grid > .gridContent > .item {
+                background-color: #fff;
+                /*width: 400px;*/
+                min-height: 40px;
+                /*border-radius: 5px;*/
+                width: 250px;
+                text-align: center;
+                display: flex;
+                flex-flow: column wrap;
+                min-height: 300px;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 15px 0;
+            }
+
+                .preload > .body > .grid > .gridContent > .item > .itemImg {
+                    /*Mockup propertise*/
+                    height: 180px;
+                    width: 180px;
+                    border: none;
+                    /*Real Propertise*/
+                    background-color: #E3E3E3;
+                    margin-left: auto;
+                    margin-right: auto;
+                    justify-self: flex-start;
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .itemName {
+                    margin-top: 10px;
+                    background-color: #E3E3E3;
+                    height: 12px;
+                    width: 150px;
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .itemPrice {
+                    height: 16px;
+                    width: 125px;
+                    margin-top: 10px;
+                    background-color: #E3E3E3;
+                    font-weight: lighter;
+                    /**/
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .addToCart {
+                    margin-top: 10px;
+                    width: 180px;
+                    font-size: 18px;
+                    background-color: #E3E3E3;
+                    padding: 6px 0;
+                    color: #008b8b;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    /**/
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart-mb {
+                display: none;
+            }
+
+            .preload > .body > .grid > .gridMore {
+                text-align: center;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+    </style>
     <div class="body">
-        <div class="banner"><img /> <div style="display: flex; flex-flow:row; justify-content:center;"><div class="bana" onclick="changeBanner()">&lt;</div><div>&nbsp;</div><div class="bana" onclick="changeBanner()">&gt;</div></div>  </div>
         <div class="grid">
             <!--hàng 1-->
             <div class="gridTitle"></div>
@@ -1356,6 +1652,7 @@
             </div>
         </div>
     </div>
+
 
     <!--footer và style của footer-->
     <style type="text/css">
@@ -1556,25 +1853,202 @@
         <input type="submit" name="subChiTiet" />
     </form>
 
-    <form id="frmDanhMuc" action="danhmucsanpham.html" style="display:none">
-        <input type="text" value="" name="idDanhMuc" />
-        <input type="submit" name="subDanhMuc" />
-    </form>
-
-    <!--phần js load data va xu ly nguyen trang-->
+    <!--code xu ly chung-->
 
     <script type="text/javascript">
+        var url = new URL(window.location.href);
+        var idDanhMuc = url.searchParams.get("idDanhMuc");
 
-        new WOW().init();
+
+        var gift;
+        var category;
+        var product;
 
         preloadData();
+        //
+        loadData();
        
 
-        /*hàm giả loadData*/
+
+        function loadData() {
+            $.ajax({
+                type: 'GET',
+                url: 'data/data_sanpham.json',
+                dataType: 'json',
+                success: function (json) {
+                    product = json
+                    $.ajax({
+                        type: 'GET',
+                        url: 'data/data_quatangkem.json',
+                        dataType: 'json',
+                        success: function (json) {
+                            gift = json
+
+                            $.ajax({
+                                type: 'GET',
+                                url: 'data/data_danhmuc.json',
+                                dataType: 'json',
+                                variable: 'category',
+                                callback: 'function () { loadPage(product) }',
+                                success: function (json) {
+                                    category = json
+                                    loadPage()
+                                    addEvent();
+                                    loadedData();
+                                }
+                            })
+                        }
+                    })
+                }
+            });
+        }
+
+
+        function loadPage() {
+            var itemFound = null;
+
+
+            if (idDanhMuc == null || idDanhMuc == '')
+                return;
+            //kiem trong category
+
+            document.getElementsByClassName("gridTitle")[0].innerHTML = idDanhMuc;
+
+            var catLen = category.category.length;
+            for (var i = 0; i < catLen; i++) {
+                if (category.category[i].title == idDanhMuc) {
+                    itemFound = category.category[i];
+                    break;
+                }
+            }
+
+            var tyLen = category.type.length;
+            for (var i = 0; i < tyLen; i++) {
+                if (category.type[i].title == idDanhMuc) {
+                    itemFound = category.type[i];
+                    break;
+                }
+            }
+
+            if (itemFound != null) {
+                var itemLength = itemFound.items.length;
+                var items = itemFound.items;
+
+
+                //
+                var gridContent = document.getElementsByClassName("gridContent")[0];
+                gridContent.innerHTML = '';
+
+
+
+                for (var i = 0; i < itemLength; i++) {
+
+                    var item = document.createElement('div');
+                    item.className = 'item';
+
+                    var itemId = document.createElement('div');
+                    itemId.className = 'itemId';
+
+                    var itemImg = document.createElement('div');
+                    itemImg.className = 'itemImg';
+
+                    var theImg = document.createElement('img');
 
 
 
 
+                    var itemName = document.createElement('div');
+                    itemName.className = 'itemName';
+
+
+
+                    var itemPrice = document.createElement('div');
+                    itemPrice.className = 'itemPrice';
+
+                    var itemPriceUnit = document.createElement("sup");
+
+                    //itemPriceUnit.style.fontSize = (eval(itemPrice.style.fontSize.substr(-2)) * 80%) +"px";
+                    itemPriceUnit.innerHTML = 'đ';
+
+                    var addToCart = document.createElement('div');
+                    addToCart.className = 'addToCart';
+
+                    var addToCartmb = document.createElement('div');
+                    addToCartmb.className = 'addToCart-mb';
+                    //
+
+                    item.appendChild(itemId);
+                    item.appendChild(itemImg);
+                    item.appendChild(itemName);
+                    item.appendChild(itemPrice);
+                    item.appendChild(addToCart);
+                    item.appendChild(addToCartmb);
+                    itemImg.appendChild(theImg);
+
+                    //var size = itemPrice.style.fontSize;
+
+
+                    var stt = -1;
+                    if ((stt = searchInProduct(items[i])) > -1) {
+
+                        itemId.innerHTML = product[stt].id;
+                        itemName.innerHTML = product[stt].title;
+                        itemPrice.innerHTML = product[stt].price;
+                        itemPrice.appendChild(itemPriceUnit);
+                        theImg.src = "data" + product[stt].imgLink;
+                        addToCart.innerHTML = 'Add to cart';
+                        addToCartmb.innerHTML = 'Add'
+                        gridContent.appendChild(item);
+
+                    }
+                    if ((stt = searchInGift(items[i])) > -1) {
+                        itemId.innerHTML = gift[stt].id;
+                        itemName.innerHTML = gift[stt].title;
+                        itemPrice.innerHTML = gift[stt].price;
+                        itemPrice.appendChild(itemPriceUnit);
+                        theImg.src = "data" + gift[stt].imgLink;
+                        addToCart.innerHTML = 'Add to cart';
+                        addToCartmb.innerHTML = 'Add';
+                        gridContent.appendChild(item);
+                    }
+                }
+            }
+
+        }
+
+        function searchInProduct(itemId) {
+            var proLen = product.length;
+            for (var i = 0; i < proLen; i++) {
+                if (product[i].id == itemId)
+                    return i;
+            }
+            return -1;
+        }
+
+        function searchInGift(itemId) {
+            var gifLen = gift.length;
+            for (var i = 0; i < gifLen; i++) {
+                if (gift[i].id == itemId)
+                    return i;
+            }
+            return -1;
+        }
+
+
+        function loadedData() {
+            var preloadDiv = document.getElementsByClassName("preload")[0];
+            preloadDiv.className = '';
+
+            //var gridContentDau = document.getElementsByClassName("gridContent")[0];
+            //var gridContentDauLength = gridContentDau.children.length;
+            //for (var i = 0; i < gridContentDauLength; i++) {
+            //    var itemId = gridContentDau.children[0].children[0].innerHTML;
+            //    if (itemId == '&nbsp;') {
+            //        gridContentDau.removeChild(gridContentDau.children[0]);
+            //    }
+            //}
+
+        }
 
         function preloadData() {
             var gridContent = document.getElementsByClassName("gridContent")[0];
@@ -1620,411 +2094,7 @@
                 numberOfItemOnRow = numberOfItemOnRow - 1;
             return numberOfItemOnRow;
         }
-        function loadedData() {
-            var preloadDiv = document.getElementsByClassName("preload")[0];
-            preloadDiv.className = '';
 
-            var gridContentDau = document.getElementsByClassName("gridContent")[0];
-            var gridContentDauLength = gridContentDau.children.length;
-            for (var i = 0; i < gridContentDauLength; i++) {
-                var itemId = gridContentDau.children[0].children[0].innerHTML;
-                if (itemId == '&nbsp;') {
-                    gridContentDau.removeChild(gridContentDau.children[0]);
-                }
-            }
-
-        }
-
-
-       
-
-        function changeBanner() {
-            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
-            var srcPath = img.src;
-            if (srcPath.includes("1.png")) {
-                img.src = banners[1];
-            }
-            else {
-                img.src = banners[0];
-            }
-        }
-        
-
-
-        var product;
-        var category;
-        var gift;
-        var loadHomePage = 0;
-        var localStorage = window.localStorage;
-        var cart = [];
-
-
-        $(document).ready(function () {
-            if (reload()) {
-                loadPage();
-                $(document).load('home.html #body')
-            }
-        });
-
-        function reload() {
-            if (loadHomePage == 0) {
-                loadHomePage == 1;
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        //function loadPage() {
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_sanpham.json',
-        //        dataType: 'json',
-        //        success: function (json) {
-        //            product = json
-        //        }
-        //    });
-
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_quatangkem.json',
-        //        dataType: 'json',
-        //        success: function (json) {
-        //            gift = json
-        //        }
-        //    });
-
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_homepage.json',
-        //        dataType: 'json',
-        //        variable: 'category',
-        //        callback: 'function () { loadHomepage(product) }',
-        //        success: function (json) {
-        //            category = json
-        //            loadHomepage(product)
-        //            loadedData();
-        //        }
-        //    });
-
-        //}
-        var banners = ['AllImages/banner 1.png', 'AllImages/banner 2.png'];
-
-        function loadPage() {
-
-
-
-            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
-            img.src = banners[0];
-
-            //
-            $.ajax({
-                type: 'GET',
-                url: 'data/data_sanpham.json',
-                dataType: 'json',
-                success: function (json) {
-                    product = json
-                    $.ajax({
-                        type: 'GET',
-                        url: 'data/data_quatangkem.json',
-                        dataType: 'json',
-                        success: function (json) {
-                            gift = json
-
-                            $.ajax({
-                                type: 'GET',
-                                url: 'data/data_homepage.json',
-                                dataType: 'json',
-                                variable: 'category',
-                                callback: 'function () { loadHomepage(product) }',
-                                success: function (json) {
-                                    category = json
-                                    loadHomepage(product)
-                                    loadedData();
-                                    addEventTitle();
-                                }
-                            })
-                        }
-                    })
-                }
-            });
-
-
-        }
-
-        function addEventTitle() {
-            var gridTitles = document.getElementsByClassName("gridTitle");
-            var grLen = gridTitles.length;
-            for (var i = 0; i < grLen; i++) {
-                gridTitles[i].setAttribute('onclick', 'clickTitle(this)');
-            }
-            
-        }
-
-        function clickTitle(title) {
-            var idDanhMuc = title.innerHTML;
-            //
-            frmDanhMuc.idDanhMuc.value = idDanhMuc;
-            frmDanhMuc.subDanhMuc.click();
-        }
-
-        function loadHomepage(product) {
-            let firstGrid = true;
-            category.forEach(function (e) {
-                let gridContent = "";
-                if (firstGrid) {
-                    firstGrid = false;
-                    buildFirstGrid(e);
-
-                } else {
-                    let body = $("body");
-                    let grid = $("<div class='grid'></div>").insertAfter($(".grid").eq($(".grid").length - 1));
-
-                    let gridTitle = $("<div class='gridTitle'></div>");
-                    $(gridTitle).text(e.title).appendTo(grid);
-                    setTitleStyle(gridTitle)
-
-                    gridContent = $("<div class='gridContent'></div>");
-                    $(gridContent).insertAfter(gridTitle);
-
-                    addItem1(e.items, gridContent, product);
-                    addWatchMore1(null, gridContent);
-                }
-            })
-        }
-
-        function moreItem(x) {
-            let lastGridTitleText = $(x).parent().find(".gridTitle").eq(0).text();
-
-            let gridContent = $(x).parent().find(".gridContent");
-            let lastGridContentIndex = $(gridContent).length - 1;
-            let lastAddedItem = $(gridContent).eq(lastGridContentIndex).find(".item").eq(2);
-            let lastAddedItemId = $(lastAddedItem).find(".itemId").text();
-
-            var array;
-            category.forEach(function (x) {
-                if (x.title.includes(lastGridTitleText)) {
-                    array = x.items
-                }
-            });
-
-            if (jQuery.inArray(lastAddedItemId, array)) {
-                let newGridContent = $("<div class='gridContent'><div>").empty()
-                $(newGridContent).insertAfter($(gridContent).eq(lastGridContentIndex));
-
-                var val = lastAddedItemId;
-                var index;
-                array.find(function (item, i) {
-                    if (item === val) {
-                        index = i;
-                        return;
-                    }
-                });
-
-                var cloneArray = array.slice();
-                var productId = cloneArray.splice(index + 1);
-
-                addItem2(productId, newGridContent, product, $(x).parent());
-            }
-        }
-
-        function getProductIdByCategory(lastGridTitleText, array) {
-            category.forEach(function (x) {
-                if (x.title.includes(lastGridTitleText)) {
-                    array = new Array(x.items);
-                }
-            });
-            return array;
-        }
-
-        function buildFirstGrid(e) {
-            let grid = $(".grid")
-
-            let gridTitle = $(grid).eq(0).find(".gridTitle")
-            $(gridTitle).eq(0).text(e.title);
-            setTitleStyle(gridTitle)
-
-            gridContent = $(grid).eq(0).find(".gridContent")
-
-            var productId = e.items;
-
-            addItem1(productId, gridContent, product);
-            addWatchMore1(grid, gridContent);
-        }
-
-        function setTitleStyle(gridTitle) {
-            $(gridTitle).css("background-color", "transparent");
-        }
-
-        function addItem2(productId, gridContent, product, grid) {
-            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
-                var item = $("<div class='item'></item>").appendTo(gridContent);
-                let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
-
-                if (productId[i].includes("sp")) {
-                    for (let j = 0; j < product.length && showItem < 3; j++) {
-                        if (product[j].id.includes(productId[i])) {
-                            addProductItemAttr(item, j);
-                            break;
-                        }
-                    }
-                }
-
-                if (productId[i].includes("qt")) {
-                    for (let j = 0; j < gift.length && showItem < 3; j++) {
-                        if (gift[j].id.includes(productId[i])) {
-                            addGiftItemAttr(item, j)
-                            break;
-                        }
-                    }
-                }
-                //console.log("i : " + i + " max: " + (productId.length - 1));
-                addWatchMore2(grid, gridContent, i, productId.length - 1);
-                removeItemBackGroundColor(item)
-            }
-        }
-
-        function addProductItemAttr(item, j) {
-            let img = $("<img></img>").attr("src", "data" + product[j].imgLink);
-            $("<div class='itemImg'></div>").append(img).appendTo(item)
-            $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(product[j].title).appendTo(item)
-            $("<div class='itemPrice'></div>").text(product[j].price).appendTo(item)
-            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
-            $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
-        }
-
-        function addGiftItemAttr(item, j) {
-            let img = $("<img></img>").attr("src", "data" + gift[j].imgLink);
-            $("<div class='itemImg'></div>").append(img).appendTo(item)
-            $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(gift[j].title).appendTo(item)
-            $("<div class='itemPrice'></div>").text(gift[j].price).appendTo(item)
-            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
-            $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
-        }
-
-        //function addItem1(productId, gridContent, product) {
-        //    for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
-        //        var item = $("<div class='item'></item>").appendTo(gridContent);
-        //        let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
-
-        //        if (productId[i].includes("sp")) {
-        //            for (let j = 0; j < product.length && showItem < 3; j++) {
-        //                if (product[j].id.includes(productId[i])) {
-        //                    addProductItemAttr(item, j);
-        //                    break;
-        //                }
-        //            }
-        //        }
-
-        //        if (productId[i].includes("qt")) {
-        //            for (let j = 0; j < gift.length && showItem < 3; j++) {
-        //                if (gift[j].id.includes(productId[i])) {
-        //                    addGiftItemAttr(item, j)
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //        //console.log("i : " + i + " max: " + (productId.length - 1));
-        //        removeItemBackGroundColor(item)
-        //    }
-        //}
-
-        function addItem1(productId, gridContent, product) {
-            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
-                var item = $("<div class='item'></item>").appendTo(gridContent);
-                let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
-
-                if (productId[i].includes("sp")) {
-                    for (let j = 0; j < product.length && showItem < 3; j++) {
-                        if (product[j].id.includes(productId[i])) {
-                            addProductItemAttr(item, j);
-                            break;
-                        }
-                    }
-                }
-
-                if (productId[i].includes("qt")) {
-                    for (let j = 0; j < gift.length && showItem < 3; j++) {
-                        if (gift[j].id.includes(productId[i])) {
-                            addGiftItemAttr(item, j)
-                            break;
-                        }
-                    }
-                }
-                //console.log("i : " + i + " max: " + (productId.length - 1));
-                removeItemBackGroundColor(item)
-            }
-        }
-
-        function addWatchMore1(previousGrid, gridContent) {
-            let previousGridMore = $(previousGrid).find(".gridMore").eq(0).html()
-            if (previousGridMore === undefined) {
-                let watchMore = $("<div></div>").text("+")
-                $("<div class='gridMore' onclick='moreItem(this)'></div>").append(watchMore).insertAfter(gridContent)
-            }
-        }
-
-        function addWatchMore2(previousGrid, gridContent, lastIndex, maxIndex) {
-
-            let previousGridMore = $(previousGrid).find(".gridMore").eq(0).html()
-            if (previousGridMore === undefined && lastIndex + 3 < maxIndex) {
-                let watchMore = $("<div></div>").text("+")
-                $("<div class='gridMore' onclick='moreItem(this)'></div>").append(watchMore).insertAfter(gridContent)
-            }
-            if (lastIndex + 3 > maxIndex) {
-                $(previousGrid).find(".gridMore").remove();
-            }
-        }
-
-
-        function removeItemBackGroundColor(item) {
-            let name = $(item).find(".itemName").eq(0);
-            let price = $(item).find(".itemPrice").eq(0);
-            let cart = $(item).find(".addToCart").eq(0);
-            let cartMb = $(item).find(".addToCart-mb").eq(0);
-
-            name.css("background-color", "transparent");
-            price.css("background-color", "transparent");
-        }
-
-        function addToCart(x) {
-
-            let id = $(x).parent().find(".itemId").eq(0);
-            let img = $(x).parent().find(".itemImg").eq(0).find("img").attr("src");
-            let name = $(x).parent().find(".itemName").eq(0);
-            let price = $(x).parent().find(".itemPrice").eq(0);
-
-            subCart = [];
-            subCart.push(id.text(), img, name.text(), price.text());
-
-            if (!isChosen(cart, id.text())) {
-                var item = { "time": (new Date()), "quantity": 1, "info": JSON.stringify(subCart) }
-                cart.push(item)
-            }
-
-            setNotification(cart);
-            localStorage.setItem("cart", JSON.stringify(cart));
-
-            $(x).parent().addClass("wow fadeOutUp animated");
-            $(x).parent().attr("style", "animation-name: fadeInUp;");
-
-            setInterval(function () { removeAnimationAddToCart(x) }, 1500);
-        }
-
-        function removeAnimationAddToCart(x) {
-            $(x).parent().removeClass("wow fadeOutUp animated");
-            $(x).parent().removeAttr("style");
-            $(x).parent().attr("style", "z-index:0")
-        }
-
-        function isChosen(cart, id) {
-            for (var i = 0; i < cart.length; i++) {
-                if (cart[i].info.includes(id)) {
-                    cart[i].quantity = parseInt(cart[i].quantity) + 1;
-                    return true;
-                }
-            }
-        }
 
 
         function addEvent() {
@@ -2032,7 +2102,7 @@
             var itemsLength = items.length;
             for (var i = 0; i < itemsLength; i++) {
                 var itemName = items[i].getElementsByClassName('itemName')[0];
-                itemName.onclick = 'openDetailLink(this);';
+                itemName.setAttribute('onclick','openDetailLink(this);');
             }
 
 
@@ -2043,13 +2113,6 @@
             //
             frmChiTiet.idSanPham.value = itemId;
             frmChiTiet.subChiTiet.click();
-        }
-
-        function setNotification(cart) {
-            let notification = $('.shopping-cart>.notify-container>.notify-bubble').eq(0);
-            $(notification).empty();
-            $(notification).eq(0).text(cart.length)
-            $(notification).show(400);
         }
     </script>
 </body>
