@@ -5,15 +5,14 @@
     <title></title>
 
     <!--thu vien tham khao-->
-
     <link href=fontawesome/css/all.css rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
-    
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap" rel="stylesheet">
     <script src="Jquery.js"></script>
     <script src="wow.min.js"></script>
     <script src="animate.js"></script>
+
     <script type="text/javascript">
         new WOW().init();
     </script>
@@ -23,8 +22,6 @@
             background-color: #E3E3E3;
         }
     </style>
-
-
 
 </head>
 <body class="preload">
@@ -747,8 +744,8 @@
 
             <div class="imgb">
 
-                <a>
-
+                <a onclick="
+                            window.open('dangnhap.html', '_self');">
                     <i class="far fa-user-circle fa-2x"></i>
                 </a>
 
@@ -780,31 +777,35 @@
                 <div class="sideMenu">
                     <a href="#" style="padding:12px 52px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Chủ đề</a>
                     <div class="dropdown-content">
-                        <a href="#">Sản phẩm mới</a>
-                        <a href="#">Sinh Nhật</a>
-                        <a href="#">Tình Yêu</a>
-                        <a href="#">Chúc Mừng</a>
-                        <a href="#">Cầu Hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Sản phẩm nổi bật</a>
+                        <a href="#" onclick="clickTitle(this)">Sinh nhật</a>
+                        <a href="#" onclick="clickTitle(this)">Tình yêu</a>
+                        <a href="#" onclick="clickTitle(this)">Kỷ niệm</a>
+                        <a href="#" onclick="clickTitle(this)">Cầu hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Chúc mừng</a>
+                        <a href="#" onclick="clickTitle(this)">Cảm ơn </a>
+                        <a href="#" onclick="clickTitle(this)">Chúc sức khoẻ</a>
+                        <a href="#" onclick="clickTitle(this)">Mừng tốt nghiệp</a>
+                        <a href="#" onclick="clickTitle(this)">Xin lỗi</a>
                     </div>
                 </div>
                 <div class="sideMenu">
                     <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Loại hoa</a>
                     <div class="dropdown-content">
-                        <a href="#">Hoa hồng</a>
-                        <a href="#">Hoa hướng dương</a>
-                        <a href="#">Sen đá</a>
-                        <a href="#">Đồng tiền</a>
-                        <a href="#">Cúc</a>
-                        <a href="#">Cẩm chướng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hồng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hướng dương</a>
+                        <a href="#" onclick="clickTitle(this)">Sen đá</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa đồng tiền</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cúc</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cẩm chướng</a>
                     </div>
                 </div>
                 <div class="sideMenu">
                     <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Quà tặng</a>
                     <div class="dropdown-content">
-                        <a href="#">Gấu Bông</a>
-                        <a href="#">Kẹo</a>
-                        <a href="#">Bánh Kem</a>
-
+                        <a href="#" onclick="clickTitle(this)">Gấu bông</a>
+                        <a href="#" onclick="clickTitle(this)">Kẹo</a>
+                        <a href="#" onclick="clickTitle(this)">Bánh kem</a>
                     </div>
                 </div>
                 <div class="sideMenu">
@@ -812,10 +813,10 @@
 
                 </div>
                 <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
+                    <a href="LienHe.html" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
                 </div>
                 <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                    <a href="About_us.html" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Giới thiệu</a>
                 </div>
 
             </div>
@@ -882,8 +883,8 @@
                         padding: 11px 42px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
                 </li>
                 <li>
-                    <a href="#home" style="
-                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                    <a href="About_us.html" style="
+                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Giới thiệu</a>
                 </li>
             </ul>
         </div>
@@ -935,6 +936,55 @@
                 }
         }
     </style>
+
+    <!--script cua button len dau-->
+    <script type="text/javascript">
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+
+        function scrollFunction() {
+
+
+
+
+            var scrollButton = document.getElementById("scrollButton")
+            var header = document.getElementsByClassName("header")[0];
+            var shopName = document.getElementById("shopname");
+            var shopSlogan = document.getElementById("slogan");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+                header.style.backgroundColor = "transparent";
+                shopName.style.display = "none";
+                shopSlogan.style.display = "none";
+
+            } else {
+                scrollButton.style.display = "none";
+                header.style.backgroundColor = "white";
+                shopName.style.display = "block";
+                shopSlogan.style.display = "block";
+            }
+
+
+            ///
+
+            var allDropDownList = document.getElementsByClassName("dropdown-content");
+            var i = 1;
+            for (i = 0; i < allDropDownList.length; i++) {
+                allDropDownList[i].style.display = "none";
+            }
+        }
+
+
+        function scrollToHeader() {
+            var html = document.getElementsByTagName("html")[0];
+            html.style.scrollBehavior = "smooth"
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0;  // For Chrome, Firefox, IE and Opera
+        }
+
+    </script>
 
     <!--html của button lên đầu-->
     <button id="scrollButton" class="gotoheader" onclick="scrollToHeader()">
@@ -1261,55 +1311,7 @@
         }
     </style>
 
-    <!--script cua button len dau-->
 
-    <script type="text/javascript">
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-
-        function scrollFunction() {
-
-
-
-
-            var scrollButton = document.getElementById("scrollButton")
-            var header = document.getElementsByClassName("header")[0];
-            var shopName = document.getElementById("shopname");
-            var shopSlogan = document.getElementById("slogan");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollButton.style.display = "block";
-                header.style.backgroundColor = "transparent";
-                shopName.style.display = "none";
-                shopSlogan.style.display = "none";
-
-            } else {
-                scrollButton.style.display = "none";
-                header.style.backgroundColor = "white";
-                shopName.style.display = "block";
-                shopSlogan.style.display = "block";
-            }
-
-
-            ///
-
-            var allDropDownList = document.getElementsByClassName("dropdown-content");
-            var i = 1;
-            for (i = 0; i < allDropDownList.length; i++) {
-                allDropDownList[i].style.display = "none";
-            }
-        }
-
-
-        function scrollToHeader() {
-            var html = document.getElementsByTagName("html")[0];
-            html.style.scrollBehavior = "smooth"
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0;  // For Chrome, Firefox, IE and Opera
-        }
-
-    </script>
 
     <!--html của body-->
     <div class="body">
