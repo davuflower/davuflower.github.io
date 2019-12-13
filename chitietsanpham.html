@@ -53,7 +53,7 @@
                 /*color: white;*/
                 color: #008b8b;
                 /**/
-                font-size: 25px;
+                font-size: 22px;
                 height: 50px;
                 /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
             }
@@ -70,7 +70,8 @@
             }
 
                 .headerMenuContent ul li {
-                    width: 160px;
+                    /*width: 160px;*/
+                    font-family: 'Quicksand';
                 }
 
                     .headerMenuContent ul li:hover {
@@ -167,7 +168,7 @@
 
 
             #shopname {
-                font-family: 'Century Gothic';
+                font-family: 'Quicksand';
                 font-size: 20px;
                 margin-top: 10px;
                 color: #de8ec8;
@@ -210,7 +211,7 @@
                 top: -8px;
                 right: 20px;
                 padding: 2px 5px 2px 6px;
-                background-color: green;
+                background-color: #008b8b;
                 color: white;
                 font-size: 0.65em;
                 border-radius: 50%;
@@ -736,8 +737,8 @@
 
             <div class="imgb">
 
-                <a>
-
+                <a onclick="
+                            window.open('dangnhap.html', '_self');">
                     <i class="far fa-user-circle fa-2x"></i>
                 </a>
 
@@ -769,31 +770,35 @@
                 <div class="sideMenu">
                     <a href="#" style="padding:12px 52px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Chủ đề</a>
                     <div class="dropdown-content">
-                        <a href="#">Sản phẩm mới</a>
-                        <a href="#">Sinh Nhật</a>
-                        <a href="#">Tình Yêu</a>
-                        <a href="#">Chúc Mừng</a>
-                        <a href="#">Cầu Hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Sản phẩm nổi bật</a>
+                        <a href="#" onclick="clickTitle(this)">Sinh nhật</a>
+                        <a href="#" onclick="clickTitle(this)">Tình yêu</a>
+                        <a href="#" onclick="clickTitle(this)">Kỷ niệm</a>
+                        <a href="#" onclick="clickTitle(this)">Cầu hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Chúc mừng</a>
+                        <a href="#" onclick="clickTitle(this)">Cảm ơn</a>
+                        <a href="#" onclick="clickTitle(this)">Chúc sức khoẻ</a>
+                        <a href="#" onclick="clickTitle(this)">Mừng tốt nghiệp</a>
+                        <a href="#" onclick="clickTitle(this)">Xin lỗi</a>
                     </div>
                 </div>
                 <div class="sideMenu">
                     <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Loại hoa</a>
                     <div class="dropdown-content">
-                        <a href="#">Hoa hồng</a>
-                        <a href="#">Hoa hướng dương</a>
-                        <a href="#">Sen đá</a>
-                        <a href="#">Đồng tiền</a>
-                        <a href="#">Cúc</a>
-                        <a href="#">Cẩm chướng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hồng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hướng dương</a>
+                        <a href="#" onclick="clickTitle(this)">Sen đá</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa đồng tiền</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cúc</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cẩm chướng</a>
                     </div>
                 </div>
                 <div class="sideMenu">
                     <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Quà tặng</a>
                     <div class="dropdown-content">
-                        <a href="#">Gấu Bông</a>
-                        <a href="#">Kẹo</a>
-                        <a href="#">Bánh Kem</a>
-
+                        <a href="#" onclick="clickTitle(this)">Gấu bông</a>
+                        <a href="#" onclick="clickTitle(this)">Kẹo</a>
+                        <a href="#" onclick="clickTitle(this)">Bánh kem</a>
                     </div>
                 </div>
                 <div class="sideMenu">
@@ -801,10 +806,10 @@
 
                 </div>
                 <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
+                    <a href="LienHe.html" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
                 </div>
                 <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                    <a href="About_us.html" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Giới thiệu</a>
                 </div>
 
             </div>
@@ -822,7 +827,7 @@
                         <a href="#" onclick="clickTitle(this)">Kỷ niệm</a>
                         <a href="#" onclick="clickTitle(this)">Cầu hôn</a>
                         <a href="#" onclick="clickTitle(this)">Chúc mừng</a>
-                        <a href="#" onclick="clickTitle(this)">Cảm ơn </a>
+                        <a href="#" onclick="clickTitle(this)">Cảm ơn</a>
                         <a href="#" onclick="clickTitle(this)">Chúc sức khoẻ</a>
                         <a href="#" onclick="clickTitle(this)">Mừng tốt nghiệp</a>
                         <a href="#" onclick="clickTitle(this)">Xin lỗi</a>
@@ -871,8 +876,8 @@
                         padding: 11px 42px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
                 </li>
                 <li>
-                    <a href="#home" style="
-                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                    <a href="About_us.html" style="
+                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Giới thiệu</a>
                 </li>
             </ul>
         </div>
@@ -983,7 +988,8 @@
                 display: flex;
                 flex-flow: row wrap;
                 width: 100%;
-                padding: 50px 100px;
+                /*padding: 50px 100px;*/
+                padding: 50px 0;
                 justify-content: center;
             }
 
@@ -1014,7 +1020,7 @@
                 }
 
             .selected {
-                border: 2px solid lightgrey;
+                border: 1px solid lightgrey;
             }
 
             .zoneContent {
@@ -1050,21 +1056,18 @@
 
             .addToCart {
                 font-family: 'Roboto', sans-serif;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 background-color: #f1d0ff;
-                padding: 10px;
-                border: 10px solid white;
+                color: #008b8b;
+                border-radius: 4px;
+                padding: 10px 20px;
+                margin-right: 10px;
+                text-decoration: none;
             }
 
-            input {
-                font-family: 'Roboto', sans-serif;
-                font-size: 2rem;
-                border: none;
-                outline: none;
-                background-color: #f1d0ff;
-                padding: 10px;
-                border: 10px solid white;
-            }
+                .addToCart:hover {
+                    background-color: #eec4ff;
+                }
         }
     </style>
     <div class="body">
@@ -1096,8 +1099,8 @@
                 Phần mô tả sản phẩm
             </div>
             <div class="zoneMua">
-                <div class="addToCart">Thêm vào giỏ</div>
-                <input type="submit" value="Mua Hàng" />
+                <a href="#" class="addToCart">Thêm vào giỏ</a>
+                <a href="#" class="addToCart">Mua hàng</a>
             </div>
         </div>
 
@@ -1482,7 +1485,10 @@
     </div>
 
 
-
+    <form id="frmDanhMuc" action="danhmucsanpham.html" style="display:none">
+        <input type="text" value="" name="idDanhMuc" />
+        <input type="submit" name="subDanhMuc" />
+    </form>
     <script type="text/javascript">
         loadData();
 
@@ -1593,7 +1599,15 @@
             }
 
 
+
         }
+        function clickTitle(title) {
+            var idDanhMuc = title.innerHTML;
+            //
+            frmDanhMuc.idDanhMuc.value = idDanhMuc;
+            frmDanhMuc.subDanhMuc.click();
+        }
+
     </script>
 </body>
 </html>
