@@ -1078,7 +1078,7 @@
             <span>></span>
             <a href="#">Sản phẩm đang xem</a>
         </div>
-
+        
         <div class="zoneHinh">
             <div class="hinhBu">
                 <img src="Images/hinh_minh_hoa.jpg" />
@@ -1099,8 +1099,8 @@
                 Phần mô tả sản phẩm
             </div>
             <div class="zoneMua">
-                <a href="#" class="addToCart">Thêm vào giỏ</a>
-                <a href="#" class="addToCart">Mua hàng</a>
+                <a href="#" onclick="addToCart(this)" class="addToCart">Thêm vào giỏ</a>
+                <a href="#" onclick="addToCart(this);window.open('GioHang.html', '_self');" class="addToCart">Mua hàng</a>
             </div>
         </div>
 
@@ -1495,6 +1495,9 @@
 
         var url = new URL(window.location.href);
         var idSanPham = url.searchParams.get("idSanPham");
+        var itemImg = "";
+        var itemName = "";
+        var itemPrice = "";
         var product;
         var gift;
 
@@ -1525,7 +1528,7 @@
                 dataType: 'json',
                 success: function (json) {
                     product = json
-                    loadDataToView(idSanPham)
+                    loadDataToViewProduct(idSanPham)
                 }
             });
 
@@ -1536,12 +1539,12 @@
                 callback: 'function () { loadDataToView(productId) }',
                 success: function (json) {
                     gift = json
-                    loadDataToView(idSanPham)
+                    loadDataToViewGift(idSanPham)
                 }
             });
         }
 
-        function loadDataToView(productId) {
+        function loadDataToViewProduct(productId) {
             var productLength = product.length;
             var theProduct = '';
             for (var i = 0; i < productLength; i++) {
@@ -1562,6 +1565,9 @@
                     img1.src = 'data' + linkHinh1;
                     img1.setAttribute('onclick', "clickHinh(this)");
                     tapHinhNho.appendChild(img1);
+                    //
+                    itemImg = 'data' + linkHinh1;
+
                 }
                 if (linkHinh2.includes("img") && linkHinh2 != null) {
                     var img2 = document.createElement("img");
@@ -1571,10 +1577,10 @@
                     tapHinhNho.appendChild(img2);
                 }
 
-                var itemName = theProduct.title;
+                itemName = theProduct.title;
                 document.getElementsByClassName('tenSanPham')[0].innerHTML = itemName;
 
-                var itemPrice = theProduct.price;
+                itemPrice = theProduct.price;
                 document.getElementsByClassName('giaSanPham')[0].innerHTML = itemPrice + "<sup>đ</sup>";
 
                 var itemDes = theProduct.description;
@@ -1595,17 +1601,129 @@
                 var hinhLon = document.getElementsByClassName("hinhBu")[0].children[0];
                 hinhLon.src = hinhMacDinh.src;
 
+
+                return;
+            }
+
+        }
+        function loadDataToViewGift(productId) {
+
+            var productLength = gift.length;
+            var theProduct = '';
+            for (var i = 0; i < productLength; i++) {
+                theProduct = gift[i];
+                if (theProduct.id == productId) {
+                    break;
+                }
+            }
+            if (i < productLength) {
+                var tapHinhNho = document.getElementsByClassName("tapHinhNho")[0];
+                tapHinhNho.innerHTML = '';
+
+                var linkHinh1 = theProduct.imgLink;
+                var linkHinh2 = '';
+
+                if (linkHinh1.includes("img") && linkHinh1 != null) {
+                    var img1 = document.createElement("img");
+                    img1.src = 'data' + linkHinh1;
+                    img1.setAttribute('onclick', "clickHinh(this)");
+                    tapHinhNho.appendChild(img1);
+                    //
+                     itemImg = 'data' + linkHinh1;
+
+                }
+                if (linkHinh2.includes("img") && linkHinh2 != null) {
+                    var img2 = document.createElement("img");
+                    img2.src = 'data' + linkHinh2;
+                    img2.setAttribute('onclick', "clickHinh(this)");
+
+                    tapHinhNho.appendChild(img2);
+                }
+
+                itemName = theProduct.title;
+                document.getElementsByClassName('tenSanPham')[0].innerHTML = itemName;
+
+                itemPrice = theProduct.price;
+                document.getElementsByClassName('giaSanPham')[0].innerHTML = itemPrice + "<sup>đ</sup>";
+
+                var itemDes = theProduct.description;
+                document.getElementsByClassName('moTaSanPham')[0].innerHTML = itemDes;
+
+                var des = document.getElementsByClassName('moTaSanPham')[0].getElementsByTagName('li')[0].innerHTML;
+                document.getElementsByClassName('moTaSanPham')[0].removeChild(document.getElementsByClassName('moTaSanPham')[0].getElementsByTagName('ul')[0])
+
+                var myP = document.createElement('p')
+                myP.innerHTML = des;
+
+                document.getElementsByClassName('moTaSanPham')[0].insertBefore(myP, document.getElementsByClassName('moTaSanPham')[0].childNodes[0]);
+
+
+
+                var hinhMacDinh = document.getElementsByClassName("tapHinhNho")[0].children[0];
+                hinhMacDinh.className = "selected";
+                var hinhLon = document.getElementsByClassName("hinhBu")[0].children[0];
+                hinhLon.src = hinhMacDinh.src;
+               
+
                 return;
             }
 
 
 
+
+
         }
+
+        //thêm vào giỏ hàng
+
+        function addToCart(x) {
+
+            let id = idSanPham
+            let img = itemImg
+            let name = itemName
+            let price = itemPrice
+
+            subCart = [];
+            subCart.push(id, img, name, price);
+
+            if (!isChosen(cart, id)) {
+                var item = { "time": (new Date()), "quantity": 1, "info": JSON.stringify(subCart) }
+                cart.push(item)
+            }
+
+            var cartString = JSON.stringify(cart)
+
+            setNotification(cartString);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            
+        }
+
+        
+
+        function isChosen(cart, id) {
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].info.includes(id)) {
+                    cart[i].quantity = parseInt(cart[i].quantity) + 1;
+                    return true;
+                }
+            }
+        }
+
         function clickTitle(title) {
             var idDanhMuc = title.innerHTML;
             //
             frmDanhMuc.idDanhMuc.value = idDanhMuc;
             frmDanhMuc.subDanhMuc.click();
+        }
+        var cart = JSON.parse(window.localStorage.cart)
+        setNotification(window.localStorage.cart)
+        function setNotification(cartt) {
+            let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
+            $(notification).empty();
+            var cartJson = JSON.parse(cartt);
+            $(notification).eq(0).text(cartJson.length)
+            $(notification).show(400);
         }
 
     </script>

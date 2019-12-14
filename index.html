@@ -2075,6 +2075,8 @@
             $(notification).eq(0).text(cart.length)
             $(notification).show(400);
         }
+        var cart = JSON.parse(window.localStorage.cart) 
+         setNotification(cart)
     </script>
 </body>
 </html>

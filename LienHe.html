@@ -1545,6 +1545,16 @@
     </form>
 
     <script>
+        var cart = JSON.parse(window.localStorage.cart)
+        setNotification(window.localStorage.cart)
+        function setNotification(cartt) {
+            let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
+            $(notification).empty();
+            var cartJson = JSON.parse(cartt);
+            $(notification).eq(0).text(cartJson.length)
+            $(notification).show(400);
+        }
+
         function clickTitle(title) {
             var idDanhMuc = title.innerHTML;
             //

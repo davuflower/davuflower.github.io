@@ -1377,6 +1377,7 @@
             $(target).hide('slow', function () { $(target).remove(); });
             removeLocalStorage(x);
             $('.money').eq(0).text(separate(sum));
+            setNotification(JSON.stringify(cart));
         }
 
         function removeLocalStorage(x) {
@@ -1602,6 +1603,7 @@
             let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
             $(notification).empty();
             var cartJson = JSON.parse(cart);
+            
             $(notification).eq(0).text(cartJson.length)
             $(notification).show(400);
         }

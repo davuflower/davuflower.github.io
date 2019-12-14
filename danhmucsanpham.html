@@ -1673,6 +1673,7 @@
 
                     var addToCart = document.createElement('div');
                     addToCart.className = 'addToCart';
+                    addToCart.setAttribute('onclick', 'addToCart(this)');
 
                     var addToCartmb = document.createElement('div');
                     addToCartmb.className = 'addToCart-mb';
@@ -1796,6 +1797,46 @@
             return numberOfItemOnRow;
         }
 
+        //thêm vào giỏ hàng
+        function addToCart(x) {
+
+            let id = $(x).parent().find(".itemId").eq(0);
+            let img = $(x).parent().find(".itemImg").eq(0).find("img").attr("src");
+            let name = $(x).parent().find(".itemName").eq(0);
+            let price = $(x).parent().find(".itemPrice").eq(0);
+
+            subCart = [];
+            subCart.push(id.text(), img, name.text(), price.text());
+
+            if (!isChosen(cart, id.text())) {
+                var item = { "time": (new Date()), "quantity": 1, "info": JSON.stringify(subCart) }
+                cart.push(item)
+            }
+
+            setNotification(JSON.stringify(cart));
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            $(x).parent().addClass("wow fadeOutUp animated");
+            $(x).parent().attr("style", "animation-name: fadeInUp;");
+
+            setInterval(function () { removeAnimationAddToCart(x) }, 1500);
+        }
+
+        function removeAnimationAddToCart(x) {
+            $(x).parent().removeClass("wow fadeOutUp animated");
+            $(x).parent().removeAttr("style");
+            $(x).parent().attr("style", "z-index:0")
+        }
+
+        function isChosen(cart, id) {
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].info.includes(id)) {
+                    cart[i].quantity = parseInt(cart[i].quantity) + 1;
+                    return true;
+                }
+            }
+        }
+
 
 
         function addEvent() {
@@ -1821,6 +1862,16 @@
             //
             frmDanhMuc.idDanhMuc.value = idDanhMuc;
             frmDanhMuc.subDanhMuc.click();
+        }
+        var cart = JSON.parse(window.localStorage.cart)
+        setNotification(window.localStorage.cart)
+        function setNotification(cart) {
+            let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
+            $(notification).empty();
+            var cartJson = JSON.parse(cart);
+            
+            $(notification).eq(0).text(cartJson.length)
+            $(notification).show(400);
         }
     </script>
 </body>
