@@ -2,29 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
-    <link href="fontawesome/css/all.css" type="text/css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap" rel="stylesheet">
+    <title>Giỏ hàng</title>
     <!--thu vien tham khao-->
-
     <link href=fontawesome/css/all.css rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap" rel="stylesheet">
     <script src="Jquery.js"></script>
     <script src="wow.min.js"></script>
-    <script src="animate.js"></script>
+    <link href="animate.css" rel="stylesheet" />
+    <!--style của body-->
     <style>
 
-        .dung_body {
+        .dv_body {
             max-width: 1060px;
             margin: 0 auto;
             font-family: 'Quicksand', sans-serif;
-            padding-top:20px;
+            padding-top: 20px;
         }
 
-        .dung_alert {
+        .dv_alert {
             color: #ff3b27;
             background-color: #fffbfb;
             border-radius: 4px;
@@ -32,11 +28,11 @@
             padding: 17px 15px;
         }
 
-        .dung_cart {
+        .dv_cart {
             margin-top: 10px;
         }
 
-        .dung_content {
+        .dv_content {
             padding: 50px 50px;
             background-color: #fff;
             border-radius: 4px;
@@ -45,7 +41,7 @@
             align-items: center;
         }
 
-        .dung_btn {
+        .dv_btn {
             text-align: center;
             background-color: #F29BAB;
             font-weight: 800;
@@ -54,600 +50,14 @@
             border-radius: 4px;
             text-decoration: none;
         }
-    </style>
-
-    <style type="text/css">
-        .preload {
-            background-color: #E3E3E3;
-        }
-        /**/
-
-        .header {
-            background-color: white;
-            padding: 20px 0;
-            /*
-
-        */
-            position: -webkit-sticky; /* Safari */
-            position: sticky;
-            top: 0;
-        }
-
-        .headerMenu {
-            display: flex;
-            flex-flow: wrap row;
-            background-color: #faf0ff;
-            color: white;
-            /**/
-            font-size: 25px;
-            height: 50px;
-            /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-        }
-
-            .headerMenu .start, .headerMenu .end {
-                flex-grow: 1;
-            }
-
-        .headerMenuContent {
-            display: flex;
-            flex-flow: row wrap;
-            flex-grow: 0;
-            width: 960px;
-        }
-
-            .headerMenuContent ul li {
-                width: 160px;
-            }
-
-                .headerMenuContent ul li:hover {
-                    background-color: #6a1051;
-                }
-
-                .headerMenuContent ul li a:hover {
-                    color: white;
-                }
-
-
-        .headerMenu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #faf0ff;
-            height: 50px;
-        }
-
-        .headerMenu li {
-            float: left;
-            text-align: center;
-        }
-
-
-
-            .headerMenu li a, .preload > .headerMenu .dropbtn {
-                display: inline-block;
-                color: #008b8b;
-                text-align: center;
-                padding: 11px 16px;
-                text-decoration: none;
-            }
-
-        .headerMenu .start {
-            background: 0;
-            margin-left: 10px;
-            display: flex;
-            margin-top: auto;
-            margin-bottom: auto;
-            color: #6a1051;
-            position: relative;
-            display: inline-block;
-        }
-
-        .headerMenu li.dropdown {
-            display: inline-block;
-        }
-
-            .headerMenu li.dropdown a:hover {
-                color: white;
-            }
-
-
-        .headerMenu .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #faf0ff;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-            .headerMenu .dropdown-content a {
-                color: #008b8b;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: center;
-            }
-
-                .headerMenu .dropdown-content a:hover {
-                    background-color: #6a1051;
-                }
-
-        .headerMenu .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .headerMenu .show {
-            display: block;
-        }
-
-        .headerInfo {
-            margin: 0 auto;
-            justify-content: space-between;
-            width: 100%;
-            /**/
-        }
-
-            .headerInfo input {
-                font-size: 20px;
-            }
-
-
-            .headerInfo .imga {
-                background: 0;
-                margin-left: 30px;
-                margin-right: auto;
-                display: flex;
-            }
-
-
-            .headerInfo .search_wrapper {
-                border: solid lightgray;
-                border-radius: 50px;
-                padding: 5px 0 5px 50px;
-                margin-top: auto;
-                margin-bottom: auto;
-                width: 30%;
-            }
-
-            .headerInfo .search_input {
-                height: 30px;
-                width: 78%;
-                border: 0;
-                /**/
-                outline: none;
-                background-color: transparent;
-                margin-right: 20px;
-            }
-
-            .headerInfo .search_button {
-                background: 0;
-                border: 0;
-                color: #d79abc;
-            }
-
-
-
-            .headerInfo .imgb {
-                background: none;
-                margin-left: 10px;
-                display: flex;
-                margin-left: auto;
-                margin-top: auto;
-                margin-bottom: auto;
-                color: #d79abc
-            }
-
-            .headerInfo .imgc a:hover {
-                color: #f2bddb;
-            }
-
-            .headerInfo .imgb a:hover {
-                color: #f2bddb;
-            }
-
-            .headerInfo .search_button:hover {
-                color: #f2bddb;
-            }
-
-            .headerInfo .imgc {
-                background: 0;
-                margin-left: 40px;
-                margin-right: 30px;
-                text-align: center;
-                display: flex;
-                margin-top: auto;
-                margin-bottom: auto;
-                color: #d79abc;
-                /*margin-right:auto;
-                        margin-left:auto;*/
-            }
-
-        .headerInfo {
-            display: flex;
-            flex-flow: row wrap;
-        }
-
-
-
-        /**/
-        .preload > .body {
-            /*background-color: #FFFFFF;*/
-            padding: 10px 150px;
-        }
-
-            .preload > .body > .banner {
-                width: 100%;
-                height: 600px;
-                background-color: white;
-                border-radius: 5px;
-                display: flex;
-                flex-flow: wrap row;
-                justify-content: center;
-                align-content: center;
-            }
-
-                .preload > .body > .banner > img {
-                    width: 800px;
-                    height: 500px;
-                    background-color: #E3E3E3;
-                    border: 0;
-                    outline: 0;
-                }
-
-            .preload > .body > .grid {
-                margin-top: 10px;
-                background-color: white;
-                padding: 40px 30px;
-                padding-bottom: 20px;
-                border-radius: 5px;
-            }
-
-                .preload > .body > .grid > .gridTitle {
-                    background-color: #E3E3E3;
-                    width: 400px;
-                    min-height: 25px;
-                    /*border-radius: 5px;*/
-                    margin-bottom: 5px;
-                }
-
-                .preload > .body > .grid > .gridContent {
-                    /*width: 400px;*/
-                    min-height: 40px;
-                    /*border-radius: 5px;*/
-                    display: flex;
-                    flex-wrap: wrap;
-                    padding: 0 0;
-                    justify-content: space-between;
-                    margin-bottom: 0;
-                }
-
-        .itemId {
-            display: none;
-            /*border-radius: 5px;*/
-        }
-
-        .preload > .body > .grid > .gridContent > .item {
-            background-color: #fff;
-            /*width: 400px;*/
-            min-height: 40px;
-            /*border-radius: 5px;*/
-            width: 250px;
-            text-align: center;
-            display: flex;
-            flex-flow: column wrap;
-            min-height: 300px;
-            justify-content: flex-end;
-            align-items: center;
-            margin: 15px 0;
-        }
-
-            .preload > .body > .grid > .gridContent > .item > .itemImg {
-                /*Mockup propertise*/
-                height: 180px;
-                width: 180px;
-                border: none;
-                /*Real Propertise*/
-                background-color: #E3E3E3;
-                margin-left: auto;
-                margin-right: auto;
-                justify-self: flex-start;
-            }
-
-            .preload > .body > .grid > .gridContent > .item > .itemName {
-                margin-top: 10px;
-                background-color: #E3E3E3;
-                height: 12px;
-                width: 150px;
-            }
-
-            .preload > .body > .grid > .gridContent > .item > .itemPrice {
-                height: 16px;
-                width: 125px;
-                margin-top: 10px;
-                background-color: #E3E3E3;
-                font-weight: lighter;
-                /**/
-            }
-
-            .preload > .body > .grid > .gridContent > .item > .addToCart {
-                margin-top: 10px;
-                width: 180px;
-                font-size: 18px;
-                background-color: #E3E3E3;
-                padding: 6px 0;
-                color: #008b8b;
-                font-weight: 700;
-                letter-spacing: 1px;
-                /**/
-            }
-
-        .preload > .body > .grid > .gridMore {
-            text-align: center;
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-
-        .preload > .footer {
-        }
-
-        .gotoheader {
-            background-color: #008b8b;
-            border: none;
-            outline: none;
-            color: #faf0ff;
-            position: fixed;
-            right: 12px;
-            bottom: 12px;
-            display: none;
-            border-radius: 50%;
-            /*border: solid 1px grey;*/
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-        }
-        /*root css*/
-
-        .body {
-            padding: 10px 150px;
-        }
-
-
-        .grid {
-            margin: 20px;
-            padding: 40px 30px;
-            padding-bottom: 20px;
-            background-color: white;
-            border-radius: 5px;
-        }
-
-        .gridTitle {
-            font-size: 35px;
-            color: #484c7f;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            cursor: pointer;
-        }
-
-            .gridTitle:hover {
-                color: #8185b8;
-            }
-
-        .gridContent {
-            background-color: #ffffff;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 0;
-            justify-content: space-between;
-            margin-bottom: 0;
-        }
-
-        .gridMore {
-            text-align: center;
-            cursor: pointer;
-            font-size: 30px;
-            color: #484c7f;
-            background-color: #fff;
-            margin-top: 10px;
-            padding: 5px;
-            margin-left: auto;
-            margin-right: auto;
-            font-family: 'Comfortaa', cursive;
-            font-weight: bolder;
-        }
-
-            .gridMore:hover {
-                color: #a2a2a2;
-            }
-
-        .item {
-            max-width: 250px;
-            text-align: center;
-            display: flex;
-            flex-flow: column wrap;
-            min-height: 300px;
-            justify-content: flex-end;
-            margin: 15px 0;
-        }
-
-        .itemId {
-            display: none;
-        }
-
-        .itemImg {
-            height: 180px;
-            width: 180px;
-            border: none;
-            background-color: #ffcccc;
-            margin-left: auto;
-            margin-right: auto;
-            align-self: flex-start;
-        }
-
-            .itemImg:hover {
-                cursor: pointer;
-            }
-
-            .itemImg > img {
-                width: 100%;
-                border: none;
-                width: 100%;
-                height: 100%;
-            }
-
-        .itemName {
-            font-size: 18px;
-            color: #444444;
-            height: 35px;
-        }
-
-            .itemName:hover {
-                color: #6f6f6f;
-                cursor: pointer;
-            }
-
-            .itemName:active {
-                color: #c2c0c0;
-            }
-
-            .itemName > a {
-                text-decoration: none;
-            }
-
-        .itemPrice {
-            font-size: 25px;
-            font-weight: lighter;
-            font-family: HelveticaNeue,'Arial Rounded MT',Montserrat,HelveticaNeue, sans-serif,sans-serif,'Quicksand','Segoe UI';
-            color: #727272;
-            padding: 5px 0;
-        }
-
-            .itemPrice:hover {
-                cursor: default;
-            }
-
-        .addToCart {
-            font-size: 18px;
-            background-color: #f1d0ff;
-            padding: 10px;
-            color: #008b8b;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-            .addToCart:hover {
-                background-color: #eec4ff;
-                cursor: pointer;
-            }
-
-            .addToCart:active {
-                background-color: #ebb9ff;
-            }
-
-        .hidden {
-            display: none;
-        }
-
-        .display:active {
-        }
-
-        #shopname {
-            font-family: 'Century Gothic';
-            font-size: 20px;
-            margin-top: 10px;
-            color: #c2b0c9;
-        }
-
-        #slogan {
-            font-family: 'Dancing Script', cursive;
-            font-weight: 700;
-            font-size: 40px;
-            color: #9656a1;
-        }
-
-        .imga img {
-            padding: 0 10px;
-        }
-
-        .shopping-cart {
-            margin: 100px auto;
-            text-align: center;
-        }
-
-        .notify-container {
-            position: relative;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .notify-bubble {
-            position: absolute;
-            top: -8px;
-            right: -7px;
-            padding: 2px 5px 2px 6px;
-            background-color: green;
-            color: white;
-            font-size: 0.65em;
-            border-radius: 50%;
-            box-shadow: 1px 1px 1px gray;
-            display: none;
+        .dv_btn:hover{
+            opacity:0.8;
         }
     </style>
 
-    <style type="text/css">
-        .wrapperFtr {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-flow: wrap;
-            justify-content: space-between;
-        }
+    
 
-        .itemFtr {
-            padding: 0 0rem;
-            text-align: left;
-        }
-
-        .containerFtr {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .footer {
-            background-color: #faf0ff;
-            padding: 10px 150px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: #008b8b;
-        }
-
-        .itemFtr ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-            .itemFtr ul li {
-                padding: 5px 0;
-            }
-
-        .socialFtr {
-            margin: 1rem;
-            color: #008b8b;
-        }
-
-        .siteFtr {
-            text-decoration: none;
-            color: #008b8b;
-        }
-
-            .siteFtr:hover {
-                box-shadow: inset 0 -30px 0 0 white;
-                /*color:#f56e6e;*/
-            }
-    </style>
+    
 </head>
 <body>
     <!--header và style của header-->
@@ -685,7 +95,7 @@
                 /*color: white;*/
                 color: #008b8b;
                 /**/
-                font-size: 25px;
+                font-size: 22px;
                 height: 50px;
                 /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
             }
@@ -702,7 +112,8 @@
             }
 
                 .headerMenuContent ul li {
-                    width: 160px;
+                    /*width: 160px;*/
+                    font-family: 'Quicksand';
                 }
 
                     .headerMenuContent ul li:hover {
@@ -799,7 +210,7 @@
 
 
             #shopname {
-                font-family: 'Century Gothic';
+                font-family: 'Quicksand';
                 font-size: 20px;
                 margin-top: 10px;
                 color: #de8ec8;
@@ -842,7 +253,7 @@
                 top: -8px;
                 right: 20px;
                 padding: 2px 5px 2px 6px;
-                background-color: green;
+                background-color: #008b8b;
                 color: white;
                 font-size: 0.65em;
                 border-radius: 50%;
@@ -1368,8 +779,8 @@
 
             <div class="imgb">
 
-                <a>
-
+                <a onclick="
+                            window.open('dangnhap.html', '_self');">
                     <i class="far fa-user-circle fa-2x"></i>
                 </a>
 
@@ -1401,31 +812,35 @@
                 <div class="sideMenu">
                     <a href="#" style="padding:12px 52px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Chủ đề</a>
                     <div class="dropdown-content">
-                        <a href="#">Sản phẩm mới</a>
-                        <a href="#">Hoa Sinh Nhật</a>
-                        <a href="#">Hoa Tình Yêu</a>
-                        <a href="#">Hoa Chúc Mừng</a>
-                        <a href="#">Hoa Cầu Hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Sản phẩm nổi bật</a>
+                        <a href="#" onclick="clickTitle(this)">Sinh nhật</a>
+                        <a href="#" onclick="clickTitle(this)">Tình yêu</a>
+                        <a href="#" onclick="clickTitle(this)">Kỷ niệm</a>
+                        <a href="#" onclick="clickTitle(this)">Cầu hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Chúc mừng</a>
+                        <a href="#" onclick="clickTitle(this)">Cảm ơn</a>
+                        <a href="#" onclick="clickTitle(this)">Chúc sức khoẻ</a>
+                        <a href="#" onclick="clickTitle(this)">Mừng tốt nghiệp</a>
+                        <a href="#" onclick="clickTitle(this)">Xin lỗi</a>
                     </div>
                 </div>
                 <div class="sideMenu">
                     <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Loại hoa</a>
                     <div class="dropdown-content">
-                        <a href="#">Hoa Hồng</a>
-                        <a href="#">Hoa Hướng Dương</a>
-                        <a href="#">Sen Đá</a>
-                        <a href="#">Hoa Đồng Tiền</a>
-                        <a href="#">Hoa Cúc</a>
-                        <a href="#">Hoa Cẩm Chướng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hồng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hướng dương</a>
+                        <a href="#" onclick="clickTitle(this)">Sen đá</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa đồng tiền</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cúc</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cẩm chướng</a>
                     </div>
                 </div>
                 <div class="sideMenu">
                     <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Quà tặng</a>
                     <div class="dropdown-content">
-                        <a href="#">Gấu Bông</a>
-                        <a href="#">Kẹo</a>
-                        <a href="#">Bánh Kem</a>
-
+                        <a href="#" onclick="clickTitle(this)">Gấu bông</a>
+                        <a href="#" onclick="clickTitle(this)">Kẹo</a>
+                        <a href="#" onclick="clickTitle(this)">Bánh kem</a>
                     </div>
                 </div>
                 <div class="sideMenu">
@@ -1433,10 +848,10 @@
 
                 </div>
                 <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
+                    <a href="LienHe.html" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
                 </div>
                 <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                    <a href="About_us.html" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Giới thiệu</a>
                 </div>
 
             </div>
@@ -1448,11 +863,16 @@
                     <a style="
                         padding: 11px 44px;" href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Chủ đề</a>
                     <div class="dropdown-content">
-                        <a href="#">Sản phẩm mới</a>
-                        <a href="#">Hoa Sinh Nhật</a>
-                        <a href="#">Hoa Tình Yêu</a>
-                        <a href="#">Hoa Chúc Mừng</a>
-                        <a href="#">Hoa Cầu Hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Sản phẩm nổi bật</a>
+                        <a href="#" onclick="clickTitle(this)">Sinh nhật</a>
+                        <a href="#" onclick="clickTitle(this)">Tình yêu</a>
+                        <a href="#" onclick="clickTitle(this)">Kỷ niệm</a>
+                        <a href="#" onclick="clickTitle(this)">Cầu hôn</a>
+                        <a href="#" onclick="clickTitle(this)">Chúc mừng</a>
+                        <a href="#" onclick="clickTitle(this)">Cảm ơn</a>
+                        <a href="#" onclick="clickTitle(this)">Chúc sức khoẻ</a>
+                        <a href="#" onclick="clickTitle(this)">Mừng tốt nghiệp</a>
+                        <a href="#" onclick="clickTitle(this)">Xin lỗi</a>
                     </div>
                 </li>
                 <li>
@@ -1461,12 +881,12 @@
                         Loại hoa
                     </a>
                     <div class="dropdown-content">
-                        <a href="#">Hoa Hồng</a>
-                        <a href="#">Hoa Hướng Dương</a>
-                        <a href="#">Sen Đá</a>
-                        <a href="#">Hoa Đồng Tiền</a>
-                        <a href="#">Hoa Cúc</a>
-                        <a href="#">Hoa Cẩm Chướng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hồng</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa hướng dương</a>
+                        <a href="#" onclick="clickTitle(this)">Sen đá</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa đồng tiền</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cúc</a>
+                        <a href="#" onclick="clickTitle(this)">Hoa cẩm chướng</a>
                     </div>
                 </li>
                 <li>
@@ -1474,9 +894,9 @@
                         padding: 11px 34px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Quà tặng</a>
 
                     <div class="dropdown-content">
-                        <a href="#">Gấu Bông</a>
-                        <a href="#">Kẹo</a>
-                        <a href="#">Bánh Kem</a>
+                        <a href="#" onclick="clickTitle(this)">Gấu bông</a>
+                        <a href="#" onclick="clickTitle(this)">Kẹo</a>
+                        <a href="#" onclick="clickTitle(this)">Bánh kem</a>
 
                     </div>
                 </li>
@@ -1498,8 +918,8 @@
                         padding: 11px 42px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
                 </li>
                 <li>
-                    <a href="#home" style="
-                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                    <a href="About_us.html" style="
+                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Giới thiệu</a>
                 </li>
             </ul>
         </div>
@@ -1552,28 +972,77 @@
         }
     </style>
 
+    <!--script cua button len dau-->
+    <script type="text/javascript">
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+
+        function scrollFunction() {
+
+
+
+
+            var scrollButton = document.getElementById("scrollButton")
+            var header = document.getElementsByClassName("header")[0];
+            var shopName = document.getElementById("shopname");
+            var shopSlogan = document.getElementById("slogan");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+                header.style.backgroundColor = "transparent";
+                shopName.style.display = "none";
+                shopSlogan.style.display = "none";
+
+            } else {
+                scrollButton.style.display = "none";
+                header.style.backgroundColor = "white";
+                shopName.style.display = "block";
+                shopSlogan.style.display = "block";
+            }
+
+
+            ///
+
+            var allDropDownList = document.getElementsByClassName("dropdown-content");
+            var i = 1;
+            for (i = 0; i < allDropDownList.length; i++) {
+                allDropDownList[i].style.display = "none";
+            }
+        }
+
+
+        function scrollToHeader() {
+            var html = document.getElementsByTagName("html")[0];
+            html.style.scrollBehavior = "smooth"
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0;  // For Chrome, Firefox, IE and Opera
+        }
+
+    </script>
+
     <!--html của button lên đầu-->
     <button id="scrollButton" class="gotoheader" onclick="scrollToHeader()">
         <i class="fas fa-chevron-up fa-3x"></i>
     </button>
 
-    
 
-    <div class="dung_body">
-        <div class="dung_alert" style="font-family:Roboto">
+
+    <div class="dv_body">
+        <div class="dv_alert" style="font-family:Roboto">
             <i class="fas fa-times-circle"></i>
             Giỏ hàng chưa có sản phẩm. Vui lòng thực hiện lại.
 
         </div>
-        <div class="dung_cart">
+        <div class="dv_cart">
             <h3>GIỎ HÀNG</h3>
-            <div class="dung_content">
+            <div class="dv_content">
 
                 <img src="Images/list-is-empty-3.png" width="250" />
                 <p style="font-family:Roboto">
                     Không có sản phẩm nào trong giỏ hàng của bạn.
                 </p>
-                <a href="index.html" class="dung_btn" style="font-family:Roboto">Tiếp tục mua sắm</a>
+                <a href="index.html" class="dv_btn" style="font-family:Roboto">Tiếp tục mua sắm</a>
 
             </div>
         </div>
@@ -1752,5 +1221,36 @@
             </div>
         </div>
     </div>
+
+    <!--phan code hidden-->
+
+    <form id="frmChiTiet" action="chitietsanpham.html" style="display:none;">
+        <input type="text" value="" name="idSanPham" />
+        <input type="submit" name="subChiTiet" />
+    </form>
+
+    <form id="frmDanhMuc" action="danhmucsanpham.html" style="display:none">
+        <input type="text" value="" name="idDanhMuc" />
+        <input type="submit" name="subDanhMuc" />
+    </form>
+
+    <script>
+        setNotification(window.localStorage.cart)
+        function setNotification(cart) {
+            let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
+            $(notification).empty();
+            var cartJson = JSON.parse(cart);
+
+            $(notification).eq(0).text(cartJson.length)
+            $(notification).show(400);
+        }
+
+        function clickTitle(title) {
+            var idDanhMuc = title.innerHTML;
+            //
+            frmDanhMuc.idDanhMuc.value = idDanhMuc;
+            frmDanhMuc.subDanhMuc.click();
+        }
+    </script>
 </body>
 </html>

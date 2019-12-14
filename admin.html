@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -16,7 +16,7 @@
     <script src="wow.min.js"></script>
     <script src="animate.js"></script>
     <style>
-       
+
 
         .body {
             max-width: 1060px;
@@ -104,6 +104,7 @@
             font-size: 16px;
             color: #43484D;
             font-weight: 300;
+            width:120px;
         }
 
         .total {
@@ -144,6 +145,9 @@
             border-radius: 4px;
             text-decoration: none;
             display: block;
+        }
+        .checkout-btn:hover{
+            opacity:0.8;
         }
 
         .description {
@@ -189,7 +193,7 @@
                 /*color: white;*/
                 color: #008b8b;
                 /**/
-                font-size: 25px;
+                font-size: 22px;
                 height: 50px;
                 /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
             }
@@ -206,7 +210,8 @@
             }
 
                 .headerMenuContent ul li {
-                    width: 160px;
+                    /*width: 160px;*/
+                    font-family: 'Quicksand';
                 }
 
                     .headerMenuContent ul li:hover {
@@ -303,7 +308,7 @@
 
 
             #shopname {
-                font-family: 'Century Gothic';
+                font-family: 'Quicksand';
                 font-size: 20px;
                 margin-top: 10px;
                 color: #de8ec8;
@@ -346,7 +351,7 @@
                 top: -8px;
                 right: 20px;
                 padding: 2px 5px 2px 6px;
-                background-color: green;
+                background-color: #008b8b;
                 color: white;
                 font-size: 0.65em;
                 border-radius: 50%;
@@ -851,96 +856,16 @@
     </script>
 
     <!--html gd cua header-->
-    <div class="header">
-        <div class="headerInfo">
-            <div class="imga">
-                <a href="index.html" target="_self">
-                    <img class="logo" src="ligi.png" />
-                </a>
-                <div>
-                    <div id="shopname">davuflower.vn</div>
-                    <div id="slogan">Nơi Hy Vọng Ngân Dài</div>
-                </div>
-            </div>
-
-            <form class="search_wrapper" action="/action_page.php">
-                <input class="search_input" type="text" placeholder="Search here ..." />
-                <button class="search_button">
-                    <i class="fas fa-search fa-2x"></i>
-                </button>
-            </form>
-
-            <div class="imgb">
-
-                <a>
-
-                    <i class="far fa-user-circle fa-2x"></i>
-                </a>
-
-            </div>
-            <div class="shopping-cart">
-                <div class="notify-container">
-                    <span class="notify-bubble">1</span>
-                    <div class="imgc btn-notify" onclick="
-                            window.open('GioHang.html', '_self');">
-                        <a>
-
-                            <i class="fas fa-shopping-cart fa-2x" onclick="
-                            window.open('GioHang.html', '_self');"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+  
     <div class="headerMenu">
         <div class="start">
             <!--<button onclick="myFunction()" class="btnlist">-->
             <i onclick="showHamburger()" class="fas fa-bars fa-1x btnlist"></i>
             <!--</button>-->
             <div class="myDropdown">
+               
                 <div class="sideMenu">
-                    <a href="#" style="padding:12px 52px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Chủ đề</a>
-                    <div class="dropdown-content">
-                        <a href="#">Sản phẩm mới</a>
-                        <a href="#">Hoa Sinh Nhật</a>
-                        <a href="#">Hoa Tình Yêu</a>
-                        <a href="#">Hoa Chúc Mừng</a>
-                        <a href="#">Hoa Cầu Hôn</a>
-                    </div>
-                </div>
-                <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Loại hoa</a>
-                    <div class="dropdown-content">
-                        <a href="#">Hoa Hồng</a>
-                        <a href="#">Hoa Hướng Dương</a>
-                        <a href="#">Sen Đá</a>
-                        <a href="#">Hoa Đồng Tiền</a>
-                        <a href="#">Hoa Cúc</a>
-                        <a href="#">Hoa Cẩm Chướng</a>
-                    </div>
-                </div>
-                <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Quà tặng</a>
-                    <div class="dropdown-content">
-                        <a href="#">Gấu Bông</a>
-                        <a href="#">Kẹo</a>
-                        <a href="#">Bánh Kem</a>
-
-                    </div>
-                </div>
-                <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Hướng dẫn</a>
-
-                </div>
-                <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
-                </div>
-                <div class="sideMenu">
-                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                    <a href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)"></a>
                 </div>
 
             </div>
@@ -948,67 +873,16 @@
         </div>
         <div class="headerMenuContent">
             <ul>
-                <li>
-                    <a style="
-                        padding: 11px 44px;" href="#" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Chủ đề</a>
-                    <div class="dropdown-content">
-                        <a href="#">Sản phẩm mới</a>
-                        <a href="#">Hoa Sinh Nhật</a>
-                        <a href="#">Hoa Tình Yêu</a>
-                        <a href="#">Hoa Chúc Mừng</a>
-                        <a href="#">Hoa Cầu Hôn</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#news" style="
-                        padding: 11px 35px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">
-                        Loại hoa
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="#">Hoa Hồng</a>
-                        <a href="#">Hoa Hướng Dương</a>
-                        <a href="#">Sen Đá</a>
-                        <a href="#">Hoa Đồng Tiền</a>
-                        <a href="#">Hoa Cúc</a>
-                        <a href="#">Hoa Cẩm Chướng</a>
-                    </div>
-                </li>
+                
                 <li>
                     <a href="#" style="
-                        padding: 11px 34px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Quà tặng</a>
-
-                    <div class="dropdown-content">
-                        <a href="#">Gấu Bông</a>
-                        <a href="#">Kẹo</a>
-                        <a href="#">Bánh Kem</a>
-
-                    </div>
-                </li>
-                <!--<li class="dropdown">
-                    <a class="dropbtn" href="#home" style="
-                        padding: 11px 23px;">Hướng dẫn</a>
-                    <div class="dropdown-content">
-                        <a href="#">Hướng dẫn mua hàng</a>
-                        <a href="#">Liên hệ</a>
-                        <a href="#">Xem thêm</a>
-                    </div>
-                </li>-->
-                <li>
-                    <a href="#home" style="
-                        padding: 11px 23px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Hướng dẫn</a>
-                </li>
-                <li>
-                    <a href="LienHe.html" style="
-                        padding: 11px 42px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Liên hệ</a>
-                </li>
-                <li>
-                    <a href="#home" style="
-                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Xem thêm</a>
+                        padding: 11px 27px;" onclick="showorNotShowMenuChildrenWhenClick(this)" onmouseover="showorNotShowMenuChildrenWhenHover(this)">Trang Admin</a>
                 </li>
             </ul>
         </div>
         <div class="end"></div>
     </div>
+
     <!--button lên đầu và style-->
     <style type="text/css">
 
@@ -1055,6 +929,55 @@
         }
     </style>
 
+    <!--script cua button len dau-->
+    <script type="text/javascript">
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+
+        function scrollFunction() {
+
+
+
+
+            var scrollButton = document.getElementById("scrollButton")
+            var header = document.getElementsByClassName("header")[0];
+            var shopName = document.getElementById("shopname");
+            var shopSlogan = document.getElementById("slogan");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+                header.style.backgroundColor = "transparent";
+                shopName.style.display = "none";
+                shopSlogan.style.display = "none";
+
+            } else {
+                scrollButton.style.display = "none";
+                header.style.backgroundColor = "white";
+                shopName.style.display = "block";
+                shopSlogan.style.display = "block";
+            }
+
+
+            ///
+
+            var allDropDownList = document.getElementsByClassName("dropdown-content");
+            var i = 1;
+            for (i = 0; i < allDropDownList.length; i++) {
+                allDropDownList[i].style.display = "none";
+            }
+        }
+
+
+        function scrollToHeader() {
+            var html = document.getElementsByTagName("html")[0];
+            html.style.scrollBehavior = "smooth"
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0;  // For Chrome, Firefox, IE and Opera
+        }
+
+    </script>
+
     <!--html của button lên đầu-->
     <button id="scrollButton" class="gotoheader" onclick="scrollToHeader()">
         <i class="fas fa-chevron-up fa-3x"></i>
@@ -1062,272 +985,156 @@
 
     <div class="body">
         <div id="notification" class="item" style="display:none; background-color:white; text-align:center">
-            <h2><i class="fas fa-check" style="color:forestgreen"></i> Thanh toán thành công</h2>
-            <div>Cám ơn bạn đã tin tưởng chọn mua sản phẩm của davuflower</div>
-            <div>Chúng tôi sẽ liên lạc lại cho quý khách trong vòng 10 phút</div>
+            <h2><i class="fas fa-check" style="color:forestgreen"></i> Xác nhận thành công</h2>
+            
+           
         </div>
-        <h3>Giỏ hàng</h3>
+        <h3>Giỏ hàng của khách</h3>
         <div class="shopping-cart">
             <!-- Title -->
             <!-- Product #1 -->
             <!--<div class="item">
-            <div class="buttons">
-                <button class="delete-btn">
-                    <i class="fas fa-times"></i>
-                </button>
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
 
-            </div>
+                </div>
 
-            <div class="image">
-                <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
-            </div>
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
 
-            <div class="description">
-                <span>Bó Hoa Young & Beautiful</span>
+                <div class="description">
+                    <span>Bó Hoa Young & Beautiful</span>
 
-            </div>
+                </div>
 
-            <div class="quantity">
-                <button class="minus-btn" type="button" name="button">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <input type="text" name="name" value="1">
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
 
-                <button class="plus-btn" type="button" name="button">
-                    <i class="fas fa-plus"></i>
-                </button>
-            </div>
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
 
-            <div class="total-price">149.000đ</div>
-        </div>-->
+                <div class="total-price">149.000đ</div>
+            </div>-->
             <!--<div class="item">
-            <div class="buttons">
-                <button class="delete-btn">
-                    <i class="fas fa-times"></i>
-                </button>
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
 
-            </div>
+                </div>
 
-            <div class="image">
-                <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
-            </div>
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
 
-            <div class="description">
-                <span>Bó Hoa Hồng Beautiful You</span>
+                <div class="description">
+                    <span>Bó Hoa Hồng Beautiful You</span>
 
-            </div>
+                </div>
 
-            <div class="quantity">
-                <button class="minus-btn" type="button" name="button">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <input type="text" name="name" value="1">
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
 
-                <button class="plus-btn" type="button" name="button">
-                    <i class="fas fa-plus"></i>
-                </button>
-            </div>
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
 
-            <div class="total-price">149.000đ</div>
-        </div>-->
+                <div class="total-price">149.000đ</div>
+            </div>-->
             <!--<div class="item">
-            <div class="buttons">
-                <button class="delete-btn">
-                    <i class="fas fa-times"></i>
-                </button>
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
 
-            </div>
+                </div>
 
-            <div class="image">
-                <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
-            </div>
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
 
-            <div class="description">
-                <span>Hộp Hoa Secret Lover</span>
+                <div class="description">
+                    <span>Hộp Hoa Secret Lover</span>
 
-            </div>
+                </div>
 
-            <div class="quantity">
-                <button class="minus-btn" type="button" name="button">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <input type="text" name="name" value="1">
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
 
-                <button class="plus-btn" type="button" name="button">
-                    <i class="fas fa-plus"></i>
-                </button>
-            </div>
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
 
-            <div class="total-price">149.000đ</div>
-        </div>-->
+                <div class="total-price">149.000đ</div>
+            </div>-->
             <!--<div class="item">
-            <div class="buttons">
-                <button class="delete-btn">
-                    <i class="fas fa-times"></i>
-                </button>
+                <div class="buttons">
+                    <button class="delete-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
 
-            </div>
+                </div>
 
-            <div class="image">
-                <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
-            </div>
+                <div class="image">
+                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                </div>
 
-            <div class="description">
-                <span>Hộp Hoa Moonlight Lover</span>
+                <div class="description">
+                    <span>Hộp Hoa Moonlight Lover</span>
 
-            </div>
+                </div>
 
-            <div class="quantity">
-                <button class="minus-btn" type="button" name="button">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <input type="text" name="name" value="1">
+                <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
 
-                <button class="plus-btn" type="button" name="button">
-                    <i class="fas fa-plus"></i>
-                </button>
-            </div>
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
 
-            <div class="total-price">149.000đ</div>
-        </div>-->
+                <div class="total-price">149.000đ</div>
+            </div>-->
 
             <div class="total">
-                <div class="total-item">
+                <!--<div class="total-item">
                     <label>Mã khuyến mãi</label>
                     <input class="coupon" type="text" placeholder="Nhập mã.." />
-                </div>
+                </div>-->
                 <div class="total-item">
                     <label>Tổng cộng</label>
                     <div class="money">0đ</div>
                 </div>
                 <div class="total-item">
-                    <a href="#thanhtoan" class="checkout-btn">Thanh toán</a>
+                    <a href="#thanhtoan" class="checkout-btn">Xác nhận đơn hàng</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script type="text/javascript" src="Jquery.js"></script>
-    <!--<script type="text/javascript">
-        var cart = JSON.parse(localStorage.cart);
-        loadItem();
-
-
-
-
-
-
-
-        function addEvents() {
-            var plusbtns = document.getElementsByClassName("plus-btn");
-            var plusbtnsLength = plusbtns.length;
-            for (var i = 0; i < plusbtnsLength; i++) {
-                plusbtns[i].setAttribute('onclick', 'clickChinhSoLuong(this)');
-            }
-
-            var minusbtns = document.getElementsByClassName("minus-btn");
-            var plusbtnsLength = plusbtns.length;
-            for (var i = 0; i < plusbtnsLength; i++) {
-                plusbtns[i].setAttribute('onclick', 'clickChinhSoLuong(this)');
-            }
-        }
-
-
-        function clickChinhSoLuong(btn) {
-            var item = btn.parentNode.parentNode;
-            var itemId = item.getElementsByClassName("itemId")[0].innerHTML;
-            var input = item.getElementsByTagName("input")[0];
-
-            if (btn.className.includes("minus"))
-                input.value = eval(input.value) - 1;
-            else
-                input.value = eval(input.value) + 1;
-
-            updateSoLuong(itemId, eval(input.value));
-
-        }
-
-        function updateSoLuong(itemId, quan) {
-            var cartLength = cart.length;
-            for (var i = 0; i < cartLength; i++) {
-
-                var item = cart[i];
-                var id = JSON.parse(item.info)[0];
-                if (id == itemId) {
-                    cart[i].quantity = quan;
-                    break;
-                }
-
-            }
-
-            localStorage.cart = cart.toString();
-            var itemParent = document.getElementsByClassName('item')[0].parentNode;
-            var items = document.getElementsByClassName('item');
-            var itemsLength = document.getElementsByClassName('item').length;
-            for (var i = 0; i < itemsLength; i++) {
-                itemParent.removeChild(items[i]);
-            }
-            loadItem();
-        }
-
-        function loadItem() {
-            var sum = 0;
-            for (let i = 0; i < cart.length; i++) {
-                let chosen = cart[i];
-                let info = JSON.parse(chosen.info);
-                let item = $('<div class="item"></div>');
-                item.insertBefore($('.total').eq(0));
-
-                let itemId = $('<div class="itemId"></div>');
-                itemId.appendTo(item);
-                let button = $('<div class="buttons" onclick="deleteItem(this)"><button class="delete-btn"><i class="fas fa-times"></i></button></div>').appendTo(item);
-                let imgDiv = $('<div class="image"></div>');
-                let img = $('<img width="120" alt="">').attr('src', info[1]);
-
-                itemId.html(info[0]);
-
-                $(imgDiv).append(img).appendTo(item);
-
-
-                let description = $('<div class="description"><span></span></div>');
-                description.text(info[2]).appendTo(item);
-
-                let quantity = $('<div class="quantity"><button class="minus-btn" type="button" name="button"><i class="fas fa-minus"></i></button><input type="text" name="name" value=""><button class="plus-btn" onclick="plusQuantity(this)" type="button" name="button"><i class="fas fa-plus"></i></button></div>').appendTo(item);
-                $(quantity).find('input').eq(0).attr('value', chosen.quantity);
-
-                let price = $('<div class="total-price"></div>');
-                $(price).text(separate(info[3]) + "đ X " + chosen.quantity).appendTo(item);
-
-                sum = sum + parseInt(info[3]) * chosen.quantity
-                $('.money').eq(0).text(separate(sum));
-
-                addEvents();
-            }
-        }
-
-        function separate(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
-        function deleteItem(x) {
-            console.log("x: " + $(x).html());
-
-            let item = $(x).parent();
-            console.log("item: " + $(item).html());
-
-            let i = $('.item').index(item);
-            console.log($('.item').index(item));
-
-            let target = $(item).parent().find('.item').eq(i);
-
-            $(target).hide('slow', function () { $(target).remove(); });
-        }
-
-    </script>-->
 
     <script type="text/javascript">
         var sum = 0;
-        var cart = JSON.parse(localStorage.cart);
+        var cart = JSON.parse(localStorage.order);
         loadPage();
         function loadPage() {
             for (let i = 0; i < cart.length; i++) {
@@ -1358,91 +1165,94 @@
         $('.minus-btn').on('click', function (e) {
             e.preventDefault();
             var $this = $(this);
-            var $input = $this.closest('div').find('input');
+            var $input = $this.closest('.item').find('input');
             var value = parseInt($input.val());
 
-            if (value > 1) {
+            if (value > 0) {
                 value = value - 1;
-                minusLocalStorage(value, $this.closest('div').find('.description').eq(0).text(), $(this).closest('div').find('.total-price').eq(0));
+                processLocalStorage('minus', value, this);
             } else {
                 value = 0;
             }
-            $input.val(value);
+            $input.attr('value', value)
 
         });
 
         $('.plus-btn').on('click', function (e) {
             e.preventDefault();
             var $this = $(this);
-            var $input = $this.closest('div').find('input');
+            var $input = $this.closest('.item').find('input');
             var value = parseInt($input.val());
 
             if (value < 100) {
                 value = value + 1;
-                addLocalStorage(value, this);
+                processLocalStorage('plus', value, this);
             } else {
                 value = 100;
             }
-            $input.val(value);
+            $input.attr('value', value)
         });
 
-        function addLocalStorage(val, x) {
-            var addValue;
-            var des = $(x).closest('div').find('.description').eq(0).text();
-            var totalprice = $(x).closest('div').find('.total-price').eq(0);
+        function processLocalStorage(hint, value, x) {
+            var des = $(x).closest('.item').find('.description').eq(0).text();
+            var totalprice = $(x).closest('.item').find('.total-price').eq(0);
+
             for (let i = 0; i < cart.length; i++) {
                 var chosen = cart[i];
                 var info = JSON.parse(chosen.info);
+
                 if (info[2].includes(des)) {
-                    addValue = info[3]
-                    chosen.quantity = val;
-                    $(totalprice).text(separate(info[3]) + "đ X" + val)
-                    console.log(" $(totalprice).text(): " + $(totalprice).text())
+                    chosen.quantity = value;
+                    $(totalprice).text("x " + separate(info[3]))
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    break;
                 }
             }
-            sum = sum + parseInt(addValue);
-            $('.money').eq(0).text(separate(sum));
-        }
 
-        function minusLocalStorage(val, x) {
-            var minusValue;
-            var des = $(x).closest('div').find('.description').eq(0).text();
-            var totalprice = $(x).closest('div').find('.total-price').eq(0);
-            for (let i = 0; i < cart.length; i++) {
-                var chosen = cart[i];
-                var info = JSON.parse(chosen.info);
-                if (info[2].includes(des)) {
-                    minusValue = info[3]
-                    chosen.quantity = val;
-                    $(totalprice).text(separate(info[3]) + "đ X" + val)
+            switch (hint) {
+                case 'plus': {
+                    sum = sum + parseInt(info[3]);
+                    break;
+                }
+                case 'minus': {
+                    sum = sum - parseInt(info[3]);
+                    break;
                 }
             }
-            sum = sum - parseInt(minusValue);
             $('.money').eq(0).text(separate(sum));
         }
-
-
 
         function separate(x) {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         }
 
         function deleteItem(x) {
-            console.log("x: " + $(x).html());
+            let target = $(x).closest('.item');
 
-            let item = $(x).parent();
-            console.log("item: " + $(item).html());
+            console.log("quantity: " + parseInt($(target).find('.quantity>input').attr('value')))
+            console.log("unit: " + parseInt(($(target).find('.total-price').text().substr(1)).replace('.', '')))
 
-            let i = $('.item').index(item);
-            console.log($('.item').index(item));
-
-            let target = $(item).parent().find('.item').eq(i);
-
-            sum = sum - parseInt($(target).find('.quantity>input').attr('value')) * parseInt(($(target).find('.total-price').text().substr(1)).replace('.', ''))
+            sum = sum - (parseInt($(target).find('.quantity>input').attr('value')) * parseInt(($(target).find('.total-price').text().substr(1)).replace('.', '')))
 
             $(target).hide('slow', function () { $(target).remove(); });
-
+            removeLocalStorage(x);
             $('.money').eq(0).text(separate(sum));
+            setNotification(JSON.stringify(cart));
+        }
+
+        function removeLocalStorage(x) {
+            var des = $(x).closest('.item').find('.description').eq(0).text();
+
+            for (let i = 0; i < cart.length; i++) {
+                var chosen = cart[i];
+                var info = JSON.parse(chosen.info);
+
+                if (info[2].includes(des)) {
+                    cart.splice(i, 1)
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    break;
+                }
+            }
         }
 
         $('.checkout-btn').click(function () {
@@ -1635,6 +1445,17 @@
             </div>
         </div>
     </div>
+    <!--phan code hidden-->
+
+    <form id="frmChiTiet" action="chitietsanpham.html" style="display:none;">
+        <input type="text" value="" name="idSanPham" />
+        <input type="submit" name="subChiTiet" />
+    </form>
+
+    <form id="frmDanhMuc" action="danhmucsanpham.html" style="display:none">
+        <input type="text" value="" name="idDanhMuc" />
+        <input type="submit" name="subDanhMuc" />
+    </form>
 
     <script>
         setNotification(window.localStorage.cart)
@@ -1642,8 +1463,16 @@
             let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
             $(notification).empty();
             var cartJson = JSON.parse(cart);
+            
             $(notification).eq(0).text(cartJson.length)
             $(notification).show(400);
+        }
+
+        function clickTitle(title) {
+            var idDanhMuc = title.innerHTML;
+            //
+            frmDanhMuc.idDanhMuc.value = idDanhMuc;
+            frmDanhMuc.subDanhMuc.click();
         }
     </script>
 </body>
