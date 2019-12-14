@@ -1057,16 +1057,18 @@
             .addToCart {
                 font-family: 'Roboto', sans-serif;
                 font-size: 1.5rem;
+                font-weight:700;
                 background-color: #f1d0ff;
                 color: #008b8b;
                 border-radius: 4px;
-                padding: 10px 20px;
+                padding: 10px 22px;
                 margin-right: 10px;
                 text-decoration: none;
             }
 
                 .addToCart:hover {
                     background-color: #eec4ff;
+                    cursor:pointer;
                 }
         }
     </style>
@@ -1099,8 +1101,8 @@
                 Phần mô tả sản phẩm
             </div>
             <div class="zoneMua">
-                <a href="#" onclick="addToCart(this)" class="addToCart">Thêm vào giỏ</a>
-                <a href="#" onclick="addToCart(this);window.open('GioHang.html', '_self');" class="addToCart">Mua hàng</a>
+                <a onclick="addToCart(this)" class="addToCart">Thêm Vào Giỏ</a>
+                <a onclick="addToCart(this);window.open('GioHang.html', '_self');" class="addToCart">Mua Hàng</a>
             </div>
         </div>
 
@@ -1500,7 +1502,7 @@
         var itemPrice = "";
         var product;
         var gift;
-
+        var cart = [];
         function loadData() {
 
             loadPage();

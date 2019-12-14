@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -10,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap" rel="stylesheet">
     <script src="Jquery.js"></script>
     <script src="wow.min.js"></script>
-    <script src="animate.js"></script>
+    <link href="animate.css" rel="stylesheet" />
 
     <script type="text/javascript">
         new WOW().init();
@@ -61,7 +62,6 @@
                 color: #008b8b;
                 /**/
                 font-size: 22px;
-                
                 height: 50px;
                 /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
             }
@@ -79,7 +79,7 @@
 
                 .headerMenuContent ul li {
                     /*width: 160px;*/
-                    font-family:'Quicksand';
+                    font-family: 'Quicksand';
                 }
 
                     .headerMenuContent ul li:hover {
@@ -995,37 +995,36 @@
     <!--body và style của body-->
     <style>
         /**/
-        @media screen and (min-width: 960px) {
+        @media screen and (min-width: 1024px) {
             .banner {
-                display:flex;
-                flex-flow:row wrap;
-                justify-content:center;
-                
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
             }
 
-            .banner:hover .bana
-            {
-                color:black;
-                background-color:white;
-            }
-            .banner:hover .bana i
-            {
-                color:black;
-                
-            }
+                .banner:hover .bana {
+                    color: black;
+                    background-color: white;
+                }
+
+                    .banner:hover .bana i {
+                        color: black;
+                    }
 
             .bana {
                 text-decoration: none;
                 font-size: 50px;
                 font-weight: bolder;
-                z-index:0;
+                z-index: 0;
                 cursor: pointer;
                 background-color: rgba(200,200,200,0.7);
-                width:50px;
-                height:50px;
+                width: 50px;
+                height: 50px;
                 color: rgba(255,255,255,0.7);
-                border-radius:50%;
-                display:flex; justify-content:center; align-items:center;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
                 .bana:hover {
@@ -1045,9 +1044,7 @@
                     display: flex;
                     flex-flow: wrap row;
                     align-items: center;
-
-                    overflow:hidden;
-                    
+                    overflow: hidden;
                 }
 
                     .body > .banner > img {
@@ -1056,9 +1053,8 @@
                         background-color: #E3E3E3;
                         border: 0;
                         outline: 0;
-                        margin-left:-50px;
-                        margin-right:-50px;
-                       
+                        margin-left: -50px;
+                        margin-right: -50px;
                     }
 
                 .body > .grid {
@@ -1151,9 +1147,9 @@
                 font-size: 18px;
                 color: #444444;
                 height: 35px;
-                font-family:'Quicksand';
-                font-weight:800;
-                padding:10px 0;
+                font-family: 'Quicksand';
+                font-weight: 800;
+                padding: 10px 0;
             }
 
                 .body > .grid > .gridContent > .item > .itemName:hover {
@@ -1186,8 +1182,348 @@
                 background-color: #f1d0ff;
                 padding: 10px;
                 color: #008b8b;
-                font-family:'Roboto', sans-serif;
-                font-weight:700;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+
+                .body > .grid > .gridContent > .item > .addToCart:hover {
+                    background-color: #eec4ff;
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .addToCart:active {
+                    background-color: #ebb9ff;
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart-mb {
+                display: none;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .display:active {
+            }
+
+
+
+            /*phần preload*/
+
+
+
+            .preload > .body {
+                /*background-color: #FFFFFF;*/
+                padding: 10px 150px;
+            }
+
+                .preload > .body > .banner {
+                    min-width: 100%;
+                    height: 600px;
+                    background-color: white;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: wrap row;
+                    justify-content: center;
+                    align-content: center;
+                }
+
+                    .preload > .body > .banner > img {
+                        width: 800px;
+                        height: 500px;
+                        background-color: #E3E3E3;
+                        border: 0;
+                        outline: 0;
+                    }
+
+                .preload > .body > .grid {
+                    margin-top: 10px;
+                    background-color: white;
+                    padding: 40px 30px;
+                    padding-bottom: 20px;
+                    border-radius: 5px;
+                }
+
+                    .preload > .body > .grid > .gridTitle {
+                        background-color: #E3E3E3;
+                        width: 400px;
+                        min-height: 25px;
+                        /*border-radius: 5px;*/
+                        margin-bottom: 5px;
+                    }
+
+                    .preload > .body > .grid > .gridContent {
+                        /*width: 400px;*/
+                        min-height: 40px;
+                        /*border-radius: 5px;*/
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 0;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                    }
+
+            .itemId {
+                display: none;
+                /*border-radius: 5px;*/
+            }
+
+            .preload > .body > .grid > .gridContent > .item {
+                background-color: #fff;
+                /*width: 400px;*/
+                min-height: 40px;
+                /*border-radius: 5px;*/
+                width: 250px;
+                text-align: center;
+                display: flex;
+                flex-flow: column wrap;
+                min-height: 300px;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 15px 0;
+            }
+
+                .preload > .body > .grid > .gridContent > .item > .itemImg {
+                    /*Mockup propertise*/
+                    height: 180px;
+                    width: 180px;
+                    border: none;
+                    /*Real Propertise*/
+                    background-color: #E3E3E3;
+                    margin-left: auto;
+                    margin-right: auto;
+                    justify-self: flex-start;
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .itemName {
+                    margin-top: 10px;
+                    background-color: #E3E3E3;
+                    height: 12px;
+                    width: 150px;
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .itemPrice {
+                    height: 16px;
+                    width: 125px;
+                    margin-top: 10px;
+                    background-color: #E3E3E3;
+                    font-weight: lighter;
+                    /**/
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .addToCart {
+                    margin-top: 10px;
+                    width: 180px;
+                    font-size: 18px;
+                    background-color: #E3E3E3;
+                    padding: 6px 0;
+                    color: #008b8b;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    /**/
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart-mb {
+                display: none;
+            }
+
+            .preload > .body > .grid > .gridMore {
+                text-align: center;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+
+         @media screen and (min-width: 960px) and (max-width:1024px) {
+            .banner {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+
+                .banner:hover .bana {
+                    color: black;
+                    background-color: white;
+                }
+
+                    .banner:hover .bana i {
+                        color: black;
+                    }
+
+            .bana {
+                text-decoration: none;
+                font-size: 50px;
+                font-weight: bolder;
+                z-index: 0;
+                cursor: pointer;
+                background-color: rgba(200,200,200,0.7);
+                width: 50px;
+                height: 50px;
+                color: rgba(255,255,255,0.7);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .bana:hover {
+                    background-color: #d4ade7;
+                    color: white;
+                }
+
+            .body {
+                padding: 10px 10%;
+            }
+
+                .body > .banner {
+                    min-width: 100%;
+                    height: auto;
+                    background-color: white;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: wrap row;
+                    align-items: center;
+                    overflow: hidden;
+                }
+
+                    .body > .banner > img {
+                        width: 100%;
+                        height: auto;
+                        background-color: #E3E3E3;
+                        border: 0;
+                        outline: 0;
+                        margin-left: -50px;
+                        margin-right: -50px;
+                    }
+
+                .body > .grid {
+                    margin-top: 10px;
+                    background-color: white;
+                    padding: 40px 30px;
+                    padding-bottom: 20px;
+                    border-radius: 5px;
+                }
+
+                    .body > .grid > .gridTitle {
+                        font-size: 35px;
+                        color: #484c7f;
+                        font-family: 'Quicksand', sans-serif;
+                        font-weight: 400;
+                        cursor: pointer;
+                        width: 400px;
+                        min-height: 25px;
+                        margin-bottom: 5px;
+                        /*border-radius: 5px;*/
+                    }
+
+                        .body > .grid > .gridTitle:hover {
+                            color: #8185b8;
+                        }
+
+                    .body > .grid > .gridContent {
+                        background-color: #ffffff;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 0;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                    }
+
+                    .body > .grid > .gridMore {
+                        text-align: center;
+                        cursor: pointer;
+                        font-size: 30px;
+                        color: #484c7f;
+                        background-color: #fff;
+                        margin-top: 10px;
+                        padding: 5px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-family: 'Comfortaa', cursive;
+                        font-weight: bolder;
+                    }
+
+                        .body > .grid > .gridMore :hover {
+                            color: #a2a2a2;
+                        }
+
+                    .body > .grid > .gridContent > .item {
+                        width: 300px;
+                        text-align: center;
+                        display: flex;
+                        flex-flow: column wrap;
+                        min-height: 300px;
+                        justify-content: flex-end;
+                        margin: 15px 0;
+                    }
+
+            .itemId {
+                display: none;
+            }
+
+            .body > .grid > .gridContent > .item > .itemImg {
+                height: 250px;
+                width: 250px;
+                border: none;
+                background-color: #ffcccc;
+                margin-left: auto;
+                margin-right: auto;
+                align-self: flex-start;
+            }
+
+                .body > .grid > .gridContent > .item > .itemImg:hover {
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .itemImg > img {
+                    width: 100%;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            .body > .grid > .gridContent > .item > .itemName {
+                font-size: 18px;
+                color: #444444;
+                height: 35px;
+                font-family: 'Quicksand';
+                font-weight: 800;
+                padding: 10px 0;
+            }
+
+                .body > .grid > .gridContent > .item > .itemName:hover {
+                    color: #6f6f6f;
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .itemName:active {
+                    color: #c2c0c0;
+                }
+
+                .body > .grid > .gridContent > .item > .itemName > a {
+                    text-decoration: none;
+                }
+
+            .body > .grid > .gridContent > .item > .itemPrice {
+                font-size: 25px;
+                font-weight: lighter;
+                font-family: 'Roboto';
+                color: #727272;
+                padding: 5px 0;
+            }
+
+                .body > .grid > .gridContent > .item > .itemPrice:hover {
+                    cursor: default;
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart {
+                font-size: 18px;
+                background-color: #f1d0ff;
+                padding: 10px;
+                color: #008b8b;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
                 letter-spacing: 1px;
             }
 
@@ -1353,10 +1689,10 @@
                 <i class="fas fa-angle-right"></i>
             </a>
             <!--<div style="display: flex; flex-flow:row; justify-content:center;">
-        <div class="bana" onclick="changeBanner()">&lt;</div>
-        <div>&nbsp;</div>
-        <div class="bana" onclick="changeBanner()">&gt;</div>
-    </div>-->
+                <div class="bana" onclick="changeBanner()">&lt;</div>
+                <div>&nbsp;</div>
+                <div class="bana" onclick="changeBanner()">&gt;</div>
+            </div>-->
         </div>        <div class="grid">
             <!--hàng 1-->
             <div class="gridTitle"></div>
@@ -1394,9 +1730,9 @@
 
             </div>
             <!--hàng 3-->
-            <div class="gridMore" onclick="themItem(this)">
+            <!--<div class="gridMore" onclick="themItem(this)">
                 <div>+</div>
-            </div>
+            </div>-->
         </div>
     </div>
 
@@ -1589,16 +1925,34 @@
 
     <script type="text/javascript">
 
+        //alert(document.body.getBoundingClientRect().width);
+
+       
         new WOW().init();
 
         preloadData();
 
+        if (detectmob())
+            alert("mobile");
+
+        function detectmob() { 
+            if( navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+            ){
+            return true;
+            }
+            else {
+            return false;
+            }
+        }
+
 
         /*hàm giả loadData*/
-
-
-
-
 
         function preloadData() {
             var gridContent = document.getElementsByClassName("gridContent")[0];
@@ -1640,8 +1994,7 @@
 
             var spaceBetweenItems = (gridContentRect.width - numberOfItemOnRow * itemRect.width) / (numberOfItemOnRow - 1);
             var spaceRate = spaceBetweenItems / gridContentRect.width;
-            if (spaceRate < 0.04)
-                numberOfItemOnRow = numberOfItemOnRow - 1;
+
             return numberOfItemOnRow;
         }
         function loadedData() {
@@ -1681,14 +2034,26 @@
         var loadHomePage = 0;
         var localStorage = window.localStorage;
         var cart = [];
-
+        var itemOnRow;
 
         $(document).ready(function () {
             if (reload()) {
                 loadPage();
-                $(document).load('home.html #body')
+                $(document).load('index.html #body');
             }
         });
+
+        window.onresize = function (e) {
+            let grid = $('.grid')
+            for (var i = 0; i < $(grid).length; i++) {
+                removeNullItem($(grid).eq(i).find('.gridContent').eq(0))
+            }
+            itemOnRow = countItemOnRow();
+            for (var i = 0; i < $(grid).length; i++) {
+                addNullItem(itemOnRow - $(grid).eq(i).find('.gridContent').eq(0).children().length % itemOnRow, $(grid).find('.gridContent').eq(i))
+            }
+        };
+
 
         function reload() {
             if (loadHomePage == 0) {
@@ -1699,49 +2064,13 @@
             }
         }
 
-        //function loadPage() {
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_sanpham.json',
-        //        dataType: 'json',
-        //        success: function (json) {
-        //            product = json
-        //        }
-        //    });
-
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_quatangkem.json',
-        //        dataType: 'json',
-        //        success: function (json) {
-        //            gift = json
-        //        }
-        //    });
-
-        //    $.ajax({
-        //        type: 'GET',
-        //        url: 'data/data_homepage.json',
-        //        dataType: 'json',
-        //        variable: 'category',
-        //        callback: 'function () { loadHomepage(product) }',
-        //        success: function (json) {
-        //            category = json
-        //            loadHomepage(product)
-        //            loadedData();
-        //        }
-        //    });
-
-        //}
         var banners = ['AllImages/banner 1.png', 'AllImages/banner 2.png'];
 
         function loadPage() {
 
-
-
             var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
             img.src = banners[0];
 
-            //
             $.ajax({
                 type: 'GET',
                 url: 'data/data_sanpham.json',
@@ -1795,7 +2124,6 @@
         function loadHomepage(product) {
             let firstGrid = true;
             category.forEach(function (e) {
-                let gridContent = "";
                 if (firstGrid) {
                     firstGrid = false;
                     buildFirstGrid(e);
@@ -1812,17 +2140,15 @@
                     $(gridContent).insertAfter(gridTitle);
 
                     addItem1(e.items, gridContent, product);
-                    addWatchMore1(null, gridContent);
                 }
             })
         }
 
         function moreItem(x) {
             let lastGridTitleText = $(x).parent().find(".gridTitle").eq(0).text();
-
             let gridContent = $(x).parent().find(".gridContent");
-            let lastGridContentIndex = $(gridContent).length - 1;
-            let lastAddedItem = $(gridContent).eq(lastGridContentIndex).find(".item").eq(2);
+            removeNullItem($(gridContent))
+            let lastAddedItem = $(gridContent).eq(0).find(".item").last();
             let lastAddedItemId = $(lastAddedItem).find(".itemId").text();
 
             var array;
@@ -1831,10 +2157,9 @@
                     array = x.items
                 }
             });
+            console.log("jQuery.inArray(lastAddedItemId, array): " + jQuery.inArray(lastAddedItemId, array))
 
             if (jQuery.inArray(lastAddedItemId, array)) {
-                let newGridContent = $("<div class='gridContent'><div>").empty()
-                $(newGridContent).insertAfter($(gridContent).eq(lastGridContentIndex));
 
                 var val = lastAddedItemId;
                 var index;
@@ -1848,7 +2173,25 @@
                 var cloneArray = array.slice();
                 var productId = cloneArray.splice(index + 1);
 
-                addItem2(productId, newGridContent, product, $(x).parent());
+                addItem2(productId, gridContent, product, $(x).parent());
+            }
+        }
+
+        function removeNullItem(gridContent) {
+            var item = $(gridContent).find('.item')
+            for (var i = 0; i < item.length; i++) {
+                if ($(item).eq(i).text() === '') {
+                    $(item).eq(i).remove();
+                }
+            }
+        }
+
+        function addNullItem(num, gridContent) {
+            if (num < itemOnRow) {
+                for (var i = 0; i < num; i++) {
+                    $('<div class="item"></div>').appendTo(gridContent);
+                    console.log('added NullItem')
+                }
             }
         }
 
@@ -1869,11 +2212,13 @@
             setTitleStyle(gridTitle)
 
             gridContent = $(grid).eq(0).find(".gridContent")
-
             var productId = e.items;
 
+            itemOnRow = countItemOnRow();
+
+            $(gridContent).empty();
+
             addItem1(productId, gridContent, product);
-            addWatchMore1(grid, gridContent);
         }
 
         function setTitleStyle(gridTitle) {
@@ -1881,12 +2226,16 @@
         }
 
         function addItem2(productId, gridContent, product, grid) {
-            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
+            var showItem = $(gridContent).find('.item').length%itemOnRow - itemOnRow
+            if (showItem == -(itemOnRow)) showItem = 0;
+            console.log("showItem: " + showItem)
+            console.log("productId.length: " + productId.length)
+            for (var i = 0; i < productId.length && showItem < itemOnRow; i++ , showItem++) {
                 var item = $("<div class='item'></item>").appendTo(gridContent);
                 let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
 
                 if (productId[i].includes("sp")) {
-                    for (let j = 0; j < product.length && showItem < 3; j++) {
+                    for (let j = 0; j < product.length && showItem < itemOnRow; j++) {
                         if (product[j].id.includes(productId[i])) {
                             addProductItemAttr(item, j);
                             break;
@@ -1895,15 +2244,14 @@
                 }
 
                 if (productId[i].includes("qt")) {
-                    for (let j = 0; j < gift.length && showItem < 3; j++) {
+                    for (let j = 0; j < gift.length && showItem < itemOnRow; j++) {
                         if (gift[j].id.includes(productId[i])) {
                             addGiftItemAttr(item, j)
                             break;
                         }
                     }
                 }
-                //console.log("i : " + i + " max: " + (productId.length - 1));
-                addWatchMore2(grid, gridContent, i, productId.length - 1);
+                addWatchMore2(grid, gridContent, i, productId.length);
                 removeItemBackGroundColor(item)
             }
         }
@@ -1913,7 +2261,7 @@
             $("<div class='itemImg'></div>").append(img).appendTo(item)
             $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(product[j].title).appendTo(item)
             $("<div class='itemPrice'></div>").text(product[j].price).appendTo(item)
-            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm vào giỏ").appendTo(item)
+            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
             $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
         }
 
@@ -1922,44 +2270,17 @@
             $("<div class='itemImg'></div>").append(img).appendTo(item)
             $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(gift[j].title).appendTo(item)
             $("<div class='itemPrice'></div>").text(gift[j].price).appendTo(item)
-            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm vào giỏ").appendTo(item)
+            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
             $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
         }
 
-        //function addItem1(productId, gridContent, product) {
-        //    for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
-        //        var item = $("<div class='item'></item>").appendTo(gridContent);
-        //        let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
-
-        //        if (productId[i].includes("sp")) {
-        //            for (let j = 0; j < product.length && showItem < 3; j++) {
-        //                if (product[j].id.includes(productId[i])) {
-        //                    addProductItemAttr(item, j);
-        //                    break;
-        //                }
-        //            }
-        //        }
-
-        //        if (productId[i].includes("qt")) {
-        //            for (let j = 0; j < gift.length && showItem < 3; j++) {
-        //                if (gift[j].id.includes(productId[i])) {
-        //                    addGiftItemAttr(item, j)
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //        //console.log("i : " + i + " max: " + (productId.length - 1));
-        //        removeItemBackGroundColor(item)
-        //    }
-        //}
-
         function addItem1(productId, gridContent, product) {
-            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
+            for (var i = 0, showItem = 0; i < productId.length && showItem < itemOnRow; i++ , showItem++) {
                 var item = $("<div class='item'></item>").appendTo(gridContent);
                 let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
 
                 if (productId[i].includes("sp")) {
-                    for (let j = 0; j < product.length && showItem < 3; j++) {
+                    for (let j = 0; j < product.length && showItem < itemOnRow; j++) {
                         if (product[j].id.includes(productId[i])) {
                             addProductItemAttr(item, j);
                             break;
@@ -1968,15 +2289,21 @@
                 }
 
                 if (productId[i].includes("qt")) {
-                    for (let j = 0; j < gift.length && showItem < 3; j++) {
+                    for (let j = 0; j < gift.length && showItem < itemOnRow; j++) {
                         if (gift[j].id.includes(productId[i])) {
                             addGiftItemAttr(item, j)
                             break;
                         }
                     }
                 }
-                //console.log("i : " + i + " max: " + (productId.length - 1));
+
                 removeItemBackGroundColor(item)
+            }
+            if (productId.length > itemOnRow) {
+                addWatchMore1(null, gridContent);
+            }
+            if (productId.length < itemOnRow) {
+                addNullItem(itemOnRow - productId.length, gridContent)
             }
         }
 
@@ -1988,15 +2315,22 @@
             }
         }
 
-        function addWatchMore2(previousGrid, gridContent, lastIndex, maxIndex) {
+        function addWatchMore2(previousGrid, gridContent, lastIndex, length) {
+            console.log("length: " + length);
+            console.log('itemOnRow: ' + itemOnRow)
 
             let previousGridMore = $(previousGrid).find(".gridMore").eq(0).html()
-            if (previousGridMore === undefined && lastIndex + 3 < maxIndex) {
+            if (previousGridMore === undefined && lastIndex < length) {
                 let watchMore = $("<div></div>").text("+")
                 $("<div class='gridMore' onclick='moreItem(this)'></div>").append(watchMore).insertAfter(gridContent)
             }
-            if (lastIndex + 3 > maxIndex) {
+            else if (lastIndex == length - 1 && previousGridMore !== undefined) {
                 $(previousGrid).find(".gridMore").remove();
+                var num = itemOnRow - ($(gridContent).find('.item').length % itemOnRow);
+                console.log("num: " + num)
+                if (num !== 0 && num != itemOnRow) {
+                    addNullItem(num, gridContent);
+                }
             }
         }
 
@@ -2038,7 +2372,7 @@
         function removeAnimationAddToCart(x) {
             $(x).parent().removeClass("wow fadeOutUp animated");
             $(x).parent().removeAttr("style");
-            $(x).parent().attr("style", "z-index:0")
+            //$(x).parent().attr("style", "z-index:0")
         }
 
         function isChosen(cart, id) {
@@ -2075,8 +2409,8 @@
             $(notification).eq(0).text(cart.length)
             $(notification).show(400);
         }
-        var cart = JSON.parse(window.localStorage.cart) 
-         setNotification(cart)
+        var cart = JSON.parse(window.localStorage.cart)
+        setNotification(cart)
     </script>
 </body>
 </html>

@@ -3,160 +3,27 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="Jquery.js"></script>
-    <link href="fontawesome/css/all.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap" rel="stylesheet">
-    <!--thu vien tham khao-->
 
+    <!--thu vien tham khao-->
     <link href=fontawesome/css/all.css rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap" rel="stylesheet">
     <script src="Jquery.js"></script>
     <script src="wow.min.js"></script>
     <script src="animate.js"></script>
-    <style>
 
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
 
-        .body {
-            max-width: 1060px;
-            margin: 0 auto;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        h3 {
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        .body .shopping-cart {
-            width: 100%;
-            margin: 20px auto;
-            background: #FFFFFF;
-            border-radius: 4px;
-            display: flex;
-            flex-direction: column;
-        }
-
-
-        .item {
-            padding: 20px 50px;
-            height: 120px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-            .item:nth-child(2n) {
-                border-top: 1px solid #E1E8EE;
-                border-bottom: 1px solid #E1E8EE;
-            }
-
-            .item .itemId {
-                display: none;
-            }
-
-        .buttons {
-            position: relative;
-        }
-
-        .delete-btn {
-            display: inline-block;
-            Cursor: pointer;
-        }
-
-        .delete-btn {
-            width: 18px;
-            height: 17px;
-        }
-
-
-        .quantity {
-            margin-right: 60px;
-        }
-
-            .quantity input {
-                -webkit-appearance: none;
-                border: none;
-                text-align: center;
-                width: 32px;
-                font-size: 16px;
-                color: #43484D;
-                font-weight: 300;
-            }
-
-        button[class*=btn] {
-            width: 30px;
-            height: 30px;
-            background-color: #E1E8EE;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-        }
-
-
-        button:focus,
-        input:focus {
-            outline: 0;
-        }
-
-        .total-price {
-            text-align: center;
-            font-size: 16px;
-            color: #43484D;
-            font-weight: 300;
-            width:120px;
-        }
-
-        .total {
-            padding: 20px 50px;
-        }
-
-        .total-item {
-            padding: 10px 0;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .money {
-            width: 200px;
-            font-weight: bold;
-            font-size: 18px;
-            text-align: right;
-            margin-left: 50px;
-        }
-
-        .coupon {
-            width: 200px;
-            height: 30px;
-            margin-left: 50px;
-            box-sizing: border-box;
-            padding: 20px 10px;
-            border-radius: 4px;
-            border: 1px solid #c8c8c8;
-        }
-
-        .checkout-btn {
-            text-align: center;
-            background-color: #F29BAB;
-            font-weight: 800;
-            color: #fff;
-            padding: 15px 55px;
-            border-radius: 4px;
-            text-decoration: none;
-            display: block;
-        }
-        .checkout-btn:hover{
-            opacity:0.8;
-        }
-
-        .description {
-            margin-right: 60px;
-            width: 200px;
+    <style type="text/css">
+        .preload {
+            background-color: #E3E3E3;
         }
     </style>
+
 </head>
-<body>
+<body class="preload">
 
     <!--header và style của header-->
     <style type="text/css">
@@ -194,6 +61,7 @@
                 color: #008b8b;
                 /**/
                 font-size: 22px;
+                
                 height: 50px;
                 /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
             }
@@ -211,7 +79,7 @@
 
                 .headerMenuContent ul li {
                     /*width: 160px;*/
-                    font-family: 'Quicksand';
+                    font-family:'Quicksand';
                 }
 
                     .headerMenuContent ul li:hover {
@@ -1124,295 +992,413 @@
         <i class="fas fa-chevron-up fa-3x"></i>
     </button>
 
+    <!--body và style của body-->
+    <style>
+        /**/
+        @media screen and (min-width: 960px) {
+            .banner {
+                display:flex;
+                flex-flow:row wrap;
+                justify-content:center;
+                
+            }
+
+            .banner:hover .bana
+            {
+                color:black;
+                background-color:white;
+            }
+            .banner:hover .bana i
+            {
+                color:black;
+                
+            }
+
+            .bana {
+                text-decoration: none;
+                font-size: 50px;
+                font-weight: bolder;
+                z-index:0;
+                cursor: pointer;
+                background-color: rgba(200,200,200,0.7);
+                width:50px;
+                height:50px;
+                color: rgba(255,255,255,0.7);
+                border-radius:50%;
+                display:flex; justify-content:center; align-items:center;
+            }
+
+                .bana:hover {
+                    background-color: #d4ade7;
+                    color: white;
+                }
+
+            .body {
+                padding: 10px 10%;
+            }
+
+                .body > .banner {
+                    min-width: 100%;
+                    height: auto;
+                    background-color: white;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: wrap row;
+                    align-items: center;
+
+                    overflow:hidden;
+                    
+                }
+
+                    .body > .banner > img {
+                        width: 100%;
+                        height: auto;
+                        background-color: #E3E3E3;
+                        border: 0;
+                        outline: 0;
+                        margin-left:-50px;
+                        margin-right:-50px;
+                       
+                    }
+
+                .body > .grid {
+                    margin-top: 10px;
+                    background-color: white;
+                    padding: 40px 30px;
+                    padding-bottom: 20px;
+                    border-radius: 5px;
+                }
+
+                    .body > .grid > .gridTitle {
+                        font-size: 35px;
+                        color: #484c7f;
+                        font-family: 'Quicksand', sans-serif;
+                        font-weight: 400;
+                        cursor: pointer;
+                        width: 400px;
+                        min-height: 25px;
+                        margin-bottom: 5px;
+                        /*border-radius: 5px;*/
+                    }
+
+                        .body > .grid > .gridTitle:hover {
+                            color: #8185b8;
+                        }
+
+                    .body > .grid > .gridContent {
+                        background-color: #ffffff;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 0;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                    }
+
+                    .body > .grid > .gridMore {
+                        text-align: center;
+                        cursor: pointer;
+                        font-size: 30px;
+                        color: #484c7f;
+                        background-color: #fff;
+                        margin-top: 10px;
+                        padding: 5px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-family: 'Comfortaa', cursive;
+                        font-weight: bolder;
+                    }
+
+                        .body > .grid > .gridMore :hover {
+                            color: #a2a2a2;
+                        }
+
+                    .body > .grid > .gridContent > .item {
+                        width: 250px;
+                        text-align: center;
+                        display: flex;
+                        flex-flow: column wrap;
+                        min-height: 300px;
+                        justify-content: flex-end;
+                        margin: 15px 0;
+                    }
+
+            .itemId {
+                display: none;
+            }
+
+            .body > .grid > .gridContent > .item > .itemImg {
+                height: 180px;
+                width: 180px;
+                border: none;
+                background-color: #ffcccc;
+                margin-left: auto;
+                margin-right: auto;
+                align-self: flex-start;
+            }
+
+                .body > .grid > .gridContent > .item > .itemImg:hover {
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .itemImg > img {
+                    width: 100%;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            .body > .grid > .gridContent > .item > .itemName {
+                font-size: 18px;
+                color: #444444;
+                height: 35px;
+                font-family:'Quicksand';
+                font-weight:800;
+                padding:10px 0;
+            }
+
+                .body > .grid > .gridContent > .item > .itemName:hover {
+                    color: #6f6f6f;
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .itemName:active {
+                    color: #c2c0c0;
+                }
+
+                .body > .grid > .gridContent > .item > .itemName > a {
+                    text-decoration: none;
+                }
+
+            .body > .grid > .gridContent > .item > .itemPrice {
+                font-size: 25px;
+                font-weight: lighter;
+                font-family: 'Roboto';
+                color: #727272;
+                padding: 5px 0;
+            }
+
+                .body > .grid > .gridContent > .item > .itemPrice:hover {
+                    cursor: default;
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart {
+                font-size: 18px;
+                background-color: #f1d0ff;
+                padding: 10px;
+                color: #008b8b;
+                font-family:'Roboto', sans-serif;
+                font-weight:700;
+                letter-spacing: 1px;
+            }
+
+                .body > .grid > .gridContent > .item > .addToCart:hover {
+                    background-color: #eec4ff;
+                    cursor: pointer;
+                }
+
+                .body > .grid > .gridContent > .item > .addToCart:active {
+                    background-color: #ebb9ff;
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart-mb {
+                display: none;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .display:active {
+            }
+
+
+
+            /*phần preload*/
+
+
+
+            .preload > .body {
+                /*background-color: #FFFFFF;*/
+                padding: 10px 150px;
+            }
+
+                .preload > .body > .banner {
+                    min-width: 100%;
+                    height: 600px;
+                    background-color: white;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: wrap row;
+                    justify-content: center;
+                    align-content: center;
+                }
+
+                    .preload > .body > .banner > img {
+                        width: 800px;
+                        height: 500px;
+                        background-color: #E3E3E3;
+                        border: 0;
+                        outline: 0;
+                    }
+
+                .preload > .body > .grid {
+                    margin-top: 10px;
+                    background-color: white;
+                    padding: 40px 30px;
+                    padding-bottom: 20px;
+                    border-radius: 5px;
+                }
+
+                    .preload > .body > .grid > .gridTitle {
+                        background-color: #E3E3E3;
+                        width: 400px;
+                        min-height: 25px;
+                        /*border-radius: 5px;*/
+                        margin-bottom: 5px;
+                    }
+
+                    .preload > .body > .grid > .gridContent {
+                        /*width: 400px;*/
+                        min-height: 40px;
+                        /*border-radius: 5px;*/
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 0;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                    }
+
+            .itemId {
+                display: none;
+                /*border-radius: 5px;*/
+            }
+
+            .preload > .body > .grid > .gridContent > .item {
+                background-color: #fff;
+                /*width: 400px;*/
+                min-height: 40px;
+                /*border-radius: 5px;*/
+                width: 250px;
+                text-align: center;
+                display: flex;
+                flex-flow: column wrap;
+                min-height: 300px;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 15px 0;
+            }
+
+                .preload > .body > .grid > .gridContent > .item > .itemImg {
+                    /*Mockup propertise*/
+                    height: 180px;
+                    width: 180px;
+                    border: none;
+                    /*Real Propertise*/
+                    background-color: #E3E3E3;
+                    margin-left: auto;
+                    margin-right: auto;
+                    justify-self: flex-start;
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .itemName {
+                    margin-top: 10px;
+                    background-color: #E3E3E3;
+                    height: 12px;
+                    width: 150px;
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .itemPrice {
+                    height: 16px;
+                    width: 125px;
+                    margin-top: 10px;
+                    background-color: #E3E3E3;
+                    font-weight: lighter;
+                    /**/
+                }
+
+                .preload > .body > .grid > .gridContent > .item > .addToCart {
+                    margin-top: 10px;
+                    width: 180px;
+                    font-size: 18px;
+                    background-color: #E3E3E3;
+                    padding: 6px 0;
+                    color: #008b8b;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    /**/
+                }
+
+            .body > .grid > .gridContent > .item > .addToCart-mb {
+                display: none;
+            }
+
+            .preload > .body > .grid > .gridMore {
+                text-align: center;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+    </style>
+
+
+
+    <!--html của body-->
     <div class="body">
-        <div id="notification" class="item" style="display:none; background-color:white; text-align:center">
-            <h2><i class="fas fa-check" style="color:forestgreen"></i> Thanh toán thành công</h2>
-            <div>Cám ơn bạn đã tin tưởng chọn mua sản phẩm của davuflower</div>
-            <div>Chúng tôi sẽ liên lạc lại cho quý khách trong vòng 10 phút</div>
-        </div>
-        <h3>Giỏ hàng</h3>
-        <div class="shopping-cart">
-            <!-- Title -->
-            <!-- Product #1 -->
-            <!--<div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                        <i class="fas fa-times"></i>
-                    </button>
-
+        <div class="banner" style="margin-bottom: 20px;">
+            <a class="bana" onclick="changeBanner()" style="">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            <img />
+            <a class="bana" onclick="changeBanner()">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            <!--<div style="display: flex; flex-flow:row; justify-content:center;">
+        <div class="bana" onclick="changeBanner()">&lt;</div>
+        <div>&nbsp;</div>
+        <div class="bana" onclick="changeBanner()">&gt;</div>
+    </div>-->
+        </div>        <div class="grid">
+            <!--hàng 1-->
+            <div class="gridTitle"></div>
+            <!-- hàng 2-->
+            <div style="" class="gridContent">
+                <!--hình ảnh 1-->
+                <div class="item">
+                    <div class="itemId">&nbsp;</div>
+                    <div class="itemImg">&nbsp;</div>
+                    <div class="itemName">&nbsp;</div>
+                    <div class="itemPrice">&nbsp;</div>
+                    <div class="addToCart">&nbsp;</div>
+                    <div class="addToCart-mb">&nbsp;</div>
                 </div>
 
-                <div class="image">
-                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
+                <!--hình ảnh 2-->
+                <div class="item">
+                    <div class="itemId">&nbsp;</div>
+                    <div class="itemImg">&nbsp;</div>
+                    <div class="itemName">&nbsp;</div>
+                    <div class="itemPrice">&nbsp;</div>
+                    <div class="addToCart">&nbsp;</div>
+                    <div class="addToCart-mb">&nbsp;</div>
                 </div>
-
-                <div class="description">
-                    <span>Bó Hoa Young & Beautiful</span>
-
+                <!--hình ảnh 3-->
+                <div class="item">
+                    <div class="itemId">&nbsp;</div>
+                    <div class="itemImg">&nbsp;</div>
+                    <div class="itemName">&nbsp;</div>
+                    <div class="itemPrice">&nbsp;</div>
+                    <div class="addToCart">&nbsp;</div>
+                    <div class="addToCart-mb">&nbsp;</div>
                 </div>
+                <!--hình ảnh 4-->
 
-                <div class="quantity">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-
-                <div class="total-price">149.000đ</div>
-            </div>-->
-            <!--<div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                        <i class="fas fa-times"></i>
-                    </button>
-
-                </div>
-
-                <div class="image">
-                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
-                </div>
-
-                <div class="description">
-                    <span>Bó Hoa Hồng Beautiful You</span>
-
-                </div>
-
-                <div class="quantity">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-
-                <div class="total-price">149.000đ</div>
-            </div>-->
-            <!--<div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                        <i class="fas fa-times"></i>
-                    </button>
-
-                </div>
-
-                <div class="image">
-                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
-                </div>
-
-                <div class="description">
-                    <span>Hộp Hoa Secret Lover</span>
-
-                </div>
-
-                <div class="quantity">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-
-                <div class="total-price">149.000đ</div>
-            </div>-->
-            <!--<div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                        <i class="fas fa-times"></i>
-                    </button>
-
-                </div>
-
-                <div class="image">
-                    <img src="Images/hinh_minh_hoa.jpg" width="120" alt="" />
-                </div>
-
-                <div class="description">
-                    <span>Hộp Hoa Moonlight Lover</span>
-
-                </div>
-
-                <div class="quantity">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-
-                <div class="total-price">149.000đ</div>
-            </div>-->
-
-            <div class="total">
-                <div class="total-item">
-                    <label>Mã khuyến mãi</label>
-                    <input class="coupon" type="text" placeholder="Nhập mã.." />
-                </div>
-                <div class="total-item">
-                    <label>Tổng cộng</label>
-                    <div class="money">0đ</div>
-                </div>
-                <div class="total-item">
-                    <a href="#thanhtoan" class="checkout-btn">Thanh toán</a>
-                </div>
+            </div>
+            <!--hàng 3-->
+            <div class="gridMore" onclick="themItem(this)">
+                <div>+</div>
             </div>
         </div>
     </div>
-
-    <script type="text/javascript" src="Jquery.js"></script>
-
-    <script type="text/javascript">
-        var sum = 0;
-        var cart = JSON.parse(localStorage.cart);
-        loadPage();
-        function loadPage() {
-            for (let i = 0; i < cart.length; i++) {
-                var chosen = cart[i];
-                var info = JSON.parse(chosen.info);
-                var item = $('<div class="item"></div>');
-                item.insertBefore($('.total').eq(0));
-
-                var button = $('<div class="buttons" onclick="deleteItem(this)"><button class="delete-btn"><i class="fas fa-times"></i></button></div>').appendTo(item);
-                var imgDiv = $('<div class="image"></div>');
-                var img = $('<img width="120" alt="">').attr('src', info[1]);
-                $(imgDiv).append(img).appendTo(item);
-
-                var description = $('<div class="description"><span></span></div>');
-                description.text(info[2]).appendTo(item);
-
-                var quantity = $('<div class="quantity"><button class="minus-btn" type="button" name="button"><i class="fas fa-minus"></i></button><input type="text" name="name" value=""><button class="plus-btn" type="button" name="button"><i class="fas fa-plus"></i></button></div>').appendTo(item);
-                $(quantity).find('input').eq(0).attr('value', chosen.quantity);
-
-                var price = $('<div class="total-price"></div>');
-                $(price).text("x " + separate(info[3])).appendTo(item);
-
-                sum = sum + parseInt(info[3]) * chosen.quantity
-            }
-            $('.money').eq(0).text(separate(sum));
-        }
-
-        $('.minus-btn').on('click', function (e) {
-            e.preventDefault();
-            var $this = $(this);
-            var $input = $this.closest('.item').find('input');
-            var value = parseInt($input.val());
-
-            if (value > 0) {
-                value = value - 1;
-                processLocalStorage('minus', value, this);
-            } else {
-                value = 0;
-            }
-            $input.attr('value', value)
-
-        });
-
-        $('.plus-btn').on('click', function (e) {
-            e.preventDefault();
-            var $this = $(this);
-            var $input = $this.closest('.item').find('input');
-            var value = parseInt($input.val());
-
-            if (value < 100) {
-                value = value + 1;
-                processLocalStorage('plus', value, this);
-            } else {
-                value = 100;
-            }
-            $input.attr('value', value)
-        });
-
-        function processLocalStorage(hint, value, x) {
-            var des = $(x).closest('.item').find('.description').eq(0).text();
-            var totalprice = $(x).closest('.item').find('.total-price').eq(0);
-
-            for (let i = 0; i < cart.length; i++) {
-                var chosen = cart[i];
-                var info = JSON.parse(chosen.info);
-
-                if (info[2].includes(des)) {
-                    chosen.quantity = value;
-                    $(totalprice).text("x " + separate(info[3]))
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    break;
-                }
-            }
-
-            switch (hint) {
-                case 'plus': {
-                    sum = sum + parseInt(info[3]);
-                    break;
-                }
-                case 'minus': {
-                    sum = sum - parseInt(info[3]);
-                    break;
-                }
-            }
-            $('.money').eq(0).text(separate(sum));
-        }
-
-        function separate(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
-        function deleteItem(x) {
-            let target = $(x).closest('.item');
-
-            console.log("quantity: " + parseInt($(target).find('.quantity>input').attr('value')))
-            console.log("unit: " + parseInt(($(target).find('.total-price').text().substr(1)).replace('.', '')))
-
-            sum = sum - (parseInt($(target).find('.quantity>input').attr('value')) * parseInt(($(target).find('.total-price').text().substr(1)).replace('.', '')))
-
-            $(target).hide('slow', function () { $(target).remove(); });
-            removeLocalStorage(x);
-            $('.money').eq(0).text(separate(sum));
-            setNotification(JSON.stringify(cart));
-        }
-
-        function removeLocalStorage(x) {
-            var des = $(x).closest('.item').find('.description').eq(0).text();
-
-            for (let i = 0; i < cart.length; i++) {
-                var chosen = cart[i];
-                var info = JSON.parse(chosen.info);
-
-                if (info[2].includes(des)) {
-                    cart.splice(i, 1)
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    break;
-                }
-            }
-        }
-
-        $('.checkout-btn').click(function () {
-            let target = $('.item').not('#notification')
-            for (let i = 0; i < target.length; i++) {
-                $(target).eq(i).hide('slow', function () { $(target).eq(i).remove(); });
-            }
-            $('.money').eq(0).text(0 + "đ");
-
-            localStorage.removeItem('cart');
-
-            showNoti();
-        });
-
-        function showNoti() {
-            $('#notification').css('display', 'block');
-        }
-
-    </script>
 
     <!--footer và style của footer-->
     <style type="text/css">
@@ -1586,6 +1572,7 @@
             </div>
         </div>
     </div>
+
     <!--phan code hidden-->
 
     <form id="frmChiTiet" action="chitietsanpham.html" style="display:none;">
@@ -1598,15 +1585,204 @@
         <input type="submit" name="subDanhMuc" />
     </form>
 
-    <script>
-        setNotification(window.localStorage.cart)
-        function setNotification(cart) {
-            let notification = $('.headerInfo .shopping-cart>.notify-container>.notify-bubble').eq(0);
-            $(notification).empty();
-            var cartJson = JSON.parse(cart);
-            
-            $(notification).eq(0).text(cartJson.length)
-            $(notification).show(400);
+    <!--phần js load data va xu ly nguyen trang-->
+
+    <script type="text/javascript">
+
+        new WOW().init();
+
+        preloadData();
+
+
+        /*hàm giả loadData*/
+
+
+
+
+
+        function preloadData() {
+            var gridContent = document.getElementsByClassName("gridContent")[0];
+            var item = gridContent.getElementsByClassName("item")[0];
+            var itemRect = item.getBoundingClientRect();
+            var gridContentRect = gridContent.getBoundingClientRect();
+
+            var numberOfItemOnRow = (Math.floor(gridContentRect.width / itemRect.width));
+
+
+            var spaceBetweenItems = (gridContentRect.width - numberOfItemOnRow * itemRect.width) / (numberOfItemOnRow - 1);
+            var spaceRate = spaceBetweenItems / gridContentRect.width;
+            if (spaceRate < 0.04)
+                numberOfItemOnRow = numberOfItemOnRow - 1;
+
+
+            //mobile version
+            //if (numberOfItemOnRow <= 2)
+            //    alert(numberOfItemOnRow + " " + window.outerWidth + " " + window.innerWidth);
+
+            //alert(numberOfItemOnRow);
+            gridContent.innerHTML = "";
+            for (var i = 0; i < numberOfItemOnRow; i++) {
+                var newItem = document.createElement("div");
+                newItem.className = "item";
+                newItem.innerHTML += item.innerHTML;
+                gridContent.appendChild(newItem);
+            }
+        }
+
+        function countItemOnRow() {
+            var gridContent = document.getElementsByClassName("gridContent")[0];
+            var item = gridContent.getElementsByClassName("item")[0];
+            var itemRect = item.getBoundingClientRect();
+            var gridContentRect = gridContent.getBoundingClientRect();
+
+            var numberOfItemOnRow = (Math.floor(gridContentRect.width / itemRect.width));
+
+
+            var spaceBetweenItems = (gridContentRect.width - numberOfItemOnRow * itemRect.width) / (numberOfItemOnRow - 1);
+            var spaceRate = spaceBetweenItems / gridContentRect.width;
+            if (spaceRate < 0.04)
+                numberOfItemOnRow = numberOfItemOnRow - 1;
+            return numberOfItemOnRow;
+        }
+        function loadedData() {
+            var preloadDiv = document.getElementsByClassName("preload")[0];
+            preloadDiv.className = '';
+
+            var gridContentDau = document.getElementsByClassName("gridContent")[0];
+            var gridContentDauLength = gridContentDau.children.length;
+            for (var i = 0; i < gridContentDauLength; i++) {
+                var itemId = gridContentDau.children[0].children[0].innerHTML;
+                if (itemId == '&nbsp;') {
+                    gridContentDau.removeChild(gridContentDau.children[0]);
+                }
+            }
+
+        }
+
+
+
+
+        function changeBanner() {
+            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
+            var srcPath = img.src;
+            if (srcPath.includes("1.png")) {
+                img.src = banners[1];
+            }
+            else {
+                img.src = banners[0];
+            }
+        }
+
+
+
+        var product;
+        var category;
+        var gift;
+        var loadHomePage = 0;
+        var localStorage = window.localStorage;
+        var cart = [];
+
+
+        $(document).ready(function () {
+            if (reload()) {
+                loadPage();
+                $(document).load('home.html #body')
+            }
+        });
+
+        function reload() {
+            if (loadHomePage == 0) {
+                loadHomePage == 1;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        //function loadPage() {
+        //    $.ajax({
+        //        type: 'GET',
+        //        url: 'data/data_sanpham.json',
+        //        dataType: 'json',
+        //        success: function (json) {
+        //            product = json
+        //        }
+        //    });
+
+        //    $.ajax({
+        //        type: 'GET',
+        //        url: 'data/data_quatangkem.json',
+        //        dataType: 'json',
+        //        success: function (json) {
+        //            gift = json
+        //        }
+        //    });
+
+        //    $.ajax({
+        //        type: 'GET',
+        //        url: 'data/data_homepage.json',
+        //        dataType: 'json',
+        //        variable: 'category',
+        //        callback: 'function () { loadHomepage(product) }',
+        //        success: function (json) {
+        //            category = json
+        //            loadHomepage(product)
+        //            loadedData();
+        //        }
+        //    });
+
+        //}
+        var banners = ['AllImages/banner 1.png', 'AllImages/banner 2.png'];
+
+        function loadPage() {
+
+
+
+            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
+            img.src = banners[0];
+
+            //
+            $.ajax({
+                type: 'GET',
+                url: 'data/data_sanpham.json',
+                dataType: 'json',
+                success: function (json) {
+                    product = json
+                    $.ajax({
+                        type: 'GET',
+                        url: 'data/data_quatangkem.json',
+                        dataType: 'json',
+                        success: function (json) {
+                            gift = json
+
+                            $.ajax({
+                                type: 'GET',
+                                url: 'data/data_homepage.json',
+                                dataType: 'json',
+                                variable: 'category',
+                                callback: 'function () { loadHomepage(product) }',
+                                success: function (json) {
+                                    category = json
+                                    loadHomepage(product)
+                                    loadedData();
+                                    addEventTitle();
+                                }
+                            })
+                        }
+                    })
+                }
+            });
+
+
+        }
+
+        function addEventTitle() {
+            var gridTitles = document.getElementsByClassName("gridTitle");
+            var grLen = gridTitles.length;
+            for (var i = 0; i < grLen; i++) {
+                gridTitles[i].setAttribute('onclick', 'clickTitle(this)');
+            }
+
         }
 
         function clickTitle(title) {
@@ -1615,6 +1791,292 @@
             frmDanhMuc.idDanhMuc.value = idDanhMuc;
             frmDanhMuc.subDanhMuc.click();
         }
+
+        function loadHomepage(product) {
+            let firstGrid = true;
+            category.forEach(function (e) {
+                let gridContent = "";
+                if (firstGrid) {
+                    firstGrid = false;
+                    buildFirstGrid(e);
+
+                } else {
+                    let body = $("body");
+                    let grid = $("<div class='grid'></div>").insertAfter($(".grid").eq($(".grid").length - 1));
+
+                    let gridTitle = $("<div class='gridTitle'></div>");
+                    $(gridTitle).text(e.title).appendTo(grid);
+                    setTitleStyle(gridTitle)
+
+                    gridContent = $("<div class='gridContent'></div>");
+                    $(gridContent).insertAfter(gridTitle);
+
+                    addItem1(e.items, gridContent, product);
+                    addWatchMore1(null, gridContent);
+                }
+            })
+        }
+
+        function moreItem(x) {
+            let lastGridTitleText = $(x).parent().find(".gridTitle").eq(0).text();
+
+            let gridContent = $(x).parent().find(".gridContent");
+            let lastGridContentIndex = $(gridContent).length - 1;
+            let lastAddedItem = $(gridContent).eq(lastGridContentIndex).find(".item").eq(2);
+            let lastAddedItemId = $(lastAddedItem).find(".itemId").text();
+
+            var array;
+            category.forEach(function (x) {
+                if (x.title.includes(lastGridTitleText)) {
+                    array = x.items
+                }
+            });
+
+            if (jQuery.inArray(lastAddedItemId, array)) {
+                let newGridContent = $("<div class='gridContent'><div>").empty()
+                $(newGridContent).insertAfter($(gridContent).eq(lastGridContentIndex));
+
+                var val = lastAddedItemId;
+                var index;
+                array.find(function (item, i) {
+                    if (item === val) {
+                        index = i;
+                        return;
+                    }
+                });
+
+                var cloneArray = array.slice();
+                var productId = cloneArray.splice(index + 1);
+
+                addItem2(productId, newGridContent, product, $(x).parent());
+            }
+        }
+
+        function getProductIdByCategory(lastGridTitleText, array) {
+            category.forEach(function (x) {
+                if (x.title.includes(lastGridTitleText)) {
+                    array = new Array(x.items);
+                }
+            });
+            return array;
+        }
+
+        function buildFirstGrid(e) {
+            let grid = $(".grid")
+
+            let gridTitle = $(grid).eq(0).find(".gridTitle")
+            $(gridTitle).eq(0).text(e.title);
+            setTitleStyle(gridTitle)
+
+            gridContent = $(grid).eq(0).find(".gridContent")
+
+            var productId = e.items;
+
+            addItem1(productId, gridContent, product);
+            addWatchMore1(grid, gridContent);
+        }
+
+        function setTitleStyle(gridTitle) {
+            $(gridTitle).css("background-color", "transparent");
+        }
+
+        function addItem2(productId, gridContent, product, grid) {
+            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
+                var item = $("<div class='item'></item>").appendTo(gridContent);
+                let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
+
+                if (productId[i].includes("sp")) {
+                    for (let j = 0; j < product.length && showItem < 3; j++) {
+                        if (product[j].id.includes(productId[i])) {
+                            addProductItemAttr(item, j);
+                            break;
+                        }
+                    }
+                }
+
+                if (productId[i].includes("qt")) {
+                    for (let j = 0; j < gift.length && showItem < 3; j++) {
+                        if (gift[j].id.includes(productId[i])) {
+                            addGiftItemAttr(item, j)
+                            break;
+                        }
+                    }
+                }
+                //console.log("i : " + i + " max: " + (productId.length - 1));
+                addWatchMore2(grid, gridContent, i, productId.length - 1);
+                removeItemBackGroundColor(item)
+            }
+        }
+
+        function addProductItemAttr(item, j) {
+            let img = $("<img></img>").attr("src", "data" + product[j].imgLink);
+            $("<div class='itemImg'></div>").append(img).appendTo(item)
+            $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(product[j].title).appendTo(item)
+            $("<div class='itemPrice'></div>").text(product[j].price).appendTo(item)
+            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm vào giỏ").appendTo(item)
+            $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
+        }
+
+        function addGiftItemAttr(item, j) {
+            let img = $("<img></img>").attr("src", "data" + gift[j].imgLink);
+            $("<div class='itemImg'></div>").append(img).appendTo(item)
+            $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(gift[j].title).appendTo(item)
+            $("<div class='itemPrice'></div>").text(gift[j].price).appendTo(item)
+            $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm vào giỏ").appendTo(item)
+            $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
+        }
+
+        //function addItem1(productId, gridContent, product) {
+        //    for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
+        //        var item = $("<div class='item'></item>").appendTo(gridContent);
+        //        let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
+
+        //        if (productId[i].includes("sp")) {
+        //            for (let j = 0; j < product.length && showItem < 3; j++) {
+        //                if (product[j].id.includes(productId[i])) {
+        //                    addProductItemAttr(item, j);
+        //                    break;
+        //                }
+        //            }
+        //        }
+
+        //        if (productId[i].includes("qt")) {
+        //            for (let j = 0; j < gift.length && showItem < 3; j++) {
+        //                if (gift[j].id.includes(productId[i])) {
+        //                    addGiftItemAttr(item, j)
+        //                    break;
+        //                }
+        //            }
+        //        }
+        //        //console.log("i : " + i + " max: " + (productId.length - 1));
+        //        removeItemBackGroundColor(item)
+        //    }
+        //}
+
+        function addItem1(productId, gridContent, product) {
+            for (var i = 0, showItem = 0; i < productId.length && showItem < 3; i++ , showItem++) {
+                var item = $("<div class='item'></item>").appendTo(gridContent);
+                let id = $("<div class='itemId'></div>").text(productId[i]).appendTo(item)
+
+                if (productId[i].includes("sp")) {
+                    for (let j = 0; j < product.length && showItem < 3; j++) {
+                        if (product[j].id.includes(productId[i])) {
+                            addProductItemAttr(item, j);
+                            break;
+                        }
+                    }
+                }
+
+                if (productId[i].includes("qt")) {
+                    for (let j = 0; j < gift.length && showItem < 3; j++) {
+                        if (gift[j].id.includes(productId[i])) {
+                            addGiftItemAttr(item, j)
+                            break;
+                        }
+                    }
+                }
+                //console.log("i : " + i + " max: " + (productId.length - 1));
+                removeItemBackGroundColor(item)
+            }
+        }
+
+        function addWatchMore1(previousGrid, gridContent) {
+            let previousGridMore = $(previousGrid).find(".gridMore").eq(0).html()
+            if (previousGridMore === undefined) {
+                let watchMore = $("<div></div>").text("+")
+                $("<div class='gridMore' onclick='moreItem(this)'></div>").append(watchMore).insertAfter(gridContent)
+            }
+        }
+
+        function addWatchMore2(previousGrid, gridContent, lastIndex, maxIndex) {
+
+            let previousGridMore = $(previousGrid).find(".gridMore").eq(0).html()
+            if (previousGridMore === undefined && lastIndex + 3 < maxIndex) {
+                let watchMore = $("<div></div>").text("+")
+                $("<div class='gridMore' onclick='moreItem(this)'></div>").append(watchMore).insertAfter(gridContent)
+            }
+            if (lastIndex + 3 > maxIndex) {
+                $(previousGrid).find(".gridMore").remove();
+            }
+        }
+
+
+        function removeItemBackGroundColor(item) {
+            let name = $(item).find(".itemName").eq(0);
+            let price = $(item).find(".itemPrice").eq(0);
+            let cart = $(item).find(".addToCart").eq(0);
+            let cartMb = $(item).find(".addToCart-mb").eq(0);
+
+            name.css("background-color", "transparent");
+            price.css("background-color", "transparent");
+        }
+
+        function addToCart(x) {
+
+            let id = $(x).parent().find(".itemId").eq(0);
+            let img = $(x).parent().find(".itemImg").eq(0).find("img").attr("src");
+            let name = $(x).parent().find(".itemName").eq(0);
+            let price = $(x).parent().find(".itemPrice").eq(0);
+
+            subCart = [];
+            subCart.push(id.text(), img, name.text(), price.text());
+
+            if (!isChosen(cart, id.text())) {
+                var item = { "time": (new Date()), "quantity": 1, "info": JSON.stringify(subCart) }
+                cart.push(item)
+            }
+
+            setNotification(cart);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            $(x).parent().addClass("wow fadeOutUp animated");
+            $(x).parent().attr("style", "animation-name: fadeInUp;");
+
+            setInterval(function () { removeAnimationAddToCart(x) }, 1500);
+        }
+
+        function removeAnimationAddToCart(x) {
+            $(x).parent().removeClass("wow fadeOutUp animated");
+            $(x).parent().removeAttr("style");
+            $(x).parent().attr("style", "z-index:0")
+        }
+
+        function isChosen(cart, id) {
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].info.includes(id)) {
+                    cart[i].quantity = parseInt(cart[i].quantity) + 1;
+                    return true;
+                }
+            }
+        }
+
+
+        function addEvent() {
+            var items = document.getElementsByClassName('item');
+            var itemsLength = items.length;
+            for (var i = 0; i < itemsLength; i++) {
+                var itemName = items[i].getElementsByClassName('itemName')[0];
+                itemName.onclick = 'openDetailLink(this);';
+            }
+
+
+        }
+
+        function openDetailLink(itemName) {
+            var itemId = itemName.parentNode.children[0].innerHTML;
+            //
+            frmChiTiet.idSanPham.value = itemId;
+            frmChiTiet.subChiTiet.click();
+        }
+
+        function setNotification(cart) {
+            let notification = $('.shopping-cart>.notify-container>.notify-bubble').eq(0);
+            $(notification).empty();
+            $(notification).eq(0).text(cart.length)
+            $(notification).show(400);
+        }
+        var cart = JSON.parse(window.localStorage.cart) 
+         setNotification(cart)
     </script>
 </body>
 </html>

@@ -1564,6 +1564,7 @@
         var gift;
         var category;
         var product;
+        var cart = [];
 
         preloadData();
         //
@@ -1698,7 +1699,7 @@
                         itemPrice.innerHTML = product[stt].price;
                         itemPrice.appendChild(itemPriceUnit);
                         theImg.src = "data" + product[stt].imgLink;
-                        addToCart.innerHTML = 'Thêm vào giỏ';
+                        addToCart.innerHTML = 'Thêm Vào Giỏ';
                         addToCartmb.innerHTML = 'Add'
                         gridContent.appendChild(item);
 
@@ -1709,7 +1710,7 @@
                         itemPrice.innerHTML = gift[stt].price;
                         itemPrice.appendChild(itemPriceUnit);
                         theImg.src = "data" + gift[stt].imgLink;
-                        addToCart.innerHTML = 'Thêm vào giỏ';
+                        addToCart.innerHTML = 'Thêm Vào Giỏ';
                         addToCartmb.innerHTML = 'Add';
                         gridContent.appendChild(item);
                     }
