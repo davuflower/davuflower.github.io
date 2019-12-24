@@ -1,9 +1,9 @@
-
+﻿
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Dạ Vũ Flower</title>
 
     <!--thu vien tham khao-->
     <link href=fontawesome/css/all.css rel="stylesheet" type="text/css">
@@ -28,9 +28,6 @@
 
     <!--header và style của header-->
     <style type="text/css">
-
-       
-
         @media screen and (min-width: 960px) {
 
 
@@ -326,7 +323,6 @@
                 flex-flow: row wrap;
             }
         }
-       
 
         @media screen and (min-width: 760px) and (max-width: 960px) {
 
@@ -950,35 +946,29 @@
 
 
         function scrollFunction() {
+
+
+
+
             var scrollButton = document.getElementById("scrollButton")
             var header = document.getElementsByClassName("header")[0];
-            var searchButton = document.getElementsByClassName("search_button");
             var shopName = document.getElementById("shopname");
             var shopSlogan = document.getElementById("slogan");
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 scrollButton.style.display = "block";
-                header.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
-                header.style.padding = "0 0";
-                //header.style.borderBottom = "1px solid";
-                //header.className = "";
-                //header.style.pointerEvents = "none";
-                //searchButton.pointerEvents = "auto";
+                header.style.backgroundColor = "transparent";
                 shopName.style.display = "none";
                 shopSlogan.style.display = "none";
 
             } else {
-
                 scrollButton.style.display = "none";
-               // header.className = "header";
-                header.style.padding = "20px 0px";
                 header.style.backgroundColor = "white";
                 shopName.style.display = "block";
                 shopSlogan.style.display = "block";
             }
 
 
-
-            
+            ///
 
             var allDropDownList = document.getElementsByClassName("dropdown-content");
             var i = 1;
@@ -1935,43 +1925,34 @@
 
     <script type="text/javascript">
 
-                function detectmob() { 
-         if( navigator.userAgent.match(/Android/i)
-         || navigator.userAgent.match(/webOS/i)
-         || navigator.userAgent.match(/iPhone/i)
-         || navigator.userAgent.match(/iPad/i)
-         || navigator.userAgent.match(/iPod/i)
-         || navigator.userAgent.match(/BlackBerry/i)
-         || navigator.userAgent.match(/Windows Phone/i)
-         ){
-            return true;
-          }
-         else {
-            return false;
-          }
-        }
-
-        makeResponsive();
-        function makeResponsive() {
-            if (detectmob()) {
-                var theWidth = document.body.getBoundingClientRect().width;
-                if (theWidth == 964) {
-                    document.getElementsByClassName("shopping-cart")[0].style.marginLeft = '0';
-                }
-            }
-        }
-
-        
+        //alert(document.body.getBoundingClientRect().width);
 
        
         new WOW().init();
 
         preloadData();
 
-        
+        if (detectmob())
+            alert("mobile");
+
+        function detectmob() { 
+            if( navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+            ){
+            return true;
+            }
+            else {
+            return false;
+            }
+        }
 
 
-        
+        /*hàm giả loadData*/
 
         function preloadData() {
             var gridContent = document.getElementsByClassName("gridContent")[0];
@@ -2035,27 +2016,18 @@
 
 
         function changeBanner() {
-            var imgRoot = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
-            var srcPath = imgRoot.src;
+            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
+            var srcPath = img.src;
             if (srcPath.includes("1.png")) {
-                //img.src = banners[1];
-                var afterBanner = banners[1];
+                img.src = banners[1];
             }
             else {
-                //img.src = banners[0];
-                var afterBanner = banners[0];
+                img.src = banners[0];
             }
-
-            document.getElementsByClassName("banner")[0].removeChild(imgRoot);
-            var lastChild = document.getElementsByClassName("banner")[0].children[1];
-            //document.getElementsByClassName("banner")[0].removeChild(lastChild);
-            document.getElementsByClassName("banner")[0].insertBefore(afterBanner, lastChild);
-            //document.getElementsByClassName("banner")[0].appendChild(lastChild);
         }
 
 
-        var imgs = [];
-        var imgsTaken = [];
+
         var product;
         var category;
         var gift;
@@ -2092,26 +2064,12 @@
             }
         }
 
-        var bannersLink = ['AllImages/banner 1.png', 'AllImages/banner 2.png'];
-        var banners = [];
-        function loadBanners() {
-
-            var imgRoot = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
-            imgRoot.src = bannersLink[0];
-            banners.push(imgRoot);
-            for (var i = 1; i < bannersLink.length; i++) {
-                var imgBanner = document.createElement("img");
-                imgBanner.src = bannersLink[i];
-                banners.push(imgBanner);
-            }
-
-        }
+        var banners = ['AllImages/banner 1.png', 'AllImages/banner 2.png'];
 
         function loadPage() {
 
-            //var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
-            //img.src = banners[0];
-            loadBanners();
+            var img = document.getElementsByClassName("banner")[0].getElementsByTagName("img")[0];
+            img.src = banners[0];
 
             $.ajax({
                 type: 'GET',
@@ -2134,8 +2092,7 @@
                                 callback: 'function () { loadHomepage(product) }',
                                 success: function (json) {
                                     category = json
-                                    loadImageToRam(product, gift);
-                                    loadHomepage(product);
+                                    loadHomepage(product)
                                     loadedData();
                                     addEventTitle();
                                 }
@@ -2146,39 +2103,6 @@
             });
 
 
-        }
-
-        
-
-        function loadImageToRam(products,gifts) {
-            var productsLength = products.length;
-            
-
-            for (var i = 0; i < productsLength; i++)
-            {
-                var img = document.createElement("img");
-                img.src = 'data' + products[i].imgLink;
-                logImg(img);
-                imgs.push(img);
-                imgsTaken.push(false);
-            }
-
-            var giftLength = gifts.length
-            for (var i = 0; i < giftLength; i++)
-            {
-                var img = document.createElement("img");
-                img.src = 'data' + gifts[i].imgLink;
-                logImg(img);
-                imgs.push(img);
-                imgsTaken.push(false);
-            }
-
-        }
-
-        function logImg(theMyImg) {
-            theMyImg.onload = function () {
-                console.log(theMyImg.src);
-            }
         }
 
         function addEventTitle() {
@@ -2333,41 +2257,17 @@
         }
 
         function addProductItemAttr(item, j) {
-            //let img = $("<img></img>").attr("src", "data" + product[j].imgLink);
-            //$("<div class='itemImg'></div>").append(img).appendTo(item)
-            var itemImg = findImgInImgs(product[j], imgs, imgsTaken);
-            if (itemImg != null)
-                $("<div class='itemImg'></div>").append(itemImg).appendTo(item)
+            let img = $("<img></img>").attr("src", "data" + product[j].imgLink);
+            $("<div class='itemImg'></div>").append(img).appendTo(item)
             $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(product[j].title).appendTo(item)
             $("<div class='itemPrice'></div>").text(product[j].price).appendTo(item)
             $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
             $("<div class='addToCart-mb' onclick='addToCart(this)'></div>").html("Thêm").appendTo(item)
         }
 
-        function findImgInImgs(product, myIMGS, myIMGStaken) {
-            for (var i = 0; i < myIMGS.length; i++) {
-                if (myIMGS[i].src.includes(product.imgLink)) {
-                    
-                    if (myIMGStaken[i] == false) {
-                        myIMGStaken[i] = true;
-                        var myImgGotten = myIMGS[i];
-                    }
-                    else {
-                        var myImgGotten = document.createElement("img");
-                        myImgGotten.src = myIMGS[i].src;
-                    }
-                    
-                    return myImgGotten;
-                }
-                
-            }
-            return null
-        }
-
         function addGiftItemAttr(item, j) {
-            var itemImg = findImgInImgs(gift[j], imgs, imgsTaken);
-            if (itemImg != null)
-                $("<div class='itemImg'></div>").append(itemImg).appendTo(item)
+            let img = $("<img></img>").attr("src", "data" + gift[j].imgLink);
+            $("<div class='itemImg'></div>").append(img).appendTo(item)
             $("<div class='itemName' onclick='openDetailLink(this)'></div>").text(gift[j].title).appendTo(item)
             $("<div class='itemPrice'></div>").text(gift[j].price).appendTo(item)
             $("<div class='addToCart' onclick='addToCart(this)'></div>").html("Thêm Vào Giỏ").appendTo(item)
